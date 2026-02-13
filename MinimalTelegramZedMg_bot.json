@@ -1,0 +1,109 @@
+{
+  "name": "MinimalTelegramZedMg_bot",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        576,
+        304
+      ],
+      "id": "c3afe3c8-fcca-4bdb-bf3b-bd5052279e53",
+      "name": "Telegram Trigger",
+      "webhookId": "a2fabfd2-eb52-404a-9f74-244150e7cd7e",
+      "credentials": {
+        "telegramApi": {
+          "id": "xHdPDRkVv0Nav4zO",
+          "name": "Telegram account ZedMg_bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-1",
+              "name": "message",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a656a5d5-b87a-4694-b604-c9a95e2b51ea",
+      "name": "Extract Telegram Message",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "=message :  {{ $json.message }}",
+        "additionalFields": {}
+      },
+      "id": "4595981e-5414-4bed-a09a-72d46ac5cc7c",
+      "name": "Send Response to Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1072,
+        304
+      ],
+      "webhookId": "f0322848-2e75-4f9a-950a-b215b875e28c",
+      "credentials": {
+        "telegramApi": {
+          "id": "xHdPDRkVv0Nav4zO",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Telegram Message": {
+      "main": [
+        [
+          {
+            "node": "Send Response to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "db42de2a-314b-4000-aa16-2a552f0cb285",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+  },
+  "id": "MHP25SCO2tcsaKpI",
+  "tags": []
+}
