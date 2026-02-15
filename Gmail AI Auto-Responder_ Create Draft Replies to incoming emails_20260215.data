@@ -1,0 +1,8059 @@
+{
+  "id": "493",
+  "finished": false,
+  "mode": "manual",
+  "retryOf": null,
+  "retrySuccessId": null,
+  "status": "error",
+  "createdAt": "2026-02-15T06:35:22.324Z",
+  "startedAt": "2026-02-15T06:35:22.327Z",
+  "stoppedAt": "2026-02-15T06:35:34.243Z",
+  "deletedAt": null,
+  "workflowId": "9cQ_xkvC-gZI3c7TK5HOn",
+  "waitTill": null,
+  "storedAt": "db",
+  "data": [
+    {
+      "version": 1,
+      "startData": "1",
+      "resultData": "2",
+      "executionData": "3"
+    },
+    {},
+    {
+      "error": "4",
+      "runData": "5",
+      "pinData": "6",
+      "lastNodeExecuted": "7"
+    },
+    {
+      "contextData": "8",
+      "nodeExecutionStack": "9",
+      "metadata": "10",
+      "waitingExecution": "11",
+      "waitingExecutionSource": "12",
+      "runtimeData": "13"
+    },
+    {
+      "level": "14",
+      "tags": "15",
+      "description": "16",
+      "timestamp": 1771137334243,
+      "context": "17",
+      "functionality": "18",
+      "name": "19",
+      "node": "20",
+      "messages": "21",
+      "message": "22",
+      "stack": "23"
+    },
+    {
+      "Gmail trigger": "24",
+      "Get many messages": "25",
+      "OpenAI Chat": "26",
+      "JSON Parser": "27",
+      "Assess if message needs a reply": "28",
+      "If Needs Reply": "29",
+      "OpenAI Chat1": "30",
+      "JSON Parser1": "31",
+      "Assign labels for message": "32",
+      "Set label values": "33",
+      "Get all labels": "34",
+      "Split out assigned labels": "35",
+      "Merge corresponding labels": "36",
+      "Aggregate label IDs": "37",
+      "Add labels to message": "38"
+    },
+    {},
+    "Add labels to message",
+    {},
+    [
+      "39"
+    ],
+    {
+      "OpenAI Chat": "40",
+      "JSON Parser": "41",
+      "OpenAI Chat1": "42",
+      "JSON Parser1": "43"
+    },
+    {},
+    {},
+    {
+      "version": 1,
+      "establishedAt": 1771137322333,
+      "source": "44",
+      "triggerNode": "45"
+    },
+    "warning",
+    {
+      "reWrapped": true
+    },
+    "Invalid id value",
+    {
+      "itemIndex": 0
+    },
+    "regular",
+    "NodeOperationError",
+    {
+      "parameters": "46",
+      "id": "47",
+      "name": "7",
+      "type": "48",
+      "position": "49",
+      "webhookId": "50",
+      "typeVersion": 2.1,
+      "credentials": "51"
+    },
+    [
+      "52"
+    ],
+    "Bad request - please check your parameters (item 0)",
+    "NodeOperationError: Bad request - please check your parameters (item 0)\n    at ExecuteContext.execute (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-nodes-base@file+packages+nodes-base_@aws-sdk+credential-providers@3.808.0_asn1.js@5_8da18263ca0574b0db58d4fefd8173ce/node_modules/n8n-nodes-base/nodes/Google/Gmail/v2/GmailV2.node.ts:818:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at WorkflowExecute.executeNode (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1069:8)\n    at WorkflowExecute.runNode (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1250:11)\n    at /usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1685:27\n    at /usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2328:11",
+    [
+      "53"
+    ],
+    [
+      "54"
+    ],
+    [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59"
+    ],
+    [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64"
+    ],
+    [
+      "65"
+    ],
+    [
+      "66"
+    ],
+    [
+      "67",
+      "68",
+      "69",
+      "70"
+    ],
+    [
+      "71",
+      "72",
+      "73",
+      "74"
+    ],
+    [
+      "75"
+    ],
+    [
+      "76"
+    ],
+    [
+      "77"
+    ],
+    [
+      "78"
+    ],
+    [
+      "79"
+    ],
+    [
+      "80"
+    ],
+    [
+      "81"
+    ],
+    {
+      "node": "82",
+      "data": "83",
+      "source": "84"
+    },
+    [
+      "85",
+      "86",
+      "87",
+      "88",
+      "89"
+    ],
+    [
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+    ],
+    [
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    [
+      "99",
+      "100",
+      "101",
+      "102"
+    ],
+    "manual",
+    {
+      "name": "103",
+      "type": "104"
+    },
+    {
+      "authentication": "105",
+      "resource": "106",
+      "operation": "107",
+      "messageId": "108",
+      "labelIds": "109"
+    },
+    "318174d8-2e00-43b8-9106-acd5586f15d1",
+    "n8n-nodes-base.gmail",
+    [
+      2384,
+      832
+    ],
+    "4f345fc9-2afd-478b-be3b-d3d28f0fbc82",
+    {
+      "gmailOAuth2": "110"
+    },
+    "400 - {\"error\":{\"code\":400,\"message\":\"Invalid id value\",\"errors\":[{\"message\":\"Invalid id value\",\"domain\":\"global\",\"reason\":\"invalidArgument\"}],\"status\":\"INVALID_ARGUMENT\"}}",
+    {
+      "startTime": 1771137322334,
+      "executionIndex": 0,
+      "source": "111",
+      "hints": "112",
+      "executionTime": 344,
+      "executionStatus": "113",
+      "data": "114"
+    },
+    {
+      "startTime": 1771137322679,
+      "executionIndex": 1,
+      "source": "115",
+      "hints": "116",
+      "executionTime": 705,
+      "executionStatus": "113",
+      "data": "117"
+    },
+    {
+      "startTime": 1771137323397,
+      "executionTime": 1636,
+      "executionIndex": 3,
+      "executionStatus": "113",
+      "source": "118",
+      "data": "119",
+      "inputOverride": "120",
+      "metadata": "121"
+    },
+    {
+      "startTime": 1771137325042,
+      "executionTime": 1221,
+      "executionIndex": 5,
+      "executionStatus": "113",
+      "source": "122",
+      "data": "123",
+      "inputOverride": "124",
+      "metadata": "125"
+    },
+    {
+      "startTime": 1771137326270,
+      "executionTime": 1004,
+      "executionIndex": 7,
+      "executionStatus": "113",
+      "source": "126",
+      "data": "127",
+      "inputOverride": "128",
+      "metadata": "129"
+    },
+    {
+      "startTime": 1771137327281,
+      "executionTime": 1079,
+      "executionIndex": 9,
+      "executionStatus": "113",
+      "source": "130",
+      "data": "131",
+      "inputOverride": "132",
+      "metadata": "133"
+    },
+    {
+      "startTime": 1771137328368,
+      "executionTime": 1117,
+      "executionIndex": 11,
+      "executionStatus": "113",
+      "source": "134",
+      "data": "135",
+      "inputOverride": "136",
+      "metadata": "137"
+    },
+    {
+      "startTime": 1771137325034,
+      "executionTime": 1,
+      "executionIndex": 4,
+      "executionStatus": "113",
+      "source": "138",
+      "data": "139",
+      "inputOverride": "140",
+      "metadata": "141"
+    },
+    {
+      "startTime": 1771137326264,
+      "executionTime": 1,
+      "executionIndex": 6,
+      "executionStatus": "113",
+      "source": "142",
+      "data": "143",
+      "inputOverride": "144",
+      "metadata": "145"
+    },
+    {
+      "startTime": 1771137327275,
+      "executionTime": 0,
+      "executionIndex": 8,
+      "executionStatus": "113",
+      "source": "146",
+      "data": "147",
+      "inputOverride": "148",
+      "metadata": "149"
+    },
+    {
+      "startTime": 1771137328361,
+      "executionTime": 1,
+      "executionIndex": 10,
+      "executionStatus": "113",
+      "source": "150",
+      "data": "151",
+      "inputOverride": "152",
+      "metadata": "153"
+    },
+    {
+      "startTime": 1771137329486,
+      "executionTime": 0,
+      "executionIndex": 12,
+      "executionStatus": "113",
+      "source": "154",
+      "data": "155",
+      "inputOverride": "156",
+      "metadata": "157"
+    },
+    {
+      "startTime": 1771137323385,
+      "executionIndex": 2,
+      "source": "158",
+      "hints": "159",
+      "executionTime": 6101,
+      "executionStatus": "113",
+      "data": "160"
+    },
+    {
+      "startTime": 1771137329487,
+      "executionIndex": 13,
+      "source": "161",
+      "hints": "162",
+      "executionTime": 1,
+      "executionStatus": "113",
+      "data": "163"
+    },
+    {
+      "startTime": 1771137329497,
+      "executionTime": 845,
+      "executionIndex": 15,
+      "executionStatus": "113",
+      "source": "164",
+      "data": "165",
+      "inputOverride": "166",
+      "metadata": "167"
+    },
+    {
+      "startTime": 1771137330354,
+      "executionTime": 695,
+      "executionIndex": 17,
+      "executionStatus": "113",
+      "source": "168",
+      "data": "169",
+      "inputOverride": "170",
+      "metadata": "171"
+    },
+    {
+      "startTime": 1771137331062,
+      "executionTime": 828,
+      "executionIndex": 19,
+      "executionStatus": "113",
+      "source": "172",
+      "data": "173",
+      "inputOverride": "174",
+      "metadata": "175"
+    },
+    {
+      "startTime": 1771137331913,
+      "executionTime": 779,
+      "executionIndex": 21,
+      "executionStatus": "113",
+      "source": "176",
+      "data": "177",
+      "inputOverride": "178",
+      "metadata": "179"
+    },
+    {
+      "startTime": 1771137330343,
+      "executionTime": 1,
+      "executionIndex": 16,
+      "executionStatus": "113",
+      "source": "180",
+      "data": "181",
+      "inputOverride": "182",
+      "metadata": "183"
+    },
+    {
+      "startTime": 1771137331050,
+      "executionTime": 1,
+      "executionIndex": 18,
+      "executionStatus": "113",
+      "source": "184",
+      "data": "185",
+      "inputOverride": "186",
+      "metadata": "187"
+    },
+    {
+      "startTime": 1771137331891,
+      "executionTime": 1,
+      "executionIndex": 20,
+      "executionStatus": "113",
+      "source": "188",
+      "data": "189",
+      "inputOverride": "190",
+      "metadata": "191"
+    },
+    {
+      "startTime": 1771137332693,
+      "executionTime": 0,
+      "executionIndex": 22,
+      "executionStatus": "113",
+      "source": "192",
+      "data": "193",
+      "inputOverride": "194",
+      "metadata": "195"
+    },
+    {
+      "startTime": 1771137329488,
+      "executionIndex": 14,
+      "source": "196",
+      "hints": "197",
+      "executionTime": 3206,
+      "executionStatus": "113",
+      "data": "198"
+    },
+    {
+      "startTime": 1771137332694,
+      "executionIndex": 23,
+      "source": "199",
+      "hints": "200",
+      "executionTime": 2,
+      "executionStatus": "113",
+      "data": "201"
+    },
+    {
+      "startTime": 1771137332697,
+      "executionIndex": 24,
+      "source": "202",
+      "hints": "203",
+      "executionTime": 429,
+      "executionStatus": "113",
+      "data": "204"
+    },
+    {
+      "startTime": 1771137333127,
+      "executionIndex": 25,
+      "source": "205",
+      "hints": "206",
+      "executionTime": 1,
+      "executionStatus": "113",
+      "data": "207"
+    },
+    {
+      "startTime": 1771137333128,
+      "executionIndex": 26,
+      "source": "208",
+      "hints": "209",
+      "executionTime": 1,
+      "executionStatus": "113",
+      "data": "210"
+    },
+    {
+      "startTime": 1771137333130,
+      "executionIndex": 27,
+      "source": "211",
+      "hints": "212",
+      "executionTime": 0,
+      "executionStatus": "113",
+      "data": "213"
+    },
+    {
+      "startTime": 1771137333130,
+      "executionIndex": 28,
+      "source": "214",
+      "hints": "215",
+      "executionTime": 1113,
+      "executionStatus": "216",
+      "error": "217"
+    },
+    {
+      "parameters": "218",
+      "id": "47",
+      "name": "7",
+      "type": "48",
+      "position": "219",
+      "webhookId": "50",
+      "typeVersion": 2.1,
+      "credentials": "220"
+    },
+    {
+      "main": "221"
+    },
+    {
+      "main": "214"
+    },
+    {
+      "subRun": "222"
+    },
+    {
+      "subRun": "223"
+    },
+    {
+      "subRun": "224"
+    },
+    {
+      "subRun": "225"
+    },
+    {
+      "subRun": "226"
+    },
+    {
+      "subRun": "227"
+    },
+    {
+      "subRun": "228"
+    },
+    {
+      "subRun": "229"
+    },
+    {
+      "subRun": "230"
+    },
+    {
+      "subRun": "231"
+    },
+    {
+      "subRun": "232"
+    },
+    {
+      "subRun": "233"
+    },
+    {
+      "subRun": "234"
+    },
+    {
+      "subRun": "235"
+    },
+    {
+      "subRun": "236"
+    },
+    {
+      "subRun": "237"
+    },
+    {
+      "subRun": "238"
+    },
+    {
+      "subRun": "239"
+    },
+    "Gmail trigger",
+    "n8n-nodes-base.gmailTrigger",
+    "oAuth2",
+    "message",
+    "addLabels",
+    "={{ $json.emailId }}",
+    "={{ $json.id }}",
+    {
+      "id": "240",
+      "name": "241"
+    },
+    [],
+    [],
+    "success",
+    {
+      "main": "242"
+    },
+    [
+      "243"
+    ],
+    [],
+    {
+      "main": "244"
+    },
+    [
+      "245"
+    ],
+    {
+      "ai_languageModel": "246"
+    },
+    {
+      "ai_languageModel": "247"
+    },
+    {
+      "subRun": "222"
+    },
+    [
+      "248"
+    ],
+    {
+      "ai_languageModel": "249"
+    },
+    {
+      "ai_languageModel": "250"
+    },
+    {
+      "subRun": "223"
+    },
+    [
+      "251"
+    ],
+    {
+      "ai_languageModel": "252"
+    },
+    {
+      "ai_languageModel": "253"
+    },
+    {
+      "subRun": "224"
+    },
+    [
+      "254"
+    ],
+    {
+      "ai_languageModel": "255"
+    },
+    {
+      "ai_languageModel": "256"
+    },
+    {
+      "subRun": "225"
+    },
+    [
+      "257"
+    ],
+    {
+      "ai_languageModel": "258"
+    },
+    {
+      "ai_languageModel": "259"
+    },
+    {
+      "subRun": "226"
+    },
+    [
+      "260"
+    ],
+    {
+      "ai_outputParser": "261"
+    },
+    {
+      "ai_outputParser": "262"
+    },
+    {
+      "subRun": "227"
+    },
+    [
+      "263"
+    ],
+    {
+      "ai_outputParser": "264"
+    },
+    {
+      "ai_outputParser": "265"
+    },
+    {
+      "subRun": "228"
+    },
+    [
+      "266"
+    ],
+    {
+      "ai_outputParser": "267"
+    },
+    {
+      "ai_outputParser": "268"
+    },
+    {
+      "subRun": "229"
+    },
+    [
+      "269"
+    ],
+    {
+      "ai_outputParser": "270"
+    },
+    {
+      "ai_outputParser": "271"
+    },
+    {
+      "subRun": "230"
+    },
+    [
+      "272"
+    ],
+    {
+      "ai_outputParser": "273"
+    },
+    {
+      "ai_outputParser": "274"
+    },
+    {
+      "subRun": "231"
+    },
+    [
+      "275"
+    ],
+    [],
+    {
+      "main": "276"
+    },
+    [
+      "277"
+    ],
+    [],
+    {
+      "main": "278"
+    },
+    [
+      "279"
+    ],
+    {
+      "ai_languageModel": "280"
+    },
+    {
+      "ai_languageModel": "281"
+    },
+    {
+      "subRun": "232"
+    },
+    [
+      "282"
+    ],
+    {
+      "ai_languageModel": "283"
+    },
+    {
+      "ai_languageModel": "284"
+    },
+    {
+      "subRun": "233"
+    },
+    [
+      "285"
+    ],
+    {
+      "ai_languageModel": "286"
+    },
+    {
+      "ai_languageModel": "287"
+    },
+    {
+      "subRun": "234"
+    },
+    [
+      "288"
+    ],
+    {
+      "ai_languageModel": "289"
+    },
+    {
+      "ai_languageModel": "290"
+    },
+    {
+      "subRun": "235"
+    },
+    [
+      "291"
+    ],
+    {
+      "ai_outputParser": "292"
+    },
+    {
+      "ai_outputParser": "293"
+    },
+    {
+      "subRun": "236"
+    },
+    [
+      "294"
+    ],
+    {
+      "ai_outputParser": "295"
+    },
+    {
+      "ai_outputParser": "296"
+    },
+    {
+      "subRun": "237"
+    },
+    [
+      "297"
+    ],
+    {
+      "ai_outputParser": "298"
+    },
+    {
+      "ai_outputParser": "299"
+    },
+    {
+      "subRun": "238"
+    },
+    [
+      "300"
+    ],
+    {
+      "ai_outputParser": "301"
+    },
+    {
+      "ai_outputParser": "302"
+    },
+    {
+      "subRun": "239"
+    },
+    [
+      "303"
+    ],
+    [],
+    {
+      "main": "304"
+    },
+    [
+      "305"
+    ],
+    [],
+    {
+      "main": "306"
+    },
+    [
+      "307"
+    ],
+    [],
+    {
+      "main": "308"
+    },
+    [
+      "309"
+    ],
+    [],
+    {
+      "main": "310"
+    },
+    [
+      "311",
+      "312"
+    ],
+    [],
+    {
+      "main": "313"
+    },
+    [
+      "314"
+    ],
+    [],
+    {
+      "main": "315"
+    },
+    [
+      "316"
+    ],
+    [],
+    "error",
+    {
+      "level": "14",
+      "tags": "15",
+      "description": "16",
+      "timestamp": 1771137334243,
+      "context": "17",
+      "functionality": "18",
+      "name": "19",
+      "node": "20",
+      "messages": "21",
+      "message": "22",
+      "stack": "23"
+    },
+    {
+      "authentication": "105",
+      "resource": "106",
+      "operation": "107",
+      "messageId": "108",
+      "labelIds": "109"
+    },
+    [
+      2384,
+      832
+    ],
+    {
+      "gmailOAuth2": "317"
+    },
+    [
+      "318"
+    ],
+    [
+      "319"
+    ],
+    [
+      "320"
+    ],
+    [
+      "321"
+    ],
+    [
+      "322"
+    ],
+    [
+      "323"
+    ],
+    [
+      "324"
+    ],
+    [
+      "325"
+    ],
+    [
+      "326"
+    ],
+    [
+      "327"
+    ],
+    [
+      "328"
+    ],
+    [
+      "329"
+    ],
+    [
+      "330"
+    ],
+    [
+      "331"
+    ],
+    [
+      "332"
+    ],
+    [
+      "333"
+    ],
+    [
+      "334"
+    ],
+    [
+      "335"
+    ],
+    [
+      "336"
+    ],
+    "MP7zXHvHyevKQVsV",
+    "Gmail account 2",
+    [
+      "337"
+    ],
+    {
+      "previousNode": "103",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "338"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "340"
+    ],
+    [
+      "341"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "342"
+    ],
+    [
+      "343"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "344"
+    ],
+    [
+      "345"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "346"
+    ],
+    [
+      "347"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "348"
+    ],
+    [
+      "349"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "350"
+    ],
+    [
+      "351"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "352"
+    ],
+    [
+      "353"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "354"
+    ],
+    [
+      "355"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "356"
+    ],
+    [
+      "357"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeRun": 0
+    },
+    [
+      "358"
+    ],
+    [
+      "359"
+    ],
+    {
+      "previousNode": "360",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "361"
+    ],
+    {
+      "previousNode": "339",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "362",
+      "363"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "365"
+    ],
+    [
+      "366"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "367"
+    ],
+    [
+      "368"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "369"
+    ],
+    [
+      "370"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "371"
+    ],
+    [
+      "372"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "373"
+    ],
+    [
+      "374"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "375"
+    ],
+    [
+      "376"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "377"
+    ],
+    [
+      "378"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeRun": 0
+    },
+    [
+      "379"
+    ],
+    [
+      "380"
+    ],
+    {
+      "previousNode": "381",
+      "previousNodeOutput": 1,
+      "previousNodeRun": 0
+    },
+    [
+      "382"
+    ],
+    {
+      "previousNode": "364",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "383"
+    ],
+    {
+      "previousNode": "384",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "385"
+    ],
+    {
+      "previousNode": "384",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "386"
+    ],
+    {
+      "previousNode": "387",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    {
+      "previousNode": "388",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "389"
+    ],
+    {
+      "previousNode": "390",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    [
+      "391"
+    ],
+    {
+      "previousNode": "392",
+      "previousNodeOutput": 0,
+      "previousNodeRun": 0
+    },
+    {
+      "id": "240",
+      "name": "241"
+    },
+    [
+      "393"
+    ],
+    {
+      "node": "394",
+      "runIndex": 0
+    },
+    {
+      "node": "394",
+      "runIndex": 1
+    },
+    {
+      "node": "394",
+      "runIndex": 2
+    },
+    {
+      "node": "394",
+      "runIndex": 3
+    },
+    {
+      "node": "394",
+      "runIndex": 4
+    },
+    {
+      "node": "395",
+      "runIndex": 0
+    },
+    {
+      "node": "395",
+      "runIndex": 1
+    },
+    {
+      "node": "395",
+      "runIndex": 2
+    },
+    {
+      "node": "395",
+      "runIndex": 3
+    },
+    {
+      "node": "395",
+      "runIndex": 4
+    },
+    {
+      "node": "396",
+      "runIndex": 0
+    },
+    {
+      "node": "396",
+      "runIndex": 1
+    },
+    {
+      "node": "396",
+      "runIndex": 2
+    },
+    {
+      "node": "396",
+      "runIndex": 3
+    },
+    {
+      "node": "397",
+      "runIndex": 0
+    },
+    {
+      "node": "397",
+      "runIndex": 1
+    },
+    {
+      "node": "397",
+      "runIndex": 2
+    },
+    {
+      "node": "397",
+      "runIndex": 3
+    },
+    [
+      "398"
+    ],
+    [
+      "399",
+      "400",
+      "401",
+      "402",
+      "403"
+    ],
+    "Assess if message needs a reply",
+    [
+      "404"
+    ],
+    [
+      "405"
+    ],
+    [
+      "406"
+    ],
+    [
+      "407"
+    ],
+    [
+      "408"
+    ],
+    [
+      "409"
+    ],
+    [
+      "410"
+    ],
+    [
+      "411"
+    ],
+    [
+      "412"
+    ],
+    [
+      "413"
+    ],
+    [
+      "414"
+    ],
+    [
+      "415"
+    ],
+    [
+      "416"
+    ],
+    [
+      "417"
+    ],
+    [
+      "418"
+    ],
+    [
+      "419"
+    ],
+    [
+      "420"
+    ],
+    [
+      "421"
+    ],
+    [
+      "422"
+    ],
+    [
+      "423"
+    ],
+    "Get many messages",
+    [
+      "424",
+      "425",
+      "426",
+      "427",
+      "428"
+    ],
+    [
+      "429"
+    ],
+    [
+      "430",
+      "431",
+      "432",
+      "433"
+    ],
+    "Assign labels for message",
+    [
+      "434"
+    ],
+    [
+      "435"
+    ],
+    [
+      "436"
+    ],
+    [
+      "437"
+    ],
+    [
+      "438"
+    ],
+    [
+      "439"
+    ],
+    [
+      "440"
+    ],
+    [
+      "441"
+    ],
+    [
+      "442"
+    ],
+    [
+      "443"
+    ],
+    [
+      "444"
+    ],
+    [
+      "445"
+    ],
+    [
+      "446"
+    ],
+    [
+      "447"
+    ],
+    [
+      "448"
+    ],
+    [
+      "449"
+    ],
+    "If Needs Reply",
+    [
+      "450",
+      "451",
+      "452",
+      "453"
+    ],
+    [
+      "454",
+      "455",
+      "456",
+      "457"
+    ],
+    "Set label values",
+    [
+      "458",
+      "459",
+      "460",
+      "461",
+      "462",
+      "463",
+      "464",
+      "465",
+      "466",
+      "467",
+      "468",
+      "469",
+      "470",
+      "471",
+      "472",
+      "473",
+      "474",
+      "475",
+      "476",
+      "477",
+      "478",
+      "479",
+      "480",
+      "481",
+      "482",
+      "483",
+      "484",
+      "485",
+      "486",
+      "487",
+      "488",
+      "489",
+      "490",
+      "491",
+      "492",
+      "493",
+      "494",
+      "495",
+      "496",
+      "497",
+      "498",
+      "499",
+      "500",
+      "501",
+      "502",
+      "503",
+      "504",
+      "505",
+      "506",
+      "507",
+      "508",
+      "509",
+      "510",
+      "511",
+      "512",
+      "513",
+      "514",
+      "515",
+      "516",
+      "517",
+      "518",
+      "519",
+      "520",
+      "521",
+      "522",
+      "523",
+      "524",
+      "525",
+      "526",
+      "527",
+      "528",
+      "529",
+      "530",
+      "531",
+      "532",
+      "533",
+      "534",
+      "535",
+      "536",
+      "537",
+      "538",
+      "539",
+      "540",
+      "541",
+      "542",
+      "543",
+      "544",
+      "545",
+      "546",
+      "547",
+      "548",
+      "549",
+      "550",
+      "551",
+      "552",
+      "553",
+      "554",
+      "555",
+      "556",
+      "557",
+      "558",
+      "559",
+      "560",
+      "561",
+      "562",
+      "563",
+      "564",
+      "565",
+      "566",
+      "567",
+      "568",
+      "569",
+      "570",
+      "571",
+      "572",
+      "573",
+      "574",
+      "575",
+      "576",
+      "577",
+      "578",
+      "579",
+      "580",
+      "581",
+      "582",
+      "583",
+      "584",
+      "585",
+      "586",
+      "587",
+      "588",
+      "589",
+      "590",
+      "591",
+      "592",
+      "593",
+      "594",
+      "595",
+      "596",
+      "597",
+      "598",
+      "599",
+      "600",
+      "601",
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607",
+      "608",
+      "609",
+      "610",
+      "611",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616",
+      "617",
+      "618",
+      "619",
+      "620",
+      "621",
+      "622",
+      "623",
+      "624",
+      "625",
+      "626",
+      "627",
+      "628",
+      "629",
+      "630",
+      "631",
+      "632",
+      "633",
+      "634",
+      "635",
+      "636",
+      "637",
+      "638",
+      "639",
+      "640",
+      "641",
+      "642",
+      "643",
+      "644",
+      "645",
+      "646",
+      "647",
+      "648",
+      "649",
+      "650",
+      "651",
+      "652",
+      "653",
+      "654",
+      "655",
+      "656",
+      "657",
+      "658",
+      "659",
+      "660",
+      "661",
+      "662",
+      "663",
+      "664",
+      "665",
+      "666",
+      "667",
+      "668",
+      "669",
+      "670",
+      "671",
+      "672",
+      "673",
+      "674",
+      "675",
+      "676",
+      "677",
+      "678",
+      "679",
+      "680",
+      "681",
+      "682",
+      "683",
+      "684",
+      "685",
+      "686",
+      "687",
+      "688",
+      "689",
+      "690",
+      "691",
+      "692",
+      "693",
+      "694",
+      "695",
+      "696",
+      "697",
+      "698",
+      "699",
+      "700",
+      "701",
+      "702",
+      "703",
+      "704",
+      "705",
+      "706",
+      "707",
+      "708",
+      "709",
+      "710",
+      "711",
+      "712",
+      "713",
+      "714",
+      "715",
+      "716",
+      "717",
+      "718",
+      "719",
+      "720",
+      "721",
+      "722",
+      "723",
+      "724",
+      "725",
+      "726",
+      "727",
+      "728",
+      "729",
+      "730",
+      "731",
+      "732",
+      "733"
+    ],
+    [
+      "734",
+      "735",
+      "736",
+      "737"
+    ],
+    "Get all labels",
+    "Split out assigned labels",
+    [
+      "738",
+      "739",
+      "740",
+      "741",
+      "742",
+      "743",
+      "744",
+      "745",
+      "746",
+      "747",
+      "748",
+      "749",
+      "750",
+      "751",
+      "752",
+      "753"
+    ],
+    "Merge corresponding labels",
+    [
+      "754"
+    ],
+    "Aggregate label IDs",
+    {
+      "json": "755",
+      "pairedItem": "756"
+    },
+    "OpenAI Chat",
+    "JSON Parser",
+    "OpenAI Chat1",
+    "JSON Parser1",
+    {
+      "json": "757",
+      "pairedItem": "758"
+    },
+    {
+      "json": "759",
+      "pairedItem": "760"
+    },
+    {
+      "json": "761",
+      "pairedItem": "760"
+    },
+    {
+      "json": "762",
+      "pairedItem": "760"
+    },
+    {
+      "json": "763",
+      "pairedItem": "760"
+    },
+    {
+      "json": "764",
+      "pairedItem": "760"
+    },
+    {
+      "json": "765"
+    },
+    {
+      "json": "766"
+    },
+    {
+      "json": "767"
+    },
+    {
+      "json": "768"
+    },
+    {
+      "json": "769"
+    },
+    {
+      "json": "770"
+    },
+    {
+      "json": "771"
+    },
+    {
+      "json": "772"
+    },
+    {
+      "json": "773"
+    },
+    {
+      "json": "774"
+    },
+    {
+      "json": "775"
+    },
+    {
+      "json": "776"
+    },
+    {
+      "json": "777"
+    },
+    {
+      "json": "778"
+    },
+    {
+      "json": "779"
+    },
+    {
+      "json": "780"
+    },
+    {
+      "json": "781"
+    },
+    {
+      "json": "782"
+    },
+    {
+      "json": "783"
+    },
+    {
+      "json": "784"
+    },
+    {
+      "json": "785",
+      "pairedItem": "786"
+    },
+    {
+      "json": "787",
+      "pairedItem": "788"
+    },
+    {
+      "json": "789",
+      "pairedItem": "790"
+    },
+    {
+      "json": "791",
+      "pairedItem": "792"
+    },
+    {
+      "json": "793",
+      "pairedItem": "794"
+    },
+    {
+      "json": "791",
+      "pairedItem": "795"
+    },
+    {
+      "json": "785",
+      "pairedItem": "796"
+    },
+    {
+      "json": "787",
+      "pairedItem": "797"
+    },
+    {
+      "json": "789",
+      "pairedItem": "798"
+    },
+    {
+      "json": "793",
+      "pairedItem": "799"
+    },
+    {
+      "json": "800"
+    },
+    {
+      "json": "801"
+    },
+    {
+      "json": "802"
+    },
+    {
+      "json": "803"
+    },
+    {
+      "json": "804"
+    },
+    {
+      "json": "805"
+    },
+    {
+      "json": "806"
+    },
+    {
+      "json": "807"
+    },
+    {
+      "json": "808"
+    },
+    {
+      "json": "809"
+    },
+    {
+      "json": "810"
+    },
+    {
+      "json": "811"
+    },
+    {
+      "json": "812"
+    },
+    {
+      "json": "813"
+    },
+    {
+      "json": "814"
+    },
+    {
+      "json": "815"
+    },
+    {
+      "json": "816",
+      "pairedItem": "817"
+    },
+    {
+      "json": "818",
+      "pairedItem": "819"
+    },
+    {
+      "json": "820",
+      "pairedItem": "821"
+    },
+    {
+      "json": "822",
+      "pairedItem": "823"
+    },
+    {
+      "json": "824",
+      "pairedItem": "825"
+    },
+    {
+      "json": "826",
+      "pairedItem": "827"
+    },
+    {
+      "json": "828",
+      "pairedItem": "829"
+    },
+    {
+      "json": "830",
+      "pairedItem": "831"
+    },
+    {
+      "json": "832",
+      "pairedItem": "833"
+    },
+    {
+      "json": "834",
+      "pairedItem": "833"
+    },
+    {
+      "json": "835",
+      "pairedItem": "833"
+    },
+    {
+      "json": "836",
+      "pairedItem": "833"
+    },
+    {
+      "json": "837",
+      "pairedItem": "833"
+    },
+    {
+      "json": "838",
+      "pairedItem": "833"
+    },
+    {
+      "json": "839",
+      "pairedItem": "833"
+    },
+    {
+      "json": "840",
+      "pairedItem": "833"
+    },
+    {
+      "json": "841",
+      "pairedItem": "833"
+    },
+    {
+      "json": "842",
+      "pairedItem": "833"
+    },
+    {
+      "json": "843",
+      "pairedItem": "833"
+    },
+    {
+      "json": "844",
+      "pairedItem": "833"
+    },
+    {
+      "json": "845",
+      "pairedItem": "833"
+    },
+    {
+      "json": "846",
+      "pairedItem": "833"
+    },
+    {
+      "json": "847",
+      "pairedItem": "833"
+    },
+    {
+      "json": "848",
+      "pairedItem": "833"
+    },
+    {
+      "json": "849",
+      "pairedItem": "833"
+    },
+    {
+      "json": "850",
+      "pairedItem": "833"
+    },
+    {
+      "json": "851",
+      "pairedItem": "833"
+    },
+    {
+      "json": "852",
+      "pairedItem": "833"
+    },
+    {
+      "json": "853",
+      "pairedItem": "833"
+    },
+    {
+      "json": "854",
+      "pairedItem": "833"
+    },
+    {
+      "json": "855",
+      "pairedItem": "833"
+    },
+    {
+      "json": "856",
+      "pairedItem": "833"
+    },
+    {
+      "json": "857",
+      "pairedItem": "833"
+    },
+    {
+      "json": "858",
+      "pairedItem": "833"
+    },
+    {
+      "json": "859",
+      "pairedItem": "833"
+    },
+    {
+      "json": "860",
+      "pairedItem": "833"
+    },
+    {
+      "json": "861",
+      "pairedItem": "833"
+    },
+    {
+      "json": "862",
+      "pairedItem": "833"
+    },
+    {
+      "json": "863",
+      "pairedItem": "833"
+    },
+    {
+      "json": "864",
+      "pairedItem": "833"
+    },
+    {
+      "json": "865",
+      "pairedItem": "833"
+    },
+    {
+      "json": "866",
+      "pairedItem": "833"
+    },
+    {
+      "json": "867",
+      "pairedItem": "833"
+    },
+    {
+      "json": "868",
+      "pairedItem": "833"
+    },
+    {
+      "json": "869",
+      "pairedItem": "833"
+    },
+    {
+      "json": "870",
+      "pairedItem": "833"
+    },
+    {
+      "json": "871",
+      "pairedItem": "833"
+    },
+    {
+      "json": "872",
+      "pairedItem": "833"
+    },
+    {
+      "json": "873",
+      "pairedItem": "833"
+    },
+    {
+      "json": "874",
+      "pairedItem": "833"
+    },
+    {
+      "json": "875",
+      "pairedItem": "833"
+    },
+    {
+      "json": "876",
+      "pairedItem": "833"
+    },
+    {
+      "json": "877",
+      "pairedItem": "833"
+    },
+    {
+      "json": "878",
+      "pairedItem": "833"
+    },
+    {
+      "json": "879",
+      "pairedItem": "833"
+    },
+    {
+      "json": "880",
+      "pairedItem": "833"
+    },
+    {
+      "json": "881",
+      "pairedItem": "833"
+    },
+    {
+      "json": "882",
+      "pairedItem": "833"
+    },
+    {
+      "json": "883",
+      "pairedItem": "833"
+    },
+    {
+      "json": "884",
+      "pairedItem": "833"
+    },
+    {
+      "json": "885",
+      "pairedItem": "833"
+    },
+    {
+      "json": "886",
+      "pairedItem": "833"
+    },
+    {
+      "json": "887",
+      "pairedItem": "833"
+    },
+    {
+      "json": "888",
+      "pairedItem": "833"
+    },
+    {
+      "json": "889",
+      "pairedItem": "833"
+    },
+    {
+      "json": "890",
+      "pairedItem": "833"
+    },
+    {
+      "json": "891",
+      "pairedItem": "833"
+    },
+    {
+      "json": "892",
+      "pairedItem": "833"
+    },
+    {
+      "json": "893",
+      "pairedItem": "833"
+    },
+    {
+      "json": "894",
+      "pairedItem": "833"
+    },
+    {
+      "json": "895",
+      "pairedItem": "833"
+    },
+    {
+      "json": "896",
+      "pairedItem": "833"
+    },
+    {
+      "json": "897",
+      "pairedItem": "833"
+    },
+    {
+      "json": "898",
+      "pairedItem": "833"
+    },
+    {
+      "json": "899",
+      "pairedItem": "833"
+    },
+    {
+      "json": "900",
+      "pairedItem": "833"
+    },
+    {
+      "json": "901",
+      "pairedItem": "833"
+    },
+    {
+      "json": "902",
+      "pairedItem": "903"
+    },
+    {
+      "json": "904",
+      "pairedItem": "903"
+    },
+    {
+      "json": "905",
+      "pairedItem": "903"
+    },
+    {
+      "json": "906",
+      "pairedItem": "903"
+    },
+    {
+      "json": "907",
+      "pairedItem": "903"
+    },
+    {
+      "json": "908",
+      "pairedItem": "903"
+    },
+    {
+      "json": "909",
+      "pairedItem": "903"
+    },
+    {
+      "json": "910",
+      "pairedItem": "903"
+    },
+    {
+      "json": "911",
+      "pairedItem": "903"
+    },
+    {
+      "json": "912",
+      "pairedItem": "903"
+    },
+    {
+      "json": "913",
+      "pairedItem": "903"
+    },
+    {
+      "json": "914",
+      "pairedItem": "903"
+    },
+    {
+      "json": "915",
+      "pairedItem": "903"
+    },
+    {
+      "json": "916",
+      "pairedItem": "903"
+    },
+    {
+      "json": "917",
+      "pairedItem": "903"
+    },
+    {
+      "json": "918",
+      "pairedItem": "903"
+    },
+    {
+      "json": "919",
+      "pairedItem": "903"
+    },
+    {
+      "json": "920",
+      "pairedItem": "903"
+    },
+    {
+      "json": "921",
+      "pairedItem": "903"
+    },
+    {
+      "json": "922",
+      "pairedItem": "903"
+    },
+    {
+      "json": "923",
+      "pairedItem": "903"
+    },
+    {
+      "json": "924",
+      "pairedItem": "903"
+    },
+    {
+      "json": "925",
+      "pairedItem": "903"
+    },
+    {
+      "json": "926",
+      "pairedItem": "903"
+    },
+    {
+      "json": "927",
+      "pairedItem": "903"
+    },
+    {
+      "json": "928",
+      "pairedItem": "903"
+    },
+    {
+      "json": "929",
+      "pairedItem": "903"
+    },
+    {
+      "json": "930",
+      "pairedItem": "903"
+    },
+    {
+      "json": "931",
+      "pairedItem": "903"
+    },
+    {
+      "json": "932",
+      "pairedItem": "903"
+    },
+    {
+      "json": "933",
+      "pairedItem": "903"
+    },
+    {
+      "json": "934",
+      "pairedItem": "903"
+    },
+    {
+      "json": "935",
+      "pairedItem": "903"
+    },
+    {
+      "json": "936",
+      "pairedItem": "903"
+    },
+    {
+      "json": "937",
+      "pairedItem": "903"
+    },
+    {
+      "json": "938",
+      "pairedItem": "903"
+    },
+    {
+      "json": "939",
+      "pairedItem": "903"
+    },
+    {
+      "json": "940",
+      "pairedItem": "903"
+    },
+    {
+      "json": "941",
+      "pairedItem": "903"
+    },
+    {
+      "json": "942",
+      "pairedItem": "903"
+    },
+    {
+      "json": "943",
+      "pairedItem": "903"
+    },
+    {
+      "json": "944",
+      "pairedItem": "903"
+    },
+    {
+      "json": "945",
+      "pairedItem": "903"
+    },
+    {
+      "json": "946",
+      "pairedItem": "903"
+    },
+    {
+      "json": "947",
+      "pairedItem": "903"
+    },
+    {
+      "json": "948",
+      "pairedItem": "903"
+    },
+    {
+      "json": "949",
+      "pairedItem": "903"
+    },
+    {
+      "json": "950",
+      "pairedItem": "903"
+    },
+    {
+      "json": "951",
+      "pairedItem": "903"
+    },
+    {
+      "json": "952",
+      "pairedItem": "903"
+    },
+    {
+      "json": "953",
+      "pairedItem": "903"
+    },
+    {
+      "json": "954",
+      "pairedItem": "903"
+    },
+    {
+      "json": "955",
+      "pairedItem": "903"
+    },
+    {
+      "json": "956",
+      "pairedItem": "903"
+    },
+    {
+      "json": "957",
+      "pairedItem": "903"
+    },
+    {
+      "json": "958",
+      "pairedItem": "903"
+    },
+    {
+      "json": "959",
+      "pairedItem": "903"
+    },
+    {
+      "json": "960",
+      "pairedItem": "903"
+    },
+    {
+      "json": "961",
+      "pairedItem": "903"
+    },
+    {
+      "json": "962",
+      "pairedItem": "903"
+    },
+    {
+      "json": "963",
+      "pairedItem": "903"
+    },
+    {
+      "json": "964",
+      "pairedItem": "903"
+    },
+    {
+      "json": "965",
+      "pairedItem": "903"
+    },
+    {
+      "json": "966",
+      "pairedItem": "903"
+    },
+    {
+      "json": "967",
+      "pairedItem": "903"
+    },
+    {
+      "json": "968",
+      "pairedItem": "903"
+    },
+    {
+      "json": "969",
+      "pairedItem": "903"
+    },
+    {
+      "json": "970",
+      "pairedItem": "903"
+    },
+    {
+      "json": "971",
+      "pairedItem": "903"
+    },
+    {
+      "json": "972",
+      "pairedItem": "973"
+    },
+    {
+      "json": "974",
+      "pairedItem": "973"
+    },
+    {
+      "json": "975",
+      "pairedItem": "973"
+    },
+    {
+      "json": "976",
+      "pairedItem": "973"
+    },
+    {
+      "json": "977",
+      "pairedItem": "973"
+    },
+    {
+      "json": "978",
+      "pairedItem": "973"
+    },
+    {
+      "json": "979",
+      "pairedItem": "973"
+    },
+    {
+      "json": "980",
+      "pairedItem": "973"
+    },
+    {
+      "json": "981",
+      "pairedItem": "973"
+    },
+    {
+      "json": "982",
+      "pairedItem": "973"
+    },
+    {
+      "json": "983",
+      "pairedItem": "973"
+    },
+    {
+      "json": "984",
+      "pairedItem": "973"
+    },
+    {
+      "json": "985",
+      "pairedItem": "973"
+    },
+    {
+      "json": "986",
+      "pairedItem": "973"
+    },
+    {
+      "json": "987",
+      "pairedItem": "973"
+    },
+    {
+      "json": "988",
+      "pairedItem": "973"
+    },
+    {
+      "json": "989",
+      "pairedItem": "973"
+    },
+    {
+      "json": "990",
+      "pairedItem": "973"
+    },
+    {
+      "json": "991",
+      "pairedItem": "973"
+    },
+    {
+      "json": "992",
+      "pairedItem": "973"
+    },
+    {
+      "json": "993",
+      "pairedItem": "973"
+    },
+    {
+      "json": "994",
+      "pairedItem": "973"
+    },
+    {
+      "json": "995",
+      "pairedItem": "973"
+    },
+    {
+      "json": "996",
+      "pairedItem": "973"
+    },
+    {
+      "json": "997",
+      "pairedItem": "973"
+    },
+    {
+      "json": "998",
+      "pairedItem": "973"
+    },
+    {
+      "json": "999",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1000",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1001",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1002",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1003",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1004",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1005",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1006",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1007",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1008",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1009",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1010",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1011",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1012",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1013",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1014",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1015",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1016",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1017",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1018",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1019",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1020",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1021",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1022",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1023",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1024",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1025",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1026",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1027",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1028",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1029",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1030",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1031",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1032",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1033",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1034",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1035",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1036",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1037",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1038",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1039",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1040",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1041",
+      "pairedItem": "973"
+    },
+    {
+      "json": "1042",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1044",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1045",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1046",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1047",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1048",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1049",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1050",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1051",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1052",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1053",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1054",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1055",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1056",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1057",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1058",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1059",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1060",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1061",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1062",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1063",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1064",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1065",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1066",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1067",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1068",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1069",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1070",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1071",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1072",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1073",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1074",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1075",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1076",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1077",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1078",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1079",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1080",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1081",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1082",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1083",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1084",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1085",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1086",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1087",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1088",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1089",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1090",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1091",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1092",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1093",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1094",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1095",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1096",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1097",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1098",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1099",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1100",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1101",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1102",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1103",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1104",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1105",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1106",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1107",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1108",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1109",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1110",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1111",
+      "pairedItem": "1043"
+    },
+    {
+      "json": "1112",
+      "pairedItem": "1113"
+    },
+    {
+      "json": "1114",
+      "pairedItem": "1115"
+    },
+    {
+      "json": "1116",
+      "pairedItem": "1117"
+    },
+    {
+      "json": "1118",
+      "pairedItem": "1119"
+    },
+    {
+      "json": "1120",
+      "binary": "1121",
+      "pairedItem": "1122"
+    },
+    {
+      "json": "1123",
+      "binary": "1124",
+      "pairedItem": "1125"
+    },
+    {
+      "json": "1126",
+      "binary": "1127",
+      "pairedItem": "1128"
+    },
+    {
+      "json": "1129",
+      "binary": "1130",
+      "pairedItem": "1131"
+    },
+    {
+      "json": "1132",
+      "binary": "1133",
+      "pairedItem": "1134"
+    },
+    {
+      "json": "1135",
+      "binary": "1136",
+      "pairedItem": "1137"
+    },
+    {
+      "json": "1138",
+      "binary": "1139",
+      "pairedItem": "1140"
+    },
+    {
+      "json": "1141",
+      "binary": "1142",
+      "pairedItem": "1143"
+    },
+    {
+      "json": "1144",
+      "binary": "1145",
+      "pairedItem": "1146"
+    },
+    {
+      "json": "1147",
+      "binary": "1148",
+      "pairedItem": "1149"
+    },
+    {
+      "json": "1150",
+      "binary": "1151",
+      "pairedItem": "1152"
+    },
+    {
+      "json": "1153",
+      "binary": "1154",
+      "pairedItem": "1155"
+    },
+    {
+      "json": "1156",
+      "binary": "1157",
+      "pairedItem": "1158"
+    },
+    {
+      "json": "1159",
+      "binary": "1160",
+      "pairedItem": "1161"
+    },
+    {
+      "json": "1162",
+      "binary": "1163",
+      "pairedItem": "1164"
+    },
+    {
+      "json": "1165",
+      "binary": "1166",
+      "pairedItem": "1167"
+    },
+    {
+      "json": "755",
+      "pairedItem": "1168"
+    },
+    {
+      "id": "1169"
+    },
+    {
+      "item": 0
+    },
+    {
+      "id": "1170",
+      "threadId": "1170",
+      "snippet": "1171",
+      "payload": "1172",
+      "sizeEstimate": 107295,
+      "historyId": "1173",
+      "internalDate": "1174",
+      "labels": "1175",
+      "From": "1176",
+      "Subject": "1177",
+      "To": "1178"
+    },
+    {
+      "item": 0
+    },
+    {
+      "id": "1170",
+      "threadId": "1170",
+      "snippet": "1179",
+      "payload": "1180",
+      "sizeEstimate": 107295,
+      "historyId": "1173",
+      "internalDate": "1174",
+      "labels": "1181",
+      "From": "1176",
+      "Subject": "1177",
+      "To": "1178"
+    },
+    {
+      "item": 0
+    },
+    {
+      "id": "1182",
+      "threadId": "1182",
+      "snippet": "1183",
+      "payload": "1184",
+      "sizeEstimate": 24635,
+      "historyId": "1185",
+      "internalDate": "1186",
+      "labels": "1187",
+      "From": "1188",
+      "To": "1189",
+      "Subject": "1190"
+    },
+    {
+      "id": "1191",
+      "threadId": "1191",
+      "snippet": "1192",
+      "payload": "1193",
+      "sizeEstimate": 87224,
+      "historyId": "1194",
+      "internalDate": "1195",
+      "labels": "1196",
+      "From": "1197",
+      "To": "1178",
+      "Subject": "1198"
+    },
+    {
+      "id": "1199",
+      "threadId": "1199",
+      "snippet": "1200",
+      "payload": "1201",
+      "sizeEstimate": 20210,
+      "historyId": "1202",
+      "internalDate": "1203",
+      "labels": "1204",
+      "From": "1205",
+      "To": "1178",
+      "Subject": "1206"
+    },
+    {
+      "id": "1207",
+      "threadId": "1207",
+      "snippet": "1208",
+      "payload": "1209",
+      "sizeEstimate": 46271,
+      "historyId": "1210",
+      "internalDate": "1211",
+      "labels": "1212",
+      "From": "1213",
+      "To": "1178",
+      "Cc": "1214",
+      "Subject": "1215"
+    },
+    {
+      "response": "1216",
+      "tokenUsage": "1217"
+    },
+    {
+      "messages": "1218",
+      "estimatedTokens": 646,
+      "options": "1219"
+    },
+    {
+      "response": "1220",
+      "tokenUsage": "1221"
+    },
+    {
+      "messages": "1222",
+      "estimatedTokens": 619,
+      "options": "1223"
+    },
+    {
+      "response": "1224",
+      "tokenUsage": "1225"
+    },
+    {
+      "messages": "1226",
+      "estimatedTokens": 859,
+      "options": "1227"
+    },
+    {
+      "response": "1228",
+      "tokenUsage": "1229"
+    },
+    {
+      "messages": "1230",
+      "estimatedTokens": 685,
+      "options": "1231"
+    },
+    {
+      "response": "1232",
+      "tokenUsage": "1233"
+    },
+    {
+      "messages": "1234",
+      "estimatedTokens": 639,
+      "options": "1235"
+    },
+    {
+      "action": "1236",
+      "response": "785"
+    },
+    {
+      "action": "1236",
+      "text": "1237"
+    },
+    {
+      "action": "1236",
+      "response": "787"
+    },
+    {
+      "action": "1236",
+      "text": "1238"
+    },
+    {
+      "action": "1236",
+      "response": "789"
+    },
+    {
+      "action": "1236",
+      "text": "1239"
+    },
+    {
+      "action": "1236",
+      "response": "791"
+    },
+    {
+      "action": "1236",
+      "text": "1240"
+    },
+    {
+      "action": "1236",
+      "response": "793"
+    },
+    {
+      "action": "1236",
+      "text": "1241"
+    },
+    {
+      "needsReply": false,
+      "replyReason": "1242",
+      "id": "1170"
+    },
+    {
+      "item": 0
+    },
+    {
+      "needsReply": false,
+      "replyReason": "1243",
+      "id": "1182"
+    },
+    {
+      "item": 1
+    },
+    {
+      "needsReply": false,
+      "replyReason": "1244",
+      "id": "1191"
+    },
+    {
+      "item": 2
+    },
+    {
+      "needsReply": true,
+      "replyReason": "1245",
+      "id": "1199"
+    },
+    {
+      "item": 3
+    },
+    {
+      "needsReply": false,
+      "replyReason": "1246",
+      "id": "1207"
+    },
+    {
+      "item": 4
+    },
+    {
+      "item": 3
+    },
+    {
+      "item": 0
+    },
+    {
+      "item": 1
+    },
+    {
+      "item": 2
+    },
+    {
+      "item": 4
+    },
+    {
+      "response": "1247",
+      "tokenUsage": "1248"
+    },
+    {
+      "messages": "1249",
+      "estimatedTokens": 1131,
+      "options": "1250"
+    },
+    {
+      "response": "1251",
+      "tokenUsage": "1252"
+    },
+    {
+      "messages": "1253",
+      "estimatedTokens": 1131,
+      "options": "1254"
+    },
+    {
+      "response": "1255",
+      "tokenUsage": "1256"
+    },
+    {
+      "messages": "1257",
+      "estimatedTokens": 1131,
+      "options": "1258"
+    },
+    {
+      "response": "1259",
+      "tokenUsage": "1260"
+    },
+    {
+      "messages": "1261",
+      "estimatedTokens": 1131,
+      "options": "1262"
+    },
+    {
+      "action": "1236",
+      "response": "816"
+    },
+    {
+      "action": "1236",
+      "text": "1263"
+    },
+    {
+      "action": "1236",
+      "response": "818"
+    },
+    {
+      "action": "1236",
+      "text": "1263"
+    },
+    {
+      "action": "1236",
+      "response": "820"
+    },
+    {
+      "action": "1236",
+      "text": "1264"
+    },
+    {
+      "action": "1236",
+      "response": "822"
+    },
+    {
+      "action": "1236",
+      "text": "1263"
+    },
+    {
+      "output": "1265"
+    },
+    {
+      "item": 0
+    },
+    {
+      "output": "1266"
+    },
+    {
+      "item": 1
+    },
+    {
+      "output": "1267"
+    },
+    {
+      "item": 2
+    },
+    {
+      "output": "1268"
+    },
+    {
+      "item": 3
+    },
+    {
+      "labels": "1269",
+      "emailId": "1170"
+    },
+    {
+      "item": 0
+    },
+    {
+      "labels": "1270",
+      "emailId": "1182"
+    },
+    {
+      "item": 1
+    },
+    {
+      "labels": "1271",
+      "emailId": "1191"
+    },
+    {
+      "item": 2
+    },
+    {
+      "labels": "1272",
+      "emailId": "1207"
+    },
+    {
+      "item": 3
+    },
+    {
+      "id": "1273",
+      "name": "1273",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "item": 0
+    },
+    {
+      "id": "1277",
+      "name": "1277",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1279",
+      "name": "1279",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1280",
+      "name": "1280",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1281",
+      "name": "1281",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1282",
+      "name": "1282",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1283",
+      "name": "1283",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1284",
+      "name": "1284",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1285",
+      "name": "1285",
+      "type": "1276"
+    },
+    {
+      "id": "1286",
+      "name": "1286",
+      "type": "1276"
+    },
+    {
+      "id": "1287",
+      "name": "1287",
+      "type": "1276"
+    },
+    {
+      "id": "1288",
+      "name": "1288",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1289",
+      "name": "1289",
+      "type": "1276"
+    },
+    {
+      "id": "1290",
+      "name": "1290",
+      "type": "1276"
+    },
+    {
+      "id": "1291",
+      "name": "1291",
+      "type": "1276"
+    },
+    {
+      "id": "1292",
+      "name": "1292",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1293",
+      "name": "1293",
+      "type": "1276"
+    },
+    {
+      "id": "1294",
+      "name": "1295",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1298",
+      "name": "1299",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1300",
+      "name": "1301",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1302",
+      "name": "1303",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1304"
+    },
+    {
+      "id": "1305",
+      "name": "1306",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1307",
+      "name": "1308",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1309",
+      "name": "1310",
+      "type": "1297"
+    },
+    {
+      "id": "1311",
+      "name": "1312",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1313",
+      "name": "1314",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1315",
+      "name": "1316",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1317",
+      "name": "1318",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1319",
+      "name": "1320",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1321",
+      "name": "1322",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297",
+      "color": "1323"
+    },
+    {
+      "id": "1324",
+      "name": "1325",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1326",
+      "name": "1327",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1328",
+      "name": "1329",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1330",
+      "name": "1331",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1332",
+      "name": "1333",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1334"
+    },
+    {
+      "id": "1335",
+      "name": "1336",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1337",
+      "name": "1338",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1339",
+      "name": "1340",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1341",
+      "name": "1342",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1343",
+      "name": "1344",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1345",
+      "name": "1346",
+      "type": "1297"
+    },
+    {
+      "id": "1347",
+      "name": "1348",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1349",
+      "name": "1350",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1351",
+      "name": "1352",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1353",
+      "name": "1354",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1355",
+      "name": "1356",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1357",
+      "name": "1358",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1359",
+      "name": "1360",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1361",
+      "name": "1362",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1363",
+      "name": "1364",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1365"
+    },
+    {
+      "id": "1366",
+      "name": "1367",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1368",
+      "name": "1369",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1370",
+      "name": "1371",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1372"
+    },
+    {
+      "id": "1373",
+      "name": "1374",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1375"
+    },
+    {
+      "id": "1376",
+      "name": "1377",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1378",
+      "name": "1379",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1380",
+      "name": "1381",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1382"
+    },
+    {
+      "id": "1383",
+      "name": "1384",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1385"
+    },
+    {
+      "id": "1386",
+      "name": "1387",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1388"
+    },
+    {
+      "id": "1389",
+      "name": "1390",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1391"
+    },
+    {
+      "id": "1392",
+      "name": "1393",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1394"
+    },
+    {
+      "id": "1395",
+      "name": "1396",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1397"
+    },
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1400"
+    },
+    {
+      "id": "1401",
+      "name": "1402",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1403"
+    },
+    {
+      "id": "1404",
+      "name": "1405",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1406"
+    },
+    {
+      "id": "1407",
+      "name": "1408",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1409"
+    },
+    {
+      "id": "1410",
+      "name": "1411",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1412"
+    },
+    {
+      "id": "1413",
+      "name": "1414",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1415"
+    },
+    {
+      "id": "1416",
+      "name": "1417",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1418"
+    },
+    {
+      "id": "1273",
+      "name": "1273",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "item": 1
+    },
+    {
+      "id": "1277",
+      "name": "1277",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1279",
+      "name": "1279",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1280",
+      "name": "1280",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1281",
+      "name": "1281",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1282",
+      "name": "1282",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1283",
+      "name": "1283",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1284",
+      "name": "1284",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1285",
+      "name": "1285",
+      "type": "1276"
+    },
+    {
+      "id": "1286",
+      "name": "1286",
+      "type": "1276"
+    },
+    {
+      "id": "1287",
+      "name": "1287",
+      "type": "1276"
+    },
+    {
+      "id": "1288",
+      "name": "1288",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1289",
+      "name": "1289",
+      "type": "1276"
+    },
+    {
+      "id": "1290",
+      "name": "1290",
+      "type": "1276"
+    },
+    {
+      "id": "1291",
+      "name": "1291",
+      "type": "1276"
+    },
+    {
+      "id": "1292",
+      "name": "1292",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1293",
+      "name": "1293",
+      "type": "1276"
+    },
+    {
+      "id": "1294",
+      "name": "1295",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1298",
+      "name": "1299",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1300",
+      "name": "1301",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1302",
+      "name": "1303",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1419"
+    },
+    {
+      "id": "1305",
+      "name": "1306",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1307",
+      "name": "1308",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1309",
+      "name": "1310",
+      "type": "1297"
+    },
+    {
+      "id": "1311",
+      "name": "1312",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1313",
+      "name": "1314",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1315",
+      "name": "1316",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1317",
+      "name": "1318",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1319",
+      "name": "1320",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1321",
+      "name": "1322",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297",
+      "color": "1420"
+    },
+    {
+      "id": "1324",
+      "name": "1325",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1326",
+      "name": "1327",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1328",
+      "name": "1329",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1330",
+      "name": "1331",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1332",
+      "name": "1333",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1421"
+    },
+    {
+      "id": "1335",
+      "name": "1336",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1337",
+      "name": "1338",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1339",
+      "name": "1340",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1341",
+      "name": "1342",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1343",
+      "name": "1344",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1345",
+      "name": "1346",
+      "type": "1297"
+    },
+    {
+      "id": "1347",
+      "name": "1348",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1349",
+      "name": "1350",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1351",
+      "name": "1352",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1353",
+      "name": "1354",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1355",
+      "name": "1356",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1357",
+      "name": "1358",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1359",
+      "name": "1360",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1361",
+      "name": "1362",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1363",
+      "name": "1364",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1422"
+    },
+    {
+      "id": "1366",
+      "name": "1367",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1368",
+      "name": "1369",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1370",
+      "name": "1371",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1423"
+    },
+    {
+      "id": "1373",
+      "name": "1374",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1424"
+    },
+    {
+      "id": "1376",
+      "name": "1377",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1378",
+      "name": "1379",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1380",
+      "name": "1381",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1425"
+    },
+    {
+      "id": "1383",
+      "name": "1384",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1426"
+    },
+    {
+      "id": "1386",
+      "name": "1387",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1427"
+    },
+    {
+      "id": "1389",
+      "name": "1390",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1428"
+    },
+    {
+      "id": "1392",
+      "name": "1393",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1429"
+    },
+    {
+      "id": "1395",
+      "name": "1396",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1430"
+    },
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1431"
+    },
+    {
+      "id": "1401",
+      "name": "1402",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1432"
+    },
+    {
+      "id": "1404",
+      "name": "1405",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1433"
+    },
+    {
+      "id": "1407",
+      "name": "1408",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1434"
+    },
+    {
+      "id": "1410",
+      "name": "1411",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1435"
+    },
+    {
+      "id": "1413",
+      "name": "1414",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1436"
+    },
+    {
+      "id": "1416",
+      "name": "1417",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1437"
+    },
+    {
+      "id": "1273",
+      "name": "1273",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "item": 2
+    },
+    {
+      "id": "1277",
+      "name": "1277",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1279",
+      "name": "1279",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1280",
+      "name": "1280",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1281",
+      "name": "1281",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1282",
+      "name": "1282",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1283",
+      "name": "1283",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1284",
+      "name": "1284",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1285",
+      "name": "1285",
+      "type": "1276"
+    },
+    {
+      "id": "1286",
+      "name": "1286",
+      "type": "1276"
+    },
+    {
+      "id": "1287",
+      "name": "1287",
+      "type": "1276"
+    },
+    {
+      "id": "1288",
+      "name": "1288",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1289",
+      "name": "1289",
+      "type": "1276"
+    },
+    {
+      "id": "1290",
+      "name": "1290",
+      "type": "1276"
+    },
+    {
+      "id": "1291",
+      "name": "1291",
+      "type": "1276"
+    },
+    {
+      "id": "1292",
+      "name": "1292",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1293",
+      "name": "1293",
+      "type": "1276"
+    },
+    {
+      "id": "1294",
+      "name": "1295",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1298",
+      "name": "1299",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1300",
+      "name": "1301",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1302",
+      "name": "1303",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1438"
+    },
+    {
+      "id": "1305",
+      "name": "1306",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1307",
+      "name": "1308",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1309",
+      "name": "1310",
+      "type": "1297"
+    },
+    {
+      "id": "1311",
+      "name": "1312",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1313",
+      "name": "1314",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1315",
+      "name": "1316",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1317",
+      "name": "1318",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1319",
+      "name": "1320",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1321",
+      "name": "1322",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297",
+      "color": "1439"
+    },
+    {
+      "id": "1324",
+      "name": "1325",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1326",
+      "name": "1327",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1328",
+      "name": "1329",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1330",
+      "name": "1331",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1332",
+      "name": "1333",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1440"
+    },
+    {
+      "id": "1335",
+      "name": "1336",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1337",
+      "name": "1338",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1339",
+      "name": "1340",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1341",
+      "name": "1342",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1343",
+      "name": "1344",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1345",
+      "name": "1346",
+      "type": "1297"
+    },
+    {
+      "id": "1347",
+      "name": "1348",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1349",
+      "name": "1350",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1351",
+      "name": "1352",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1353",
+      "name": "1354",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1355",
+      "name": "1356",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1357",
+      "name": "1358",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1359",
+      "name": "1360",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1361",
+      "name": "1362",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1363",
+      "name": "1364",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1441"
+    },
+    {
+      "id": "1366",
+      "name": "1367",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1368",
+      "name": "1369",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1370",
+      "name": "1371",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1442"
+    },
+    {
+      "id": "1373",
+      "name": "1374",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1443"
+    },
+    {
+      "id": "1376",
+      "name": "1377",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1378",
+      "name": "1379",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1380",
+      "name": "1381",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1444"
+    },
+    {
+      "id": "1383",
+      "name": "1384",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1445"
+    },
+    {
+      "id": "1386",
+      "name": "1387",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1446"
+    },
+    {
+      "id": "1389",
+      "name": "1390",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1447"
+    },
+    {
+      "id": "1392",
+      "name": "1393",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1448"
+    },
+    {
+      "id": "1395",
+      "name": "1396",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1449"
+    },
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1450"
+    },
+    {
+      "id": "1401",
+      "name": "1402",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1451"
+    },
+    {
+      "id": "1404",
+      "name": "1405",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1452"
+    },
+    {
+      "id": "1407",
+      "name": "1408",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1453"
+    },
+    {
+      "id": "1410",
+      "name": "1411",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1454"
+    },
+    {
+      "id": "1413",
+      "name": "1414",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1455"
+    },
+    {
+      "id": "1416",
+      "name": "1417",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1456"
+    },
+    {
+      "id": "1273",
+      "name": "1273",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "item": 3
+    },
+    {
+      "id": "1277",
+      "name": "1277",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1279",
+      "name": "1279",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1280",
+      "name": "1280",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1281",
+      "name": "1281",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1282",
+      "name": "1282",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1278",
+      "type": "1276"
+    },
+    {
+      "id": "1283",
+      "name": "1283",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1284",
+      "name": "1284",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1285",
+      "name": "1285",
+      "type": "1276"
+    },
+    {
+      "id": "1286",
+      "name": "1286",
+      "type": "1276"
+    },
+    {
+      "id": "1287",
+      "name": "1287",
+      "type": "1276"
+    },
+    {
+      "id": "1288",
+      "name": "1288",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1289",
+      "name": "1289",
+      "type": "1276"
+    },
+    {
+      "id": "1290",
+      "name": "1290",
+      "type": "1276"
+    },
+    {
+      "id": "1291",
+      "name": "1291",
+      "type": "1276"
+    },
+    {
+      "id": "1292",
+      "name": "1292",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1276"
+    },
+    {
+      "id": "1293",
+      "name": "1293",
+      "type": "1276"
+    },
+    {
+      "id": "1294",
+      "name": "1295",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1298",
+      "name": "1299",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1300",
+      "name": "1301",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1302",
+      "name": "1303",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1457"
+    },
+    {
+      "id": "1305",
+      "name": "1306",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1307",
+      "name": "1308",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1309",
+      "name": "1310",
+      "type": "1297"
+    },
+    {
+      "id": "1311",
+      "name": "1312",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1313",
+      "name": "1314",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1315",
+      "name": "1316",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1317",
+      "name": "1318",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1319",
+      "name": "1320",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1321",
+      "name": "1322",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1275",
+      "type": "1297",
+      "color": "1458"
+    },
+    {
+      "id": "1324",
+      "name": "1325",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1326",
+      "name": "1327",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1328",
+      "name": "1329",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1330",
+      "name": "1331",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1332",
+      "name": "1333",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1459"
+    },
+    {
+      "id": "1335",
+      "name": "1336",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1337",
+      "name": "1338",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1339",
+      "name": "1340",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1341",
+      "name": "1342",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1343",
+      "name": "1344",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1345",
+      "name": "1346",
+      "type": "1297"
+    },
+    {
+      "id": "1347",
+      "name": "1348",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1349",
+      "name": "1350",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1351",
+      "name": "1352",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1353",
+      "name": "1354",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1355",
+      "name": "1356",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1357",
+      "name": "1358",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1359",
+      "name": "1360",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1361",
+      "name": "1362",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1363",
+      "name": "1364",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1460"
+    },
+    {
+      "id": "1366",
+      "name": "1367",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1368",
+      "name": "1369",
+      "messageListVisibility": "1274",
+      "labelListVisibility": "1275",
+      "type": "1297"
+    },
+    {
+      "id": "1370",
+      "name": "1371",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1461"
+    },
+    {
+      "id": "1373",
+      "name": "1374",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1462"
+    },
+    {
+      "id": "1376",
+      "name": "1377",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1378",
+      "name": "1379",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297"
+    },
+    {
+      "id": "1380",
+      "name": "1381",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1463"
+    },
+    {
+      "id": "1383",
+      "name": "1384",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1464"
+    },
+    {
+      "id": "1386",
+      "name": "1387",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1465"
+    },
+    {
+      "id": "1389",
+      "name": "1390",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1466"
+    },
+    {
+      "id": "1392",
+      "name": "1393",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1467"
+    },
+    {
+      "id": "1395",
+      "name": "1396",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1468"
+    },
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1469"
+    },
+    {
+      "id": "1401",
+      "name": "1402",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1470"
+    },
+    {
+      "id": "1404",
+      "name": "1405",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1471"
+    },
+    {
+      "id": "1407",
+      "name": "1408",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1472"
+    },
+    {
+      "id": "1410",
+      "name": "1411",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1473"
+    },
+    {
+      "id": "1413",
+      "name": "1414",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1474"
+    },
+    {
+      "id": "1416",
+      "name": "1417",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1475"
+    },
+    {
+      "labels": "1399"
+    },
+    {
+      "item": 0
+    },
+    {
+      "labels": "1399"
+    },
+    {
+      "item": 1
+    },
+    {
+      "labels": "1399"
+    },
+    {
+      "item": 2
+    },
+    {
+      "labels": "1399"
+    },
+    {
+      "item": 3
+    },
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1476",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1477",
+      "1478"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1479",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1477",
+      "1480"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1481",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1477",
+      "1482"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1483",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1477",
+      "1484"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1485",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1486",
+      "1478"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1487",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1486",
+      "1480"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1488",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1486",
+      "1482"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1489",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1486",
+      "1484"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1490",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1491",
+      "1478"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1492",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1491",
+      "1480"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1493",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1491",
+      "1482"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1494",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1491",
+      "1484"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1495",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1496",
+      "1478"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1497",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1496",
+      "1480"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1498",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1496",
+      "1482"
+    ],
+    {
+      "id": "1398",
+      "name": "1399",
+      "messageListVisibility": "1296",
+      "labelListVisibility": "1278",
+      "type": "1297",
+      "color": "1499",
+      "labels": "1399"
+    },
+    {},
+    [
+      "1496",
+      "1484"
+    ],
+    [
+      "1500",
+      "1501",
+      "1502",
+      "1503",
+      "1504",
+      "1505",
+      "1506",
+      "1507",
+      "1508",
+      "1509",
+      "1510",
+      "1511",
+      "1512",
+      "1513",
+      "1514",
+      "1515"
+    ],
+    [
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398",
+      "1398"
+    ],
+    "19c5ff4c354df080",
+    "Mathieu Gros Stories for Mathieu Gros @mathieu.gros·Become a member Medium daily digest Today&#39;s highlights Usman Writes Usman Writes Google Launches Mangle: A New Language That Could Change How We",
+    {
+      "mimeType": "1516"
+    },
+    "18745230",
+    "1771136400000",
+    [
+      "1517",
+      "1518",
+      "1519",
+      "1520"
+    ],
+    "Medium Daily Digest <noreply@medium.com>",
+    "Google Launches Mangle: A New Language That Could Change How We Work With Databases | Usman Writes",
+    "mathieu.gros@gmail.com",
+    "Mathieu Gros Stories for Mathieu Gros @mathieu.gros·Become a member Medium daily digest Today's highlights Usman Writes Usman Writes Google Launches Mangle: A New Language That Could Change How We",
+    {
+      "mimeType": "1516"
+    },
+    [
+      "1521",
+      "1522",
+      "1523",
+      "1524"
+    ],
+    "19c5fdece4759607",
+    "Teachable logo white Hello mathieu.gros@gmail.com, We have detected an existing Teachable Account using this email. You can link your Teachable Account to Code and Compile by logging in to Teachable",
+    {
+      "mimeType": "1525"
+    },
+    "18745221",
+    "1771134963000",
+    [
+      "1521",
+      "1522",
+      "1523",
+      "1524"
+    ],
+    "Team Teachable <notifications+6e41aa9a@tx.teachable.com>",
+    "\"mathieu.gros@gmail.com\" <mathieu.gros@gmail.com>",
+    "Connect your Teachable Account to Code and Compile",
+    "19c5b68d07fbc5c7",
+    "On a votre date idéal… ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌",
+    {
+      "mimeType": "1516"
+    },
+    "18744909",
+    "1771060121000",
+    [
+      "1521",
+      "1526",
+      "1524"
+    ],
+    "\"McDonald's France\" <contact@info-news.mcdonalds.fr>",
+    "Crush glacé à 1,50€* 💖",
+    "19c5af3e34f321cb",
+    "Bonjour Mathieu, Nous souhaitons savoir si vous êtes toujours intérêssé(e) par le bien suivant ? property picture Appartement • 770 € 58.7 m 2 • 3 p. • 2 ch. Souhaitez-vous postuler pour ce bien ? Oui,",
+    {
+      "mimeType": "1516"
+    },
+    "18739739",
+    "1771052458000",
+    [
+      "1521",
+      "1522",
+      "1523",
+      "1524"
+    ],
+    "Altarea <no-reply@flatbay.fr>",
+    "Êtes-vous toujours intérêssé(e) par Appartement Chemin du Pont des Îles 30000 Nîmes",
+    "19c3344115ccafa2",
+    "Qwen3-Next-Coder is now available on Ollama with version 0.15.5. This model supports a context window of 256K tokens and was trained specifically for agentic coding — tool use, long tasks, and",
+    {
+      "mimeType": "1516"
+    },
+    "18744679",
+    "1770386624000",
+    [
+      "1521",
+      "1522",
+      "1526",
+      "1524",
+      "1527"
+    ],
+    "Ollama <hello@ollama.com>",
+    "",
+    "Qwen3-Coder-Next available in Ollama",
+    {
+      "generations": "1528"
+    },
+    {
+      "completionTokens": 79,
+      "promptTokens": 653,
+      "totalTokens": 732
+    },
+    [
+      "1529"
+    ],
+    {
+      "openai_api_key": "1530",
+      "model": "1531",
+      "temperature": 0,
+      "max_retries": 2,
+      "configuration": "1532",
+      "model_kwargs": "1533",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1534"
+    },
+    {
+      "completionTokens": 78,
+      "promptTokens": 626,
+      "totalTokens": 704
+    },
+    [
+      "1535"
+    ],
+    {
+      "openai_api_key": "1536",
+      "model": "1531",
+      "temperature": 0,
+      "max_retries": 2,
+      "configuration": "1537",
+      "model_kwargs": "1538",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1539"
+    },
+    {
+      "completionTokens": 67,
+      "promptTokens": 866,
+      "totalTokens": 933
+    },
+    [
+      "1540"
+    ],
+    {
+      "openai_api_key": "1541",
+      "model": "1531",
+      "temperature": 0,
+      "max_retries": 2,
+      "configuration": "1542",
+      "model_kwargs": "1543",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1544"
+    },
+    {
+      "completionTokens": 77,
+      "promptTokens": 692,
+      "totalTokens": 769
+    },
+    [
+      "1545"
+    ],
+    {
+      "openai_api_key": "1546",
+      "model": "1531",
+      "temperature": 0,
+      "max_retries": 2,
+      "configuration": "1547",
+      "model_kwargs": "1548",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1549"
+    },
+    {
+      "completionTokens": 76,
+      "promptTokens": 646,
+      "totalTokens": 722
+    },
+    [
+      "1550"
+    ],
+    {
+      "openai_api_key": "1551",
+      "model": "1531",
+      "temperature": 0,
+      "max_retries": 2,
+      "configuration": "1552",
+      "model_kwargs": "1553",
+      "supports_strict_tool_calling": false
+    },
+    "parse",
+    "{\n  \"__structured__output\": {\n    \"__structured__output__object\": {\n      \"id\": \"19c5ff4c354df080\",\n      \"replyReason\": \"Le mail est une newsletter informative sur un nouveau langage de programmation lancé par Google, sans demande explicite d'action ou question nécessitant une réponse.\",\n      \"needsReply\": false\n    }\n  }\n}",
+    "{\n  \"__structured__output\": {\n    \"__structured__output__object\": {\n      \"id\": \"19c5fdece4759607\",\n      \"replyReason\": \"Le mail informe simplement de la détection d'un compte Teachable existant et propose de le connecter, aucune action de réponse n'est nécessaire.\",\n      \"needsReply\": false\n    }\n  }\n}",
+    "{\n  \"__structured__output\": {\n    \"__structured__output__object\": {\n      \"id\": \"19c5b68d07fbc5c7\",\n      \"replyReason\": \"Le message semble être une promotion commerciale sans demande explicite de réponse.\",\n      \"needsReply\": false\n    }\n  }\n}",
+    "{\n  \"__structured__output\": {\n    \"__structured__output__object\": {\n      \"id\": \"19c5af3e34f321cb\",\n      \"replyReason\": \"Le mail demande une confirmation d'intérêt pour un appartement, une réponse est nécessaire pour indiquer si vous souhaitez postuler ou non.\",\n      \"needsReply\": true\n    }\n  }\n}",
+    "{\n  \"__structured__output\": {\n    \"__structured__output__object\": {\n      \"id\": \"19c3344115ccafa2\",\n      \"replyReason\": \"Le mail informe de la disponibilité d'un nouveau modèle de codage sur Ollama, sans poser de question ni demander d'action spécifique.\",\n      \"needsReply\": false\n    }\n  }\n}",
+    "Le mail est une newsletter informative sur un nouveau langage de programmation lancé par Google, sans demande explicite d'action ou question nécessitant une réponse.",
+    "Le mail informe simplement de la détection d'un compte Teachable existant et propose de le connecter, aucune action de réponse n'est nécessaire.",
+    "Le message semble être une promotion commerciale sans demande explicite de réponse.",
+    "Le mail demande une confirmation d'intérêt pour un appartement, une réponse est nécessaire pour indiquer si vous souhaitez postuler ou non.",
+    "Le mail informe de la disponibilité d'un nouveau modèle de codage sur Ollama, sans poser de question ni demander d'action spécifique.",
+    {
+      "generations": "1554"
+    },
+    {
+      "completionTokens": 12,
+      "promptTokens": 1139,
+      "totalTokens": 1151
+    },
+    [
+      "1555"
+    ],
+    {
+      "openai_api_key": "1556",
+      "model": "1557",
+      "max_retries": 2,
+      "configuration": "1558",
+      "model_kwargs": "1559",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1560"
+    },
+    {
+      "completionTokens": 12,
+      "promptTokens": 1139,
+      "totalTokens": 1151
+    },
+    [
+      "1555"
+    ],
+    {
+      "openai_api_key": "1561",
+      "model": "1557",
+      "max_retries": 2,
+      "configuration": "1562",
+      "model_kwargs": "1563",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1564"
+    },
+    {
+      "completionTokens": 20,
+      "promptTokens": 1139,
+      "totalTokens": 1159
+    },
+    [
+      "1555"
+    ],
+    {
+      "openai_api_key": "1565",
+      "model": "1557",
+      "max_retries": 2,
+      "configuration": "1566",
+      "model_kwargs": "1567",
+      "supports_strict_tool_calling": false
+    },
+    {
+      "generations": "1568"
+    },
+    {
+      "completionTokens": 12,
+      "promptTokens": 1139,
+      "totalTokens": 1151
+    },
+    [
+      "1555"
+    ],
+    {
+      "openai_api_key": "1569",
+      "model": "1557",
+      "max_retries": 2,
+      "configuration": "1570",
+      "model_kwargs": "1571",
+      "supports_strict_tool_calling": false
+    },
+    "```json\n{\"output\":{\"labels\":[\"Newsletter\"]}}\n```",
+    "```json\n{\n  \"output\": {\n    \"labels\": [\"Newsletter\"]\n  }\n}\n```",
+    {
+      "labels": "1269"
+    },
+    {
+      "labels": "1270"
+    },
+    {
+      "labels": "1271"
+    },
+    {
+      "labels": "1272"
+    },
+    [
+      "1399"
+    ],
+    [
+      "1399"
+    ],
+    [
+      "1399"
+    ],
+    [
+      "1399"
+    ],
+    "CHAT",
+    "hide",
+    "labelHide",
+    "system",
+    "SENT",
+    "labelShow",
+    "INBOX",
+    "IMPORTANT",
+    "TRASH",
+    "DRAFT",
+    "SPAM",
+    "CATEGORY_FORUMS",
+    "CATEGORY_UPDATES",
+    "CATEGORY_PERSONAL",
+    "CATEGORY_PROMOTIONS",
+    "CATEGORY_SOCIAL",
+    "GREEN_CIRCLE",
+    "RED_CIRCLE",
+    "YELLOW_STAR",
+    "STARRED",
+    "UNREAD",
+    "Label_1",
+    "camera@gmail.com",
+    "show",
+    "user",
+    "Label_10",
+    "AEMCO",
+    "Label_12",
+    "CLEO",
+    "Label_1236065026104893536",
+    "System-Alert",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    "Label_13",
+    "CLEO/JAPON FUKUSHIMA/12-1066_MACHINE DE DECOUPE",
+    "Label_14",
+    "CLEO/07-1040_ROBOT INSPEC STEL_IndB DERICHEBOURG",
+    "Label_1449467372891832066",
+    "Sales-Lead",
+    "Label_15",
+    "AEMCO/01-975_BUGEY1 STMI",
+    "Label_16",
+    "DAHER",
+    "Label_17",
+    "DAHER/12-1065_CONTENEUR DE MANUTENTION ETC",
+    "Label_18",
+    "CLEO/02-1078_PROCEDE CAROTTAGE ANDRA",
+    "Label_19",
+    "CLEO/04-820_CEA FONTENAY",
+    "Label_2",
+    "cma.mathieugros@orange.fr",
+    {
+      "textColor": "1574",
+      "backgroundColor": "1575"
+    },
+    "Label_20",
+    "CLEO/JAPON FUKUSHIMA/06-1185_OBTURATION VBL EN CHARGE",
+    "Label_21",
+    "CLEO/CEA PREMICE",
+    "Label_22",
+    "CLEO/CEA PREMICE/09-964_Malaxeur",
+    "Label_23",
+    "CLEO/CEA PREMICE/02-1157_Introduction adjuvant",
+    "Label_2329338360552893920",
+    "Legal",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    "Label_24",
+    "CLEO/CEA PREMICE/03-1161_Doseur PARIMIX archivage",
+    "Label_25",
+    "CLEO/JAPON FUKUSHIMA",
+    "Label_26",
+    "CLEO/09-1211_RAINUREUSE",
+    "Label_27",
+    "CLEO/02-1256_SKID POMPAGE DE L'ADEC",
+    "Label_34",
+    "02_Mgfab",
+    "Label_35",
+    "02_Mgfab/mgfab.fr.contact",
+    "Label_36",
+    "02_Mgfab/mgfab.fr",
+    "Label_38",
+    "02_Mgfab/Lbc",
+    "Label_39",
+    "02_Mgfab/mgfab.fr/Formalités",
+    "Label_4",
+    "01_Perso",
+    "Label_40",
+    "02_Mgfab/mgfab.fr/Comptes",
+    "Label_41",
+    "02_Mgfab/mgfab.fr/Ventes",
+    "Label_43",
+    "✔️",
+    "Label_44",
+    "✔️✔️",
+    "Label_4447461432210655984",
+    "P3-Normal",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1576"
+    },
+    "Label_45",
+    "✔",
+    "Label_46",
+    "✔✔",
+    "Label_47",
+    "To-Reply",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1577"
+    },
+    "Label_49",
+    "Awaiting Reply",
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    "Label_5",
+    "03_Travail",
+    "Label_5103491201070864418",
+    "02_Mgfab/mgfab.fr/E-commerce",
+    "Label_53",
+    "Notification",
+    {
+      "textColor": "1578",
+      "backgroundColor": "1580"
+    },
+    "Label_54",
+    "Marketing",
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    "Label_5419407949278103158",
+    "Waiting",
+    {
+      "textColor": "1581",
+      "backgroundColor": "1582"
+    },
+    "Label_5715023077215702925",
+    "Personal",
+    {
+      "textColor": "1583",
+      "backgroundColor": "1584"
+    },
+    "Label_6074354615212045544",
+    "P1-Urgent",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    "Label_6142826831339502995",
+    "Ops",
+    {
+      "textColor": "1585",
+      "backgroundColor": "1586"
+    },
+    "Label_6729901727656298357",
+    "Newsletter",
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    "Label_7434261779898721500",
+    "Client-Project",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    "Label_7437448973846415271",
+    "P4-Low",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1590"
+    },
+    "Label_8105483375312857054",
+    "In-Progress",
+    {
+      "textColor": "1591",
+      "backgroundColor": "1592"
+    },
+    "Label_872440408787131760",
+    "P2-High",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1593"
+    },
+    "Label_880106789849581455",
+    "Billing",
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    "Label_93311250381610953",
+    "Support",
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1574",
+      "backgroundColor": "1575"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1576"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1577"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1580"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1581",
+      "backgroundColor": "1582"
+    },
+    {
+      "textColor": "1583",
+      "backgroundColor": "1584"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1585",
+      "backgroundColor": "1586"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1590"
+    },
+    {
+      "textColor": "1591",
+      "backgroundColor": "1592"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1593"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1574",
+      "backgroundColor": "1575"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1576"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1577"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1580"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1581",
+      "backgroundColor": "1582"
+    },
+    {
+      "textColor": "1583",
+      "backgroundColor": "1584"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1585",
+      "backgroundColor": "1586"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1590"
+    },
+    {
+      "textColor": "1591",
+      "backgroundColor": "1592"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1593"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1574",
+      "backgroundColor": "1575"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1576"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1577"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1580"
+    },
+    {
+      "textColor": "1578",
+      "backgroundColor": "1579"
+    },
+    {
+      "textColor": "1581",
+      "backgroundColor": "1582"
+    },
+    {
+      "textColor": "1583",
+      "backgroundColor": "1584"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1573"
+    },
+    {
+      "textColor": "1585",
+      "backgroundColor": "1586"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1590"
+    },
+    {
+      "textColor": "1591",
+      "backgroundColor": "1592"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1593"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1572",
+      "backgroundColor": "1589"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 62
+    },
+    {
+      "item": 0,
+      "input": 1
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 1,
+      "input": 1
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 2,
+      "input": 1
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 3,
+      "input": 1
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 131
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 200
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 269
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "textColor": "1587",
+      "backgroundColor": "1588"
+    },
+    {
+      "item": 0
+    },
+    {
+      "item": 1
+    },
+    {
+      "item": 2
+    },
+    {
+      "item": 3
+    },
+    {
+      "item": 4
+    },
+    {
+      "item": 5
+    },
+    {
+      "item": 6
+    },
+    {
+      "item": 7
+    },
+    {
+      "item": 8
+    },
+    {
+      "item": 9
+    },
+    {
+      "item": 10
+    },
+    {
+      "item": 11
+    },
+    {
+      "item": 12
+    },
+    {
+      "item": 13
+    },
+    {
+      "item": 14
+    },
+    {
+      "item": 15
+    },
+    "multipart/alternative",
+    {
+      "id": "1279",
+      "name": "1279"
+    },
+    {
+      "id": "1280",
+      "name": "1280"
+    },
+    {
+      "id": "1285",
+      "name": "1285"
+    },
+    {
+      "id": "1293",
+      "name": "1293"
+    },
+    {
+      "id": "1279",
+      "name": "1279"
+    },
+    {
+      "id": "1280",
+      "name": "1280"
+    },
+    {
+      "id": "1285",
+      "name": "1285"
+    },
+    {
+      "id": "1293",
+      "name": "1293"
+    },
+    "text/html",
+    {
+      "id": "1287",
+      "name": "1287"
+    },
+    {
+      "id": "1383",
+      "name": "1384"
+    },
+    [
+      "1594"
+    ],
+    "System: Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\nSubject:Google Launches Mangle: A New Language That Could Change How We Work With Databases | Usman Writes\nMessage:Mathieu Gros Stories for Mathieu Gros @mathieu.gros·Become a member Medium daily digest Today's highlights Usman Writes Usman Writes Google Launches Mangle: A New Language That Could Change How We\n\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n19c5ff4c354df080\n\nTa sortie doit absolument respecter Output Paraser \nHuman: Subject:Google Launches Mangle: A New Language That Could Change How We Work With Databases | Usman Writes\nMessage:Mathieu Gros Stories for Mathieu Gros @mathieu.gros·Become a member Medium daily digest Today's highlights Usman Writes Usman Writes Google Launches Mangle: A New Language That Could Change How We\n\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"__structured__output\":{\"type\":\"object\",\"properties\":{\"__structured__output__object\":{\"type\":\"object\",\"properties\":{\"needsReply\":{\"type\":\"boolean\"},\"replyReason\":{\"type\":\"string\",\"description\":\"Explanation of why a reply is needed or not\"},\"id\":{\"type\":\"string\"}},\"required\":[\"needsReply\"],\"additionalProperties\":false},\"__structured__output__array\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/properties/__structured__output/properties/__structured__output__object\"}}},\"additionalProperties\":false,\"description\":\"Wrapper around the output data. It can only contain __structured__output__object or __structured__output__array but never both.\"}},\"required\":[\"__structured__output\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1596"
+    },
+    "gpt-4.1-mini",
+    {
+      "defaultHeaders": "1597",
+      "baseURL": "1598",
+      "fetchOptions": "1599"
+    },
+    {
+      "response_format": "1600"
+    },
+    [
+      "1601"
+    ],
+    "System: Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\nSubject:Connect your Teachable Account to Code and Compile\nMessage:Teachable logo white Hello mathieu.gros@gmail.com, We have detected an existing Teachable Account using this email. You can link your Teachable Account to Code and Compile by logging in to Teachable\n\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n19c5fdece4759607\n\nTa sortie doit absolument respecter Output Paraser \nHuman: Subject:Connect your Teachable Account to Code and Compile\nMessage:Teachable logo white Hello mathieu.gros@gmail.com, We have detected an existing Teachable Account using this email. You can link your Teachable Account to Code and Compile by logging in to Teachable\n\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"__structured__output\":{\"type\":\"object\",\"properties\":{\"__structured__output__object\":{\"type\":\"object\",\"properties\":{\"needsReply\":{\"type\":\"boolean\"},\"replyReason\":{\"type\":\"string\",\"description\":\"Explanation of why a reply is needed or not\"},\"id\":{\"type\":\"string\"}},\"required\":[\"needsReply\"],\"additionalProperties\":false},\"__structured__output__array\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/properties/__structured__output/properties/__structured__output__object\"}}},\"additionalProperties\":false,\"description\":\"Wrapper around the output data. It can only contain __structured__output__object or __structured__output__array but never both.\"}},\"required\":[\"__structured__output\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1602"
+    },
+    {
+      "defaultHeaders": "1603",
+      "baseURL": "1598",
+      "fetchOptions": "1604"
+    },
+    {
+      "response_format": "1605"
+    },
+    [
+      "1606"
+    ],
+    "System: Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\nSubject:Crush glacé à 1,50€* 💖\nMessage:On a votre date idéal… ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌\n\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n19c5b68d07fbc5c7\n\nTa sortie doit absolument respecter Output Paraser \nHuman: Subject:Crush glacé à 1,50€* 💖\nMessage:On a votre date idéal… ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌\n\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"__structured__output\":{\"type\":\"object\",\"properties\":{\"__structured__output__object\":{\"type\":\"object\",\"properties\":{\"needsReply\":{\"type\":\"boolean\"},\"replyReason\":{\"type\":\"string\",\"description\":\"Explanation of why a reply is needed or not\"},\"id\":{\"type\":\"string\"}},\"required\":[\"needsReply\"],\"additionalProperties\":false},\"__structured__output__array\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/properties/__structured__output/properties/__structured__output__object\"}}},\"additionalProperties\":false,\"description\":\"Wrapper around the output data. It can only contain __structured__output__object or __structured__output__array but never both.\"}},\"required\":[\"__structured__output\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1607"
+    },
+    {
+      "defaultHeaders": "1608",
+      "baseURL": "1598",
+      "fetchOptions": "1609"
+    },
+    {
+      "response_format": "1610"
+    },
+    [
+      "1611"
+    ],
+    "System: Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\nSubject:Êtes-vous toujours intérêssé(e) par Appartement Chemin du Pont des Îles 30000 Nîmes\nMessage:Bonjour Mathieu, Nous souhaitons savoir si vous êtes toujours intérêssé(e) par le bien suivant ? property picture Appartement • 770 € 58.7 m 2 • 3 p. • 2 ch. Souhaitez-vous postuler pour ce bien ? Oui,\n\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n19c5af3e34f321cb\n\nTa sortie doit absolument respecter Output Paraser \nHuman: Subject:Êtes-vous toujours intérêssé(e) par Appartement Chemin du Pont des Îles 30000 Nîmes\nMessage:Bonjour Mathieu, Nous souhaitons savoir si vous êtes toujours intérêssé(e) par le bien suivant ? property picture Appartement • 770 € 58.7 m 2 • 3 p. • 2 ch. Souhaitez-vous postuler pour ce bien ? Oui,\n\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"__structured__output\":{\"type\":\"object\",\"properties\":{\"__structured__output__object\":{\"type\":\"object\",\"properties\":{\"needsReply\":{\"type\":\"boolean\"},\"replyReason\":{\"type\":\"string\",\"description\":\"Explanation of why a reply is needed or not\"},\"id\":{\"type\":\"string\"}},\"required\":[\"needsReply\"],\"additionalProperties\":false},\"__structured__output__array\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/properties/__structured__output/properties/__structured__output__object\"}}},\"additionalProperties\":false,\"description\":\"Wrapper around the output data. It can only contain __structured__output__object or __structured__output__array but never both.\"}},\"required\":[\"__structured__output\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1612"
+    },
+    {
+      "defaultHeaders": "1613",
+      "baseURL": "1598",
+      "fetchOptions": "1614"
+    },
+    {
+      "response_format": "1615"
+    },
+    [
+      "1616"
+    ],
+    "System: Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\nSubject:Qwen3-Coder-Next available in Ollama\nMessage:Qwen3-Next-Coder is now available on Ollama with version 0.15.5. This model supports a context window of 256K tokens and was trained specifically for agentic coding — tool use, long tasks, and\n\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n19c3344115ccafa2\n\nTa sortie doit absolument respecter Output Paraser \nHuman: Subject:Qwen3-Coder-Next available in Ollama\nMessage:Qwen3-Next-Coder is now available on Ollama with version 0.15.5. This model supports a context window of 256K tokens and was trained specifically for agentic coding — tool use, long tasks, and\n\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"__structured__output\":{\"type\":\"object\",\"properties\":{\"__structured__output__object\":{\"type\":\"object\",\"properties\":{\"needsReply\":{\"type\":\"boolean\"},\"replyReason\":{\"type\":\"string\",\"description\":\"Explanation of why a reply is needed or not\"},\"id\":{\"type\":\"string\"}},\"required\":[\"needsReply\"],\"additionalProperties\":false},\"__structured__output__array\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/properties/__structured__output/properties/__structured__output__object\"}}},\"additionalProperties\":false,\"description\":\"Wrapper around the output data. It can only contain __structured__output__object or __structured__output__array but never both.\"}},\"required\":[\"__structured__output\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1617"
+    },
+    {
+      "defaultHeaders": "1618",
+      "baseURL": "1598",
+      "fetchOptions": "1619"
+    },
+    {
+      "response_format": "1620"
+    },
+    [
+      "1621"
+    ],
+    "System: Voici la version corrigée, complète et prête à l’usage, avec toutes les étiquettes FR + leur équivalent JSON EN entre parenthèses.\nElle est optimisée pour être claire pour l’humain et 100 % compatible avec le schéma JSON.\n\n✅ Document corrigé et harmonisé\n🎯 Objectif\nAttribuer une ou plusieurs étiquettes à chaque e‑mail afin qu’un système automatisé puisse organiser la boîte de réception.\n\n📌 Règles générales\n- Utilisez uniquement les étiquettes définies ci‑dessous.\n- Vous pouvez attribuer 1 à 4 étiquettes par e‑mail.\n- Incluez toujours au moins une étiquette de Type.\n- Vous pouvez ajouter une étiquette de Statut et une de Priorité.\n- En cas de doute, choisissez l’étiquette la plus générale ou la plus sûre.\n- Ignorez les signatures et mentions légales.\n\n🗂️ Étiquettes de Type (objet de l’e-mail)\n(entre parenthèses : valeur JSON obligatoire)\nProspect (Opportunity)\nPour les nouvelles opportunités commerciales : demandes de prix, devis, démonstrations, collaborations, appels d’offres.\nClient-Projet (Client-Project)\nPour le suivi des projets clients : mises à jour, livrables, retours, planification, CR de réunion.\nAssistance (Support)\nPour les problèmes techniques, bugs, incidents, demandes d’aide sur un service existant.\nFacturation (Billing)\nPour les factures, paiements, relances, devis, documents financiers.\nJuridique (Legal)\nPour les contrats, NDA, RGPD, conformité, documents d’avocats.\nOpérations (Ops)\nPour les notifications liées aux outils, serveurs, API, automatisation, infrastructure.\nAlerte système (System-Alert)\nPour les alertes automatiques critiques : erreurs, sécurité, surcharge CPU, incidents techniques.\nSi c’est clairement une alerte technique, privilégier System-Alert plutôt que Ops.\n\nPersonnel (Personal)\nPour les e‑mails non professionnels : famille, amis, vie personnelle.\nNewsletter (Newsletter)\nPour les contenus récurrents : newsletters, articles, campagnes marketing, résumés.\n\n🔧 Étiquettes de Statut / Action\n(entre parenthèses : valeur JSON obligatoire)\nÀ répondre (To-Reply)\nUne réponse ou action est attendue de l’utilisateur.\nEn attente (Waiting)\nL’utilisateur attend un retour d’un tiers.\nEn cours (In-Progress)\nLe sujet est en traitement mais non terminé.\nTerminé (Done)\nAucune action supplémentaire n’est nécessaire.\n\n🚦 Étiquettes de Priorité\n(entre parenthèses : valeur JSON obligatoire)\nP1 – Urgent (P1-Urgent)\nÀ traiter immédiatement ou très rapidement.\nP2 – Élevée (P2-High)\nImportant, à traiter dans les prochains jours.\nP3 – Normale (P3-Normal)\nPriorité standard, pas de délai critique.\nP4 – Faible (P4-Low)\nPeut être traité plus tard sans conséquence.\n\nFormat de sortie attendu\nToujours renvoyer un objet JSON :\n{\n  \"labels\": [\n    \"TypeLabel\",\n    \"StatusLabel (optionnel)\",\n    \"PriorityLabel (optionnel)\"\n  ]\n}\n\n\nExemple :\n{\n  \"labels\": [\"Client-Project\", \"To-Reply\", \"P2-High\"]\n}\n\nVoir output parser.\n\n\n\n\nHuman: Mathieu Gros Stories for Mathieu Gros @mathieu.gros·Become a member Medium daily digest Today&#39;s highlights Usman Writes Usman Writes Google Launches Mangle: A New Language That Could Change How We\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"labels\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"Opportunity\",\"Client-Project\",\"Support\",\"Billing\",\"Legal\",\"Ops\",\"Personal\",\"Newsletter\",\"System-Alert\",\"To-Reply\",\"Waiting\",\"In-Progress\",\"Done\",\"P1-Urgent\",\"P2-High\",\"P3-Normal\",\"P4-Low\"]}}},\"required\":[\"labels\"],\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1622"
+    },
+    "gpt-4o-mini",
+    {
+      "defaultHeaders": "1623",
+      "baseURL": "1598",
+      "fetchOptions": "1624"
+    },
+    {},
+    [
+      "1625"
+    ],
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1626"
+    },
+    {
+      "defaultHeaders": "1627",
+      "baseURL": "1598",
+      "fetchOptions": "1628"
+    },
+    {},
+    [
+      "1629"
+    ],
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1630"
+    },
+    {
+      "defaultHeaders": "1631",
+      "baseURL": "1598",
+      "fetchOptions": "1632"
+    },
+    {},
+    [
+      "1633"
+    ],
+    {
+      "lc": 1,
+      "type": "1595",
+      "id": "1634"
+    },
+    {
+      "defaultHeaders": "1635",
+      "baseURL": "1598",
+      "fetchOptions": "1636"
+    },
+    {},
+    "#ffffff",
+    "#fb4c2f",
+    "#222222",
+    "#eeeeee",
+    "#16a765",
+    "#ff7537",
+    "#434343",
+    "#ffe6c7",
+    "#fce8b3",
+    "#7a4706",
+    "#ffdeb5",
+    "#0d3472",
+    "#b6cff5",
+    "#0b4f30",
+    "#b3efd3",
+    "#711a36",
+    "#fbd3e0",
+    "#b99aff",
+    "#cca6ac",
+    "#094228",
+    "#42d692",
+    "#ffad46",
+    [
+      "1637"
+    ],
+    "secret",
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    "https://api.openai.com/v1",
+    {
+      "dispatcher": "1640"
+    },
+    {
+      "type": "1641"
+    },
+    [
+      "1642"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1643"
+    },
+    {
+      "type": "1641"
+    },
+    [
+      "1644"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1645"
+    },
+    {
+      "type": "1641"
+    },
+    [
+      "1646"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1647"
+    },
+    {
+      "type": "1641"
+    },
+    [
+      "1648"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1649"
+    },
+    {
+      "type": "1641"
+    },
+    [
+      "1650"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1651"
+    },
+    [
+      "1652"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1653"
+    },
+    [
+      "1654"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1655"
+    },
+    [
+      "1656"
+    ],
+    [
+      "1638"
+    ],
+    {
+      "openai-platform": "1639"
+    },
+    {
+      "dispatcher": "1657"
+    },
+    {
+      "text": "1237",
+      "generationInfo": "1658"
+    },
+    "OPENAI_API_KEY",
+    "org-qkmJQuJ2WnvoIKMr2UJwIJkZ",
+    {
+      "_events": "1659",
+      "_eventsCount": 0
+    },
+    "json_object",
+    {
+      "text": "1238",
+      "generationInfo": "1660"
+    },
+    {
+      "_events": "1661",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1239",
+      "generationInfo": "1662"
+    },
+    {
+      "_events": "1663",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1240",
+      "generationInfo": "1664"
+    },
+    {
+      "_events": "1665",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1241",
+      "generationInfo": "1666"
+    },
+    {
+      "_events": "1667",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1263",
+      "generationInfo": "1668"
+    },
+    {
+      "_events": "1669",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1263",
+      "generationInfo": "1670"
+    },
+    {
+      "_events": "1671",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1264",
+      "generationInfo": "1672"
+    },
+    {
+      "_events": "1673",
+      "_eventsCount": 0
+    },
+    {
+      "text": "1263",
+      "generationInfo": "1674"
+    },
+    {
+      "_events": "1675",
+      "_eventsCount": 0
+    },
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    {
+      "finish_reason": "1676"
+    },
+    {},
+    "stop"
+  ],
+  "workflowData": {
+    "id": "9cQ_xkvC-gZI3c7TK5HOn",
+    "name": "Gmail AI Auto-Responder: Create Draft Replies to incoming emails",
+    "active": false,
+    "activeVersionId": null,
+    "nodes": [
+      {
+        "parameters": {
+          "pollTimes": {
+            "item": [
+              {
+                "mode": "everyMinute"
+              }
+            ]
+          },
+          "authentication": "oAuth2",
+          "event": "messageReceived",
+          "simple": false,
+          "filters": {
+            "q": "-from:me"
+          },
+          "options": {}
+        },
+        "id": "c1bc92eb-e3b6-4a23-8872-eda1824fc2a0",
+        "name": "Gmail Trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          112,
+          112
+        ],
+        "typeVersion": 1,
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "qcgpwRzx5eZ9o1LQ",
+            "name": "Gmail account"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 1
+            },
+            "conditions": [
+              {
+                "id": "53849246-ad32-4845-9976-9f9688f5a6f2",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "true",
+                  "singleValue": true
+                },
+                "leftValue": "={{ $json.needsReply }}",
+                "rightValue": "true"
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "id": "c7c906c1-dae0-44de-840e-9b07dbd65db6",
+        "name": "If Needs Reply",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          672,
+          112
+        ],
+        "typeVersion": 2
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "jsonSchemaExample": "{\n\t\"state\": \"California\",\n\t\"cities\": [\"Los Angeles\", \"San Francisco\", \"San Diego\"]\n}",
+          "jsonSchema": "={\n  \"type\": \"object\",\n  \"properties\": {\n    \"needsReply\": {\n      \"type\": \"boolean\"\n    },\n    \"replyReason\": {\n      \"type\": \"string\",\n      \"description\": \"Explanation of why a reply is needed or not\"\n    },\n    \"id\": {\n      \"type\": \"string\",\n      \"id\": \"Mail ID\"\n    }\n  },\n  \"required\": [\"needsReply\"]\n}",
+          "autoFix": false
+        },
+        "id": "ad975f06-bcb1-4c3c-858d-aa0c3ca6873f",
+        "name": "JSON Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          528,
+          272
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "model": "gpt-4.1-mini",
+          "options": {
+            "responseFormat": "json_object",
+            "temperature": 0
+          }
+        },
+        "id": "c913543c-4260-49ce-90e9-2598d227c380",
+        "name": "OpenAI Chat",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          352,
+          272
+        ],
+        "typeVersion": 1,
+        "credentials": {
+          "openAiApi": {
+            "id": "bcp1WWksO5Apywoz",
+            "name": "OpenAi account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "## When I receive an Email\n",
+          "height": 394.42512272977456,
+          "width": 304.10628068244364,
+          "color": 1
+        },
+        "id": "a0291749-e0ed-4337-b840-a1dac9ae3843",
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          0
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## ... that Needs a Reply\n",
+          "height": 397,
+          "width": 556,
+          "color": 1
+        },
+        "id": "495104ba-c461-4a12-8e13-812187f67916",
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          320,
+          0
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## Generate a Reply",
+          "height": 400.08454375343996,
+          "width": 333.19082443588354,
+          "color": 1
+        },
+        "id": "00925626-eef0-4c73-a063-d22c22540cc4",
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          896,
+          0
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## ...as a Draft in the conversation",
+          "height": 395,
+          "width": 326,
+          "color": 1
+        },
+        "id": "8d9252c7-8509-44d2-ba9c-3c7a81abd9e6",
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1248,
+          0
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "model": "gpt-4.1-mini",
+          "options": {}
+        },
+        "id": "88f0c995-c67d-4b5b-8609-8bc5b645fbab",
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          912,
+          256
+        ],
+        "typeVersion": 1,
+        "credentials": {
+          "openAiApi": {
+            "id": "bcp1WWksO5Apywoz",
+            "name": "OpenAi account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "authentication": "oAuth2",
+          "resource": "draft",
+          "operation": "create",
+          "subject": "=Re: {{ $('Gmail trigger').item.json.headers.subject }}",
+          "threadNotice": "",
+          "emailType": "html",
+          "message": "={{ $json.text.replace(/\\n/g, \"<br />\\n\") }}",
+          "options": {
+            "threadId": "={{ $('Gmail trigger').item.json.threadId }}",
+            "sendTo": "={{ $('Gmail trigger').item.json.headers.from }}"
+          }
+        },
+        "id": "f47668da-5cdd-4301-9c08-cc37fb0b7292",
+        "name": "Gmail - Create Draft",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1344,
+          112
+        ],
+        "typeVersion": 2.1,
+        "webhookId": "52130cc2-2bc3-4250-b436-6a91182a9159",
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "MP7zXHvHyevKQVsV",
+            "name": "Gmail account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "prompt": "=Subject:{{ $('Get many messages').item.json.Subject }}\nMessage:{{ $json.snippet }}\n",
+          "messages": {
+            "messageValues": [
+              {
+                "type": "SystemMessagePromptTemplate",
+                "message": "=Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\n{{$parameter.prompt}}\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n{{ $json.id }}\n\nTa sortie doit absolument respecter Output Paraser "
+              }
+            ]
+          }
+        },
+        "id": "910399dc-e6f2-4379-a654-4247a0263c46",
+        "name": "Assess if message needs a reply",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          352,
+          112
+        ],
+        "typeVersion": 1.3,
+        "alwaysOutputData": false,
+        "notesInFlow": false
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "promptType": "define",
+          "text": "=Subject: {{ $('Gmail trigger').item.json.subject }}\nMessage: {{ $('Gmail trigger').item.json.textAsHtml }}",
+          "hasOutputParser": false,
+          "needsFallback": false,
+          "messages": {
+            "messageValues": [
+              {
+                "type": "SystemMessagePromptTemplate",
+                "message": "You're a helpful personal assistant and your task is to draft replies on my behalf to my incoming emails. Whenever I provide some text from an email, return an appropriate draft reply for it and nothing else.\nEnsure that the reply is suitable for a professional email setting and addresses the topic in a clear, structured, and detailed manner.\nDo not make things up.\n\nDetailed instructions:\n- Be concise and maintain a business casual tone.\n- Start with \"Hello,\", and end with \"Best,\"\n- When replying to yes-no questions, draft 2 responses: one affirmative and one negative separated by \" - - - - - - - OR - - - - - - - \"\n- If you don't know an answer, you can leave placeholders like \"[YOUR_ANSWER_HERE]\".\n- Don't use any special formatting, only plain text.\n- Reply in the same language as the inbound email."
+              }
+            ]
+          }
+        },
+        "id": "6276f430-f228-481f-8574-e5a5a34695d0",
+        "name": "Generate email reply",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          944,
+          64
+        ],
+        "typeVersion": 1.4
+      },
+      {
+        "parameters": {
+          "content": "###\n\n\n\n\n\n\n\n\n\n\n### JSON schema\nEdit JSON schema and label names according to your needs.\n\n⚠️ **Label names in system prompt and JSON schema should be the same.**",
+          "height": 319.3323098457962,
+          "width": 241.53974014153226,
+          "color": 1
+        },
+        "id": "a19184c9-70b3-40b5-87f3-b69b31106b00",
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1104,
+          1024
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Merge labels\nCombine labels retrieved from Gmail account and assigned by AI together.",
+          "height": 347.0476323933831,
+          "width": 226.14233872620645,
+          "color": 1
+        },
+        "id": "86cf052b-e5c7-4793-81c2-3b2aa319e4e3",
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1856,
+          688
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Aggregarte labels and add to message\nCreate array of label IDs and add to the desired email message in Gmail.",
+          "height": 347.0476323933831,
+          "width": 452.48413953150185,
+          "color": 1
+        },
+        "id": "017f82e1-fadd-4ed1-95b8-ede52cdaf117",
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2096,
+          672
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Get message content\nBased on Gmail message ID retrieve body content of the email and pass it to AI chain.",
+          "height": 348.5873725349161,
+          "width": 238.4602598584674,
+          "color": 1
+        },
+        "id": "979427f2-314a-48fe-aaf4-66225b9b520b",
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -80,
+          672
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Assign labels\nLet the AI decide which labels suit the best content of the message.\n\n⚠️ **Remember to edit system prompt** - modify label names and instructions according to your needs.",
+          "height": 348.5873725349161,
+          "width": 378.57661273793565,
+          "color": 1
+        },
+        "id": "586081f5-1c01-46b3-ba31-e4702c800576",
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          896,
+          640
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "pollTimes": {
+            "item": [
+              {
+                "mode": "everyMinute"
+              }
+            ]
+          },
+          "authentication": "oAuth2",
+          "event": "messageReceived",
+          "simple": true,
+          "filters": {}
+        },
+        "id": "45dd1095-6573-4398-8e83-b5c6781ca078",
+        "name": "Gmail trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          -272,
+          864
+        ],
+        "typeVersion": 1.2,
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "qcgpwRzx5eZ9o1LQ",
+            "name": "Gmail account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "promptType": "define",
+          "text": "={{ $('Gmail trigger').item.json.snippet }}",
+          "hasOutputParser": true,
+          "needsFallback": false,
+          "messages": {
+            "messageValues": [
+              {
+                "type": "SystemMessagePromptTemplate",
+                "message": "Voici la version corrigée, complète et prête à l’usage, avec toutes les étiquettes FR + leur équivalent JSON EN entre parenthèses.\nElle est optimisée pour être claire pour l’humain et 100 % compatible avec le schéma JSON.\n\n✅ Document corrigé et harmonisé\n🎯 Objectif\nAttribuer une ou plusieurs étiquettes à chaque e‑mail afin qu’un système automatisé puisse organiser la boîte de réception.\n\n📌 Règles générales\n- Utilisez uniquement les étiquettes définies ci‑dessous.\n- Vous pouvez attribuer 1 à 4 étiquettes par e‑mail.\n- Incluez toujours au moins une étiquette de Type.\n- Vous pouvez ajouter une étiquette de Statut et une de Priorité.\n- En cas de doute, choisissez l’étiquette la plus générale ou la plus sûre.\n- Ignorez les signatures et mentions légales.\n\n🗂️ Étiquettes de Type (objet de l’e-mail)\n(entre parenthèses : valeur JSON obligatoire)\nProspect (Opportunity)\nPour les nouvelles opportunités commerciales : demandes de prix, devis, démonstrations, collaborations, appels d’offres.\nClient-Projet (Client-Project)\nPour le suivi des projets clients : mises à jour, livrables, retours, planification, CR de réunion.\nAssistance (Support)\nPour les problèmes techniques, bugs, incidents, demandes d’aide sur un service existant.\nFacturation (Billing)\nPour les factures, paiements, relances, devis, documents financiers.\nJuridique (Legal)\nPour les contrats, NDA, RGPD, conformité, documents d’avocats.\nOpérations (Ops)\nPour les notifications liées aux outils, serveurs, API, automatisation, infrastructure.\nAlerte système (System-Alert)\nPour les alertes automatiques critiques : erreurs, sécurité, surcharge CPU, incidents techniques.\nSi c’est clairement une alerte technique, privilégier System-Alert plutôt que Ops.\n\nPersonnel (Personal)\nPour les e‑mails non professionnels : famille, amis, vie personnelle.\nNewsletter (Newsletter)\nPour les contenus récurrents : newsletters, articles, campagnes marketing, résumés.\n\n🔧 Étiquettes de Statut / Action\n(entre parenthèses : valeur JSON obligatoire)\nÀ répondre (To-Reply)\nUne réponse ou action est attendue de l’utilisateur.\nEn attente (Waiting)\nL’utilisateur attend un retour d’un tiers.\nEn cours (In-Progress)\nLe sujet est en traitement mais non terminé.\nTerminé (Done)\nAucune action supplémentaire n’est nécessaire.\n\n🚦 Étiquettes de Priorité\n(entre parenthèses : valeur JSON obligatoire)\nP1 – Urgent (P1-Urgent)\nÀ traiter immédiatement ou très rapidement.\nP2 – Élevée (P2-High)\nImportant, à traiter dans les prochains jours.\nP3 – Normale (P3-Normal)\nPriorité standard, pas de délai critique.\nP4 – Faible (P4-Low)\nPeut être traité plus tard sans conséquence.\n\nFormat de sortie attendu\nToujours renvoyer un objet JSON :\n{\n  \"labels\": [\n    \"TypeLabel\",\n    \"StatusLabel (optionnel)\",\n    \"PriorityLabel (optionnel)\"\n  ]\n}\n\n\nExemple :\n{\n  \"labels\": [\"Client-Project\", \"To-Reply\", \"P2-High\"]\n}\n\nVoir output parser.\n\n\n\n"
+              }
+            ]
+          }
+        },
+        "id": "4c3a8474-d9f2-449e-a629-58927f191565",
+        "name": "Assign labels for message",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          960,
+          832
+        ],
+        "typeVersion": 1.5
+      },
+      {
+        "parameters": {
+          "mode": "manual",
+          "duplicateItem": false,
+          "assignments": {
+            "assignments": [
+              {
+                "id": "72d11a72-6693-447c-b7ca-4ba1a3579075",
+                "name": "labels",
+                "type": "array",
+                "value": "={{ $json.output.labels }}"
+              },
+              {
+                "id": "email_id_assignment",
+                "name": "emailId",
+                "type": "string",
+                "value": "={{ $('Get many messages').item.json.id }}"
+              }
+            ]
+          },
+          "includeOtherFields": false,
+          "options": {}
+        },
+        "id": "9f5d6d18-2fe1-43d4-a611-305e9f9e99c5",
+        "name": "Set label values",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1344,
+          832
+        ],
+        "typeVersion": 3.4
+      },
+      {
+        "parameters": {
+          "authentication": "oAuth2",
+          "resource": "label",
+          "operation": "getAll",
+          "returnAll": true
+        },
+        "id": "dbf2d4cf-c053-4a4c-9630-acf17797f961",
+        "name": "Get all labels",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1616,
+          704
+        ],
+        "webhookId": "dec6f574-f47c-4b5d-86b9-2b0f6c957145",
+        "typeVersion": 2.1,
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "qcgpwRzx5eZ9o1LQ",
+            "name": "Gmail account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "fieldToSplitOut": "labels",
+          "include": "noOtherFields",
+          "options": {}
+        },
+        "id": "aa679de2-8c50-40b2-b1d8-a0339d0b779e",
+        "name": "Split out assigned labels",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1616,
+          928
+        ],
+        "typeVersion": 1,
+        "alwaysOutputData": false
+      },
+      {
+        "parameters": {
+          "mode": "combine",
+          "combineBy": "combineByFields",
+          "advanced": true,
+          "mergeByFields": {
+            "values": [
+              {
+                "field1": "name",
+                "field2": "labels"
+              }
+            ]
+          },
+          "joinMode": "keepMatches",
+          "outputDataFrom": "both",
+          "options": {}
+        },
+        "id": "73c2a694-d9ce-4e0f-847f-79344cbba5a7",
+        "name": "Merge corresponding labels",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1968,
+          784
+        ],
+        "typeVersion": 3.1,
+        "alwaysOutputData": true
+      },
+      {
+        "parameters": {
+          "aggregate": "aggregateIndividualFields",
+          "fieldsToAggregate": {
+            "fieldToAggregate": [
+              {
+                "fieldToAggregate": "id",
+                "renameField": false
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "0ff21664-2332-439e-9a47-dfd8b559020e",
+        "name": "Aggregate label IDs",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2160,
+          832
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "authentication": "oAuth2",
+          "resource": "message",
+          "operation": "addLabels",
+          "messageId": "={{ $json.emailId }}",
+          "labelIds": "={{ $json.id }}"
+        },
+        "id": "318174d8-2e00-43b8-9106-acd5586f15d1",
+        "name": "Add labels to message",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          2384,
+          832
+        ],
+        "webhookId": "4f345fc9-2afd-478b-be3b-d3d28f0fbc82",
+        "typeVersion": 2.1,
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "MP7zXHvHyevKQVsV",
+            "name": "Gmail account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "## Add AI labels to Gmail messages\nWith this workflow you can automatically set labels for your Gmail message according to its content. \n\nIn this workflow available are 3 labels: \"Partnership\", \"Inquiry\" and \"Notification\". Feel free to adjust labels according to your needs. \n\n**Please remember to set label names both in your Gmail account and workflow.**",
+          "height": 240.57943708322733,
+          "width": 420.4803040774015,
+          "color": 4
+        },
+        "id": "50cefd41-416b-4c32-95ce-363a5da95a3f",
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -784,
+          672
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## ⚠️ Note\n\n1. Complete video guide for this workflow is available [on my YouTube](https://youtu.be/a8Dhj3Zh9vQ). \n2. Remember to add your credentials and configure nodes (covered in the video guide).\n3. If you like this workflow, please subscribe to [my YouTube channel](https://www.youtube.com/@workfloows) and/or [my newsletter](https://workfloows.com/).\n\n**Thank you for your support!**",
+          "height": 257.42916378714597,
+          "width": 421.0932411886662,
+          "color": 1
+        },
+        "id": "3007b83e-b1b7-4cad-89e2-acfa3f010845",
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -784,
+          944
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Gmail Trigger\nReceive data from Gmail about new incoming message. \n\n⚠️ Set polling interval according to your needs.",
+          "height": 348.5873725349161,
+          "width": 238.4602598584674,
+          "color": 1
+        },
+        "id": "f8e092d0-1d49-4436-826e-6a25934cdf6e",
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -336,
+          672
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4o-mini"
+          },
+          "options": {}
+        },
+        "id": "e8fac222-57a6-476f-96dc-7c6083e3e7d8",
+        "name": "OpenAI Chat1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          944,
+          1040
+        ],
+        "typeVersion": 1.2,
+        "credentials": {
+          "openAiApi": {
+            "id": "bcp1WWksO5Apywoz",
+            "name": "OpenAi account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "schemaType": "manual",
+          "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"labels\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\",\n        \"enum\": [\n          \"Opportunity\",\n          \"Client-Project\",\n          \"Support\",\n          \"Billing\",\n          \"Legal\",\n          \"Ops\",\n          \"Personal\",\n          \"Newsletter\",\n          \"System-Alert\",\n          \"To-Reply\",\n          \"Waiting\",\n          \"In-Progress\",\n          \"Done\",\n          \"P1-Urgent\",\n          \"P2-High\",\n          \"P3-Normal\",\n          \"P4-Low\"\n        ]\n      }\n    }\n  },\n  \"required\": [\"labels\"]\n}\n",
+          "autoFix": false
+        },
+        "id": "5c7c0001-cc08-46ba-af6d-980074be1cf4",
+        "name": "JSON Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          1184,
+          1040
+        ],
+        "typeVersion": 1.2
+      },
+      {
+        "parameters": {
+          "authentication": "oAuth2",
+          "resource": "message",
+          "operation": "getAll",
+          "returnAll": true,
+          "simple": true,
+          "filtersNotice": "",
+          "filters": {
+            "q": "=in:inbox is:unread"
+          }
+        },
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 2.2,
+        "position": [
+          0,
+          864
+        ],
+        "id": "78659b58-8cb4-4080-890e-aaa7bb1e6f6d",
+        "name": "Get many messages",
+        "webhookId": "a898abc5-7b79-41af-9420-4dfafe234f63",
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "MP7zXHvHyevKQVsV",
+            "name": "Gmail account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"needsReply\": {\n      \"type\": \"boolean\"\n      }\n  },\n  \"required\": [\"needsReply\"]\n}",
+          "height": 224,
+          "width": 272,
+          "color": 1
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          368,
+          448
+        ],
+        "id": "467d7bab-51e4-4c6c-a8ad-19c2e46fee87",
+        "name": "Sticky Note12"
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1,
+        "position": [
+          1632,
+          112
+        ],
+        "id": "4420afff-2998-47e7-bbd4-888f3791d396",
+        "name": "No Operation, do nothing"
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1,
+        "position": [
+          2672,
+          832
+        ],
+        "id": "c3834961-3af6-49e3-aece-86106111eb0d",
+        "name": "No Operation, do nothing1"
+      },
+      {
+        "parameters": {
+          "notice": "",
+          "rule": {
+            "interval": [
+              {
+                "field": "minutes",
+                "minutesInterval": 1
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.3,
+        "position": [
+          -272,
+          1072
+        ],
+        "id": "be413833-e2c1-402a-aded-bd3dda90b9c7",
+        "name": "Schedule Trigger",
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "content": "You are an email classification assistant.\n\nYour goal is to assign one or more labels to each email so that an automation system can organize the inbox.\n\nRules:\n- Use ONLY the labels defined below. Do NOT invent new labels.\n- You may assign between 1 and 4 labels per email.\n- Always include at least one “Type” label (what the email is about).\n- Optionally add one “Status” label (what to do) and one “Priority” label (how urgent).\n- If you are not sure between two labels, choose the more general or safer one.\n- Ignore signatures and legal footers when deciding.\n\nType labels (what the email is about):\n\n- Sales-Lead\n  Use for new business opportunities: people asking for prices, demos, collaborations, or sending an RFP.\n  Examples: “We’d like to work with you”, “Can you send a quote?”, “We are interested in your services”.\n\n- Client-Project\n  Use for ongoing client work: project updates, specs, delivery, feedback, planning.\n  Examples: “Here is the latest version of the document”, “Can we change this feature?”, “Project meeting notes”.\n\n- Support\n  Use when someone reports a problem, bug, incident, or asks for help with an existing service.\n  Examples: “Your script crashes”, “I cannot log in”, “The server is down”.\n\n- Billing\n  Use for money and documents related to money: invoices, payments, refunds, quotes, bank messages, tax receipts.\n  Examples: “Invoice attached”, “Payment confirmation”, “Overdue invoice reminder”.\n\n- Legal\n  Use for contracts, NDAs, compliance, privacy (GDPR), company policies, or anything from lawyers.\n  Examples: “Please sign the contract”, “Data processing agreement”, “Terms update”.\n\n- Ops\n  (“Operations”) Use for tools, infrastructure, automation and platform notifications (hosting, APIs, monitoring).\n  Examples: “Server maintenance notice”, “API key update”, “Deployment successful/failed”.\n\n- Personal\n  Use for personal or family emails not related to business.\n  Examples: friends, family, school information for children, personal events.\n\n- Newsletter\n  Use for recurring informational content: newsletters, blog updates, marketing campaigns, community digests.\n  Examples: “Weekly newsletter”, “New features in our product”.\n\n- System-Alert\n  Use for automatic alerts that usually require attention: errors, warnings, security alerts, high-CPU, etc.\n  If the email is clearly a technical alert, prefer System-Alert over Ops.\n\nStatus / action labels (what to do next):\n\n- To-Reply\n  The user should send a reply or take a clear action.\n  Use when the sender expects an answer or a decision.\n\n- Waiting\n  The user is waiting for someone else. The ball is on the other side.\n  Example: follow-up after sending a quote, waiting for client feedback.\n\n- In-Progress\n  The user has started working on this but it is not finished yet.\n  Example: tasks currently being handled.\n\n- Done\n  Everything required by this email is already completed. No more action needed.\n\n\nPriority labels (how urgent it is):\n\n- P1-Urgent\n  Needs attention today or very soon. Short deadlines, production issues, blocking problems.\n\n- P2-High\n  Important but not critical today. Should be handled within a few days.\n\n- P3-Normal\n  Normal priority business emails without strict deadline.\n\n- P4-Low\n  Low priority. Can be processed later without consequence (some newsletters, non-urgent info).\n\nOUTPUT FORMAT (very important):\nReturn a single JSON object with this structure:\n\n{\n  \"labels\": [\n    \"TypeLabel1\",\n    \"TypeLabel2 (optional)\",\n    \"StatusLabel (optional)\",\n    \"PriorityLabel (optional)\"\n  ]\n}\n\nUse only the label names defined above. Example:\n{\"labels\":[\"Client-Project\",\"To-Reply\",\"P2-High\"]}\n",
+          "height": 160,
+          "width": 240,
+          "color": 1
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          832,
+          1280
+        ],
+        "id": "428d1307-e22a-4a08-a5cd-644583d7226d",
+        "name": "Sticky Note13"
+      }
+    ],
+    "connections": {
+      "JSON Parser": {
+        "ai_outputParser": [
+          [
+            {
+              "node": "Assess if message needs a reply",
+              "type": "ai_outputParser",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Assess if message needs a reply",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If Needs Reply": {
+        "main": [
+          [],
+          [
+            {
+              "node": "Assign labels for message",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Generate email reply",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Generate email reply": {
+        "main": [
+          [
+            {
+              "node": "Gmail - Create Draft",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Assess if message needs a reply": {
+        "main": [
+          [
+            {
+              "node": "If Needs Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail trigger": {
+        "main": [
+          [
+            {
+              "node": "Get many messages",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Assign labels for message": {
+        "main": [
+          [
+            {
+              "node": "Set label values",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Set label values": {
+        "main": [
+          [
+            {
+              "node": "Get all labels",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Split out assigned labels",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get all labels": {
+        "main": [
+          [
+            {
+              "node": "Merge corresponding labels",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Split out assigned labels": {
+        "main": [
+          [
+            {
+              "node": "Merge corresponding labels",
+              "type": "main",
+              "index": 1
+            }
+          ]
+        ]
+      },
+      "Merge corresponding labels": {
+        "main": [
+          [
+            {
+              "node": "Aggregate label IDs",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Aggregate label IDs": {
+        "main": [
+          [
+            {
+              "node": "Add labels to message",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat1": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Assign labels for message",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "JSON Parser1": {
+        "ai_outputParser": [
+          [
+            {
+              "node": "Assign labels for message",
+              "type": "ai_outputParser",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail - Create Draft": {
+        "main": [
+          [
+            {
+              "node": "No Operation, do nothing",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get many messages": {
+        "main": [
+          [
+            {
+              "node": "Assess if message needs a reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Add labels to message": {
+        "main": [
+          [
+            {
+              "node": "No Operation, do nothing1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Schedule Trigger": {
+        "main": [
+          [
+            {
+              "node": "Get many messages",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate",
+      "availableInMCP": false,
+      "callerPolicy": "workflowsFromSameOwner"
+    },
+    "pinData": {}
+  },
+  "customData": {}
+}
