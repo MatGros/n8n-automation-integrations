@@ -50,3 +50,8 @@ n8n-automation-integrations/
 1. **Jamais de secrets** dans le JSON (clés API, mots de passe). Utilisez les Credentials n8n.
 2. Toujours tester un workflow dans `development/` avant de le passer en `active/`.
 3. Mettre à jour ce README lors de l'ajout d'un nouveau workflow.
+
+## 🧰 Developer checks
+- Run the sanitization script: `python scripts/sanitize_workflows.py workflows --dry-run` (use `--force` to apply).
+- Run security tests: `pytest -q` (tests live in `scripts/tests/test_security.py`).
+

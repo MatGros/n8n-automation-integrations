@@ -51,8 +51,13 @@ All sensitive data has been removed. The repository is now safe to share publicl
 
 ## Next Steps
 1. PHASE 2: Restructure architecture (15 categories)
-2. PHASE 4: Implement automated security tests
+2. PHASE 4: Implement automated security tests (IN PROGRESS — security validator + pytest added)
 3. PHASE 5: Set up CI/CD workflows
+
+## Additional updates (2026-02-17)
+- ✅ Added `scripts/validators/security_validator.py` and `scripts/tests/test_security.py` to detect hard-coded emails, private VPS hostnames, credential IDs in `credentials.*.id`, instanceId and webhookId keys.
+- ✅ Replaced remaining hard-coded personal emails in templates/workflows with `example.com` placeholders.
+- ✅ Validator unit tests added and executed locally (see `pytest` results).
 
 ## Script Usage
 ```bash

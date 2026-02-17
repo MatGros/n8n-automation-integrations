@@ -20,12 +20,12 @@
           "convertFieldsToString": false
         }
       },
-      "id": "171159eb-9936-4dbd-94a3-4277799353bc",
+      "id": "d1e84ba8-f9e3-43fa-b98d-3764e737336e",
       "name": "leadScraping",
       "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
       "position": [
-        1792,
-        1968
+        1424,
+        1728
       ],
       "typeVersion": 2
     },
@@ -62,12 +62,12 @@
           "convertFieldsToString": false
         }
       },
-      "id": "b561761a-a725-4b6e-b37f-090563107d24",
+      "id": "e5a866be-93a1-4edd-a728-83a221e49c55",
       "name": "leadResearch",
       "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
       "position": [
-        1952,
-        1952
+        1584,
+        1712
       ],
       "typeVersion": 2
     },
@@ -79,40 +79,15 @@
           "systemMessage": "=# Présentation\nVous êtes Sam Ovens, un agent chargé de générer des prospects, responsable de la collecte et de la recherche de prospects.\n\n# Outils\n### leadScraping :\nUtilisez cet outil pour collecter des prospects dans une feuille Google Sheet. N'utilisez cet outil que lorsque vous disposez de suffisamment d'informations pour effectuer la requête de recherche JSON souhaitée.\n\n### leadResearch :\nUtilisez cet outil pour rechercher un prospect à partir de son URL LinkedIn. \n\n# Règles :\n- Posez des questions de clarification si vous avez des doutes.\n- Posez des questions afin de recueillir suffisamment d'informations pour satisfaire la requête de chacun des outils.\n- Vous devez vous présenter en tant que « Sam Ovens » et demander à l'utilisateur quels prospects il souhaite collecter aujourd'hui. \n- Remplacez toujours les espaces par « + » dans vos requêtes de recherche. Par exemple, au lieu de « los angeles united states », votre requête doit être « los+angeles+united+states ». \n- Vous avez toujours besoin d'une URL LinkedIn pour rechercher un prospect. \n- Vous ne pouvez rechercher qu'une seule personne à la fois. \n- N'hésitez pas à être léger et drôle.\n- Assurez-vous de toujours appeler les outils avec le format JSON correct, mais n'enveloppez pas la requête dans ```json```.\n\n# Exemple \n- Entrée : « Bonjour » \n- Sortie : « Ici Sam Ovens, le dieu de la prospection B2B. Quels prospects puis-je vous aider à récupérer aujourd'hui ? Indiquez-moi simplement les lieux, les entreprises et les intitulés de poste, et je m'occupe du reste ! » \n- Entrée : « Allons-y \\n Lieux : \\n - Chicago, États-Unis \\n - Sydney, Australie \\n\\n Entreprises : \\n - Planificateurs financiers \\n] \n- Sortie : « Génial. Je pense que vous avez oublié les titres de poste. Quels titres de poste dois-je rechercher ? » \n- Entrée : « Seulement les PDG, s'il vous plaît » \n- Appelez l'outil leadScrape avec la requête : \n\n[\n  {\n    « location » : [\n      « chicago+united+states »,\n      « sydney+australia »\n    ],\n    « business » : [\n      « financial+planner »\n    ],\n    « job_title » : [\n      « ceo »\n    ]\n  }\n] \n- Entrée de l'outil : « 25 nouveaux contacts ont été ajoutés à la feuille Google Sheet ! »\n- Sortie : « C'est fait ! J'ai ajouté 25 nouveaux contacts à la feuille Google Sheet. Faites-moi savoir si vous avez besoin d'autre chose ! » \n"
         }
       },
-      "id": "7ad71d24-25fd-4ca8-80c8-3124651ec6cf",
+      "id": "e89239c4-a891-4dc7-8ad8-62e03d7f73ea",
       "name": "Lead Agent",
       "type": "@n8n/n8n-nodes-langchain.agent",
       "position": [
-        1632,
-        1600
+        1264,
+        1360
       ],
       "typeVersion": 1.7,
       "onError": "continueErrorOutput"
-    },
-    {
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "value": "gpt-4.1-nano",
-          "mode": "list",
-          "cachedResultName": "gpt-4.1-nano"
-        },
-        "options": {}
-      },
-      "id": "0d408086-fcd9-4d45-a3f3-8513fc6b3286",
-      "name": "OpenAI Chat Model",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "position": [
-        1552,
-        1824
-      ],
-      "typeVersion": 1.2,
-      "credentials": {
-        "openAiApi": {
-          "id": "CRED_0002",
-          "name": "OpenAi account"
-        }
-      }
     },
     {
       "parameters": {
@@ -120,12 +95,12 @@
         "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "contextWindowLength": 10
       },
-      "id": "db2aefae-bd30-4ec1-8f10-21be6ffc51b7",
+      "id": "dc44f6cf-5906-4228-a0c7-81ea6bfb028f",
       "name": "Simple Memory",
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "position": [
-        1680,
-        1904
+        1312,
+        1664
       ],
       "typeVersion": 1.3
     },
@@ -135,39 +110,18 @@
         "fileId": "={{ $json.message.voice.file_id }}",
         "additionalFields": {}
       },
-      "id": "5b27c7d7-3b29-4dfa-8ee3-8e6db26683cd",
+      "id": "fe920c3c-a1bb-4908-bf84-b1908532364e",
       "name": "Download File",
       "type": "n8n-nodes-base.telegram",
       "position": [
-        1120,
-        1504
+        752,
+        1264
       ],
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
           "id": "CRED_0000",
           "name": "Telegram account my_bot"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "resource": "audio",
-        "operation": "transcribe",
-        "options": {}
-      },
-      "id": "4dedbb6f-1f11-4e9a-a878-e08625674ac8",
-      "name": "Transcribe",
-      "type": "@n8n/n8n-nodes-langchain.openAi",
-      "position": [
-        1328,
-        1504
-      ],
-      "typeVersion": 1.6,
-      "credentials": {
-        "openAiApi": {
-          "id": "CRED_0002",
-          "name": "OpenAi account"
         }
       }
     },
@@ -185,12 +139,12 @@
         },
         "options": {}
       },
-      "id": "3958a793-f379-4703-aabe-e2d508b1f2c4",
+      "id": "512d68df-dc42-4b70-ac53-e28e1daed7bd",
       "name": "Text",
       "type": "n8n-nodes-base.set",
       "position": [
-        1328,
-        1712
+        960,
+        1472
       ],
       "typeVersion": 3.4
     },
@@ -251,12 +205,12 @@
         },
         "options": {}
       },
-      "id": "79fc7be1-4af8-440d-aa98-f66ae47884f9",
+      "id": "bca25524-57ca-4df4-8e5d-7b1f27cb9e69",
       "name": "Voice or Text",
       "type": "n8n-nodes-base.switch",
       "position": [
-        896,
-        1600
+        528,
+        1360
       ],
       "typeVersion": 3.2
     },
@@ -268,12 +222,12 @@
           "appendAttribution": false
         }
       },
-      "id": "4e6e5070-1498-4e92-bd60-a6241f52f309",
+      "id": "2b0ed5b7-ef35-4c90-9cff-705bf805ef34",
       "name": "Response",
       "type": "n8n-nodes-base.telegram",
       "position": [
-        2112,
-        1504
+        1744,
+        1264
       ],
       "typeVersion": 1.2,
       "credentials": {
@@ -291,12 +245,12 @@
           "appendAttribution": false
         }
       },
-      "id": "4d8e1de4-a02b-4fa9-ad0e-d57a03ef2aaa",
+      "id": "5c18a4e7-7627-43b7-b274-daf8edf3f211",
       "name": "Error Response",
       "type": "n8n-nodes-base.telegram",
       "position": [
-        2112,
-        1712
+        1744,
+        1472
       ],
       "typeVersion": 1.2,
       "credentials": {
@@ -313,12 +267,12 @@
         ],
         "additionalFields": {}
       },
-      "id": "5f476e63-4b80-43c4-957d-85261db977b9",
+      "id": "fc6d9e4f-73de-4f58-881d-fd6d3743921b",
       "name": "Telegram Trigger",
       "type": "n8n-nodes-base.telegramTrigger",
       "position": [
-        640,
-        1600
+        272,
+        1360
       ],
       "typeVersion": 1.2,
       "credentials": {
@@ -335,12 +289,12 @@
         "width": 320,
         "color": 3
       },
-      "id": "f21ff98d-e562-4ab6-9d14-0b675717e8ab",
+      "id": "31c8c49c-b0c3-4c2a-8ab4-94b3822ad434",
       "name": "Sticky Note1",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1200,
-        864
+        832,
+        624
       ],
       "typeVersion": 1
     },
@@ -351,12 +305,12 @@
         "width": 780,
         "color": 5
       },
-      "id": "e70fba28-bcd8-4d34-912f-9a14676c6dee",
+      "id": "89358cfd-d13e-4b7f-b96a-11a5a20158e4",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1536,
-        864
+        1168,
+        624
       ],
       "typeVersion": 1
     },
@@ -367,12 +321,12 @@
         "width": 320,
         "color": 3
       },
-      "id": "55a0f125-836d-45c6-af8b-fa7dbca2337c",
+      "id": "73c1735e-1d05-4634-96b5-e81412698c10",
       "name": "Sticky Note2",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1200,
-        304
+        832,
+        64
       ],
       "typeVersion": 1
     },
@@ -383,12 +337,12 @@
         "width": 780,
         "color": 5
       },
-      "id": "345b869b-6150-4d03-8429-fd4fc577573a",
+      "id": "b8250a4a-ea62-4233-801b-82ae4a604a5d",
       "name": "Sticky Note3",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1536,
-        304
+        1168,
+        64
       ],
       "typeVersion": 1
     },
@@ -399,12 +353,12 @@
         "width": 880,
         "color": 6
       },
-      "id": "d27149b2-bfc3-4d4a-a0b6-2414322c8700",
+      "id": "408eeb37-1beb-4ab5-ad24-4a2811d40f63",
       "name": "Sticky Note4",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        592,
-        1472
+        224,
+        1232
       ],
       "typeVersion": 1
     },
@@ -415,28 +369,28 @@
         "width": 800,
         "color": 6
       },
-      "id": "4d9b792a-4d43-4702-873e-539ad6c5bf59",
+      "id": "93d67985-fd1b-4eb9-abc4-682282c01317",
       "name": "Sticky Note5",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1520,
-        1472
+        1152,
+        1232
       ],
       "typeVersion": 1
     },
     {
       "parameters": {
-        "content": "## Hey, I'm Abdul 👋\n### I build growth systems for consultants & agencies. If you want to work together or need help automating your business, check out my website: \n### **https://www.builtbyabdul.com/**\n### Or email me at **abdul@buildabdul.com**\n### Have a lovely day ;)`",
+        "content": "## Hey, I'm Abdul 👋\n### I build growth systems for consultants & agencies. If you want to work together or need help automating your business, check out my website: \n### **https://www.builtbyabdul.com/**\n### Or email me at **abdul@example.com**\n### Have a lovely day ;)`",
         "height": 240,
         "width": 440,
         "color": 5
       },
-      "id": "2e106fbe-506c-4d8c-90a8-2a12fd07a10a",
+      "id": "6d73651e-8c72-4845-823d-5f105a0154ad",
       "name": "Sticky Note6",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1040,
-        1952
+        672,
+        1712
       ],
       "typeVersion": 1
     },
@@ -446,14 +400,59 @@
         "height": 1160,
         "width": 780
       },
-      "id": "8260426e-0e2f-4fbe-9327-8b4248014f70",
+      "id": "cce0a53a-6c24-4cab-9e9c-b12116d663d3",
       "name": "Sticky Note7",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        368,
-        240
+        0,
+        0
       ],
       "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        1584
+      ],
+      "id": "e5cd54e9-6e3e-456b-b5ff-0745ff3547b0",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "CRED_0006",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        960,
+        1264
+      ],
+      "id": "4abff607-a920-42dd-a46e-ae6eb5fff349",
+      "name": "Transcribe a recording",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "CRED_0006",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -487,17 +486,6 @@
         ]
       ]
     },
-    "Transcribe": {
-      "main": [
-        [
-          {
-            "node": "Lead Agent",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "leadResearch": {
       "ai_tool": [
         [
@@ -524,7 +512,7 @@
       "main": [
         [
           {
-            "node": "Transcribe",
+            "node": "Transcribe a recording",
             "type": "main",
             "index": 0
           }
@@ -571,7 +559,7 @@
         ]
       ]
     },
-    "OpenAI Chat Model": {
+    "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
           {
@@ -581,17 +569,29 @@
           }
         ]
       ]
+    },
+    "Transcribe a recording": {
+      "main": [
+        [
+          {
+            "node": "Lead Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
   },
-  "versionId": "4f6f290c-05ef-4fa8-87bf-32465dd9bd7e",
+  "versionId": "a81c52f5-a8a0-42e6-81e8-c5480ac45502",
   "meta": {
-    "templateId": "6532",
     "templateCredsSetupCompleted": true
   },
-  "id": "MPgIChQYgMXvA0UZ",
+  "id": "6Jcx492wjJaThyBFX6Aei",
   "tags": []
 }

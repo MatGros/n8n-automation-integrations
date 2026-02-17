@@ -56,7 +56,7 @@
 
 ---
 
-## PHASE 2: RESTRUCTURATION ARCHITECTURE
+## PHASE 2: RESTRUCTURATION ARCHITECTURE ✅ DONE
 
 ### REVIEW PRE-PHASE 2
 - [ ] Valider que PHASE 1 est complète et testée
@@ -86,40 +86,40 @@ workflows/
 └── 99-templates/            # Templates génériques + by-technology + by-pattern
 ```
 
-- [ ] Créer tous les dossiers de catégories
-- [ ] Créer sous-dossiers pour chaque catégorie
-- [ ] Créer structure README.md pour chaque catégorie
+- [x] Créer tous les dossiers de catégories
+- [x] Créer sous-dossiers pour chaque catégorie
+- [x] Créer structure README.md pour chaque catégorie
 
 ### 2.2 Migration des workflows existants
 
-- [ ] `telegram-echo-bot.json` → `01-communication/telegram/echo-bot/workflow.json`
-- [ ] `gmail-ai-auto-responder.json` → `01-communication/email/gmail-ai-responder/workflow.json`
-- [ ] `social-media-content-creator.json` → `02-marketing/social-media/multi-platform-creator/workflow.json`
-- [ ] `chat-with-the-news.json` → `04-data-intelligence/news-agents/rss-chat-agent/workflow.json`
-- [ ] `lead-gen-agent-telegram.json` → `03-sales/lead-generation/telegram-agent/workflow.json`
-- [ ] Templates lead-gen → `99-templates/lead-gen/`
+- [x] `telegram-echo-bot.json` → `01-communication/telegram/echo-bot/workflow.json`
+- [x] `gmail-ai-auto-responder.json` → `01-communication/email/gmail-ai-responder/workflow.json`
+- [x] `social-media-content-creator.json` → `02-marketing/social-media/multi-platform-creator/workflow.json`
+- [x] `chat-with-the-news.json` → `04-data-intelligence/news-agents/rss-chat-agent/workflow.json`
+- [x] `lead-gen-agent-telegram.json` → `03-sales/lead-generation/telegram-agent/workflow.json`
+- [x] Templates lead-gen → `99-templates/lead-gen/`
 
 ### 2.3 README par workflow
 
-- [ ] `01-communication/telegram/echo-bot/README.md`
-- [ ] `01-communication/email/gmail-ai-responder/README.md`
-- [ ] `02-marketing/social-media/multi-platform-creator/README.md`
-- [ ] `04-data-intelligence/news-agents/rss-chat-agent/README.md`
-- [ ] `03-sales/lead-generation/telegram-agent/README.md`
-- [ ] `99-templates/README.md`
+- [x] `01-communication/telegram/echo-bot/README.md`
+- [x] `01-communication/email/gmail-ai-responder/README.md`
+- [x] `02-marketing/social-media/multi-platform-creator/README.md`
+- [x] `04-data-intelligence/news-agents/rss-chat-agent/README.md`
+- [x] `03-sales/lead-generation/telegram-agent/README.md`
+- [x] `99-templates/README.md`
 
 ### 2.4 Nettoyage fichiers racine
 
-- [ ] Déplacer/supprimer `Gmail AI Auto-Responder_*.data`
-- [ ] Déplacer/supprimer `Gmail AI Auto-Responder_*.n8n`
-- [ ] Organiser fichiers dupliqués `workflows/development/`
+- [x] Déplacer/supprimer `Gmail AI Auto-Responder_*.data`
+- [x] Déplacer/supprimer `Gmail AI Auto-Responder_*.n8n`
+- [x] Organiser fichiers dupliqués `workflows/development/`
 
-### 2.4 REVIEW DE PHASE 2
-- [ ] Vérifier structure conforme (15 catégories)
-- [ ] Vérifier tous workflows migrés correctement
-- [ ] Vérifier nommage en kebab-case
-- [ ] Vérifier README présent pour chaque category
-- [ ] Tester que workflows sont toujours valides après migration
+### 2.5 REVIEW DE PHASE 2 ✅
+- [x] Vérifier structure conforme (15 catégories)
+- [x] Vérifier tous workflows migrés correctement
+- [x] Vérifier nommage en kebab-case
+- [x] Vérifier README présent pour chaque category
+- [x] Tester que workflows sont toujours valides après migration
 
 ---
 
@@ -184,21 +184,21 @@ workflows/
 
 ### 4.1 Infrastructure
 
-- [ ] Créer `scripts/tests/`, `scripts/validators/`, `scripts/utils/`
+- [x] Créer `scripts/tests/`, `scripts/validators/`, `scripts/utils/`
 - [ ] Créer `requirements.txt` (pytest, jsonschema, etc.)
-- [ ] Créer `pytest.ini`
-- [ ] Créer `scripts/tests/__init__.py`
+- [x] Créer `pytest.ini`
+- [x] Créer `scripts/tests/__init__.py`
 
 ### 4.2 Tests sécurité (`scripts/tests/test_security.py`)
 
-- [ ] Test: Détection URLs serveurs
-- [ ] Test: Détection credential IDs
-- [ ] Test: Détection instance IDs
-- [ ] Test: Détection webhook IDs
+- [x] Test: Détection URLs serveurs (narrowed to private hosts)
+- [x] Test: Détection credential IDs (credentials.*.id JSON scan)
+- [x] Test: Détection instance IDs (JSON key scan)
+- [x] Test: Détection webhook IDs (JSON key scan)
 - [ ] Test: Détection IP addresses
 - [ ] Test: Détection tokens/API keys
-- [ ] Test: Détection emails personnels
-- [ ] Créer `scripts/validators/security_validator.py`
+- [x] Test: Détection emails personnels
+- [x] Créer `scripts/validators/security_validator.py`
 
 ### 4.3 Tests architecture (`scripts/tests/test_architecture.py`)
 
