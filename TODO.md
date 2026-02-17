@@ -123,7 +123,23 @@ workflows/
 - [x] Déplacer/supprimer `Gmail AI Auto-Responder_*.n8n`
 - [x] Organiser fichiers dupliqués `workflows/development/`
 
-### 2.5 REVIEW DE PHASE 2 ✅
+### 2.5 Convention Architecture Fichiers Workflows
+
+FICHIERS REQUIS (testés automatiquement):
+- [x] Chaque workflow DOIT avoir `workflow.json`
+- [x] Chaque workflow DOIT avoir `README.md`
+- [ ] Créer test: vérifier présence workflow.json + README.md dans chaque dossier workflow
+
+FICHIERS OPTIONNELS (documentés, NON testés):
+- [ ] `template.json` - version base/template du workflow (optionnel)
+- [ ] `test.json` - cas de test et scénarios (optionnel)
+- [ ] `config.json` - configuration spécifique (optionnel)
+- [ ] `CHANGELOG.md` - historique des versions (optionnel)
+- [ ] `test-data/` - payloads et données de test (optionnel)
+- [ ] `logs/` - logs d'exécution (optionnel)
+- [ ] `docs/` - documentation additionnelle (optionnel)
+
+### 2.6 REVIEW DE PHASE 2 ✅
 - [x] Vérifier structure conforme (15 catégories)
 - [x] Vérifier tous workflows migrés correctement
 - [x] Vérifier nommage en kebab-case
