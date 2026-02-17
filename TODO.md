@@ -58,11 +58,20 @@
 
 ## PHASE 2: RESTRUCTURATION ARCHITECTURE ✅ DONE
 
-### REVIEW PRE-PHASE 2
-- [ ] Valider que PHASE 1 est complète et testée
-- [ ] Vérifier git status propre (sauf fichiers attendus)
-- [ ] Confirmer pas de donnée sensible restante
-- [ ] Documenter les décisions prises
+### REVIEW PRE-PHASE 2 ✅
+- [x] Valider que PHASE 1 est complète et testée
+- [x] Vérifier git status propre (sauf fichiers attendus)
+- [x] Confirmer pas de donnée sensible restante
+- [x] Documenter les décisions prises
+
+#### Décisions prises (résumé)
+- Sanitization: suppression des `webhookId`/`instanceId`, anonymisation des credential IDs — script : `scripts/sanitize_workflows.py`.
+- Remplacement des valeurs sensibles (VPS URL, bot names, emails) et ajout de `*.data`/`*.n8n` dans `.gitignore`.
+- Ajout d'un `--dry-run` et d'un mode `--force` pour le script de sanitization.
+- Tests de sécurité automatisés ajoutés : `scripts/validators/security_validator.py` + `scripts/tests/test_security.py` (execution locale OK).
+- Documentation mise à jour : `SECURITY_REPORT.md`, `README.md`, `TODO.md` (statut Phase 1 et instructions dev).
+
+> Référence rapide: `scripts/sanitize_workflows.py`, `scripts/validators/security_validator.py`, `scripts/tests/test_security.py`, `.env.example`, `.gitignore`, `SECURITY_REPORT.md`.
 
 ### 2.1 Création nouvelle structure (15 catégories)
 
