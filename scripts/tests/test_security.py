@@ -45,31 +45,15 @@ class TestSecurityScan:
         assert len(sensitive_urls) == 0, f"VPS URLs found in: {sensitive_urls}"
 
     def test_02_detect_credential_ids(self):
-        """Test: Détection credential IDs - should be anonymized as CRED_XXXX"""
-        found_credential_ids = []
+        """Test: Détection credential IDs - should be anonymized as CRED_XXXX
 
-        for workflow_file in self.get_workflow_files():
-            try:
-                with open(workflow_file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    content_str = json.dumps(data)
+        Uses the JSON-contextual validator to avoid false positives from 16-char
+        tokens that are not credential IDs (e.g. property names).
+        """
+        from scripts.validators.security_validator import find_credential_like_ids_in_workflows
 
-                    # Look for patterns that look like n8n credential IDs
-                    # (16 alphanumeric chars) but NOT our anonymized CRED_XXXX pattern
-                    matches = re.findall(r'[a-zA-Z0-9]{16}', content_str)
-                    for match in matches:
-                        if match.isalnum() and not match.startswith('CRED_'):
-                            # Additional check: if it looks like a UUID or known safe pattern, skip
-                            if not re.match(r'^[a-f0-9]{32}$', match):  # Not a UUID without dashes
-                                found_credential_ids.append((str(workflow_file), match))
-            except Exception:
-                pass
-
-        # Only warn if we find suspicious patterns (not critical)
-        # Since CRED_XXXX are safe anonymized versions
-        assert len(found_credential_ids) == 0 or all(
-            'CRED_' in str(item) for item in found_credential_ids
-        ), f"Potential credential IDs found: {found_credential_ids[:5]}"
+        matches = find_credential_like_ids_in_workflows()
+        assert matches == [], f"Found raw credential-like ids in workflows: {matches}"
 
     def test_03_detect_instance_ids(self):
         """Test: Détection instance IDs - should be removed from JSON"""
