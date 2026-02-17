@@ -224,7 +224,7 @@ Si explicitement demandé, procédez aux corrections:
 ### ❌ PROBLÈME CRITIQUE
 ```python
 # Fichier: api.py:42
-password = "admin123"  # Secret en clair
+password = "example_password"  # DO NOT USE real credentials (example only)
 ```
 **Impact**: Exposition de credentials  
 **Recommandation**: Utiliser variables d'environnement + secret manager

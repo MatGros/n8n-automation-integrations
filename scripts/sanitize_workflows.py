@@ -28,9 +28,9 @@ class WorkflowSanitizer:
         'webhook_id': r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$',  # UUID format
     }
 
-    # URLs to anonymize
+    # URLs to anonymize (redacted in repo; use placeholders)
     VPS_URLS = [
-        'https://n8n.srv830801.hstgr.cloud',
+        'https://your-n8n-instance.com',
         'https://n8n.srv',
     ]
 
