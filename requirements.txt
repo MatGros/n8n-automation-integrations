@@ -1,0 +1,4 @@
+pytest>=7.4
+pytest-cov
+jsonschema
+pre-commit
