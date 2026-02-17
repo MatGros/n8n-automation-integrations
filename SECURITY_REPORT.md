@@ -46,7 +46,7 @@ Key artifacts:
 ---
 
 ## Recommendations (short-term)
-1. Add a GitHub Action to run the security validators on every PR (Phase 5).  
+1. ✅ Security CI job added: `.github/workflows/security-check.yml` (runs validators on PRs).  
 2. Add a pre-commit hook to block commits that introduce sensitive patterns.  
 3. Schedule a periodic scan (weekly) in CI to catch accidental additions.
 
@@ -59,7 +59,7 @@ Key artifacts:
 ---
 
 If you want, I can:  
-- Add the security job to CI now,  
 - Create a pre-commit config and hook,  
-- Schedule recurring scans via GitHub Actions.
+- Schedule recurring scans via GitHub Actions,  
+- Harden CI reporting (PR comments / summary artifacts).
 

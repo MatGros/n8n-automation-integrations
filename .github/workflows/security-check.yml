@@ -1,0 +1,38 @@
+name: Security checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  security-scan:
+    name: Security validators
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run security unit tests
+        run: pytest -q scripts/tests/test_security.py
+
+      - name: Run quick security scan and save report
+        run: |
+          mkdir -p reports
+          python scripts/validators/security_validator.py > reports/security-scan.json
+
+      - name: Upload security scan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan
+          path: reports/security-scan.json

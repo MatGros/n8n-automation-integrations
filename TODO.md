@@ -289,13 +289,13 @@ FICHIERS OPTIONNELS (documentés, NON testés):
 
 ## PHASE 5: CI/CD GITHUB ACTIONS
 
-### 5.1 Workflow sécurité
+### 5.1 Workflow sécurité ✅
 
-- [ ] Créer `.github/workflows/security-check.yml`
-  - [ ] Job: security-scan
-  - [ ] Job: credential-detection
-  - [ ] Job: sensitive-data-scan
-  - [ ] Upload artifacts
+- [x] Créer `.github/workflows/security-check.yml`
+  - [x] Job: security-scan (runs `pytest` on security validators)
+  - [x] Job: credential-detection (validator + tests)
+  - [x] Job: sensitive-data-scan (sanitizer/validator)
+  - [x] Upload artifacts (`reports/security-scan.json`)
   - [ ] Fail si violations
 
 ### 5.2 Workflow architecture
