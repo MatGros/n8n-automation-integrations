@@ -388,7 +388,7 @@
     {
       "parameters": {
         "operation": "sendAndWait",
-        "sendTo": "=mathieu.gros@gmail.com",
+        "sendTo": "=your-email@example.com",
         "subject": "=🔥FOR APPROVAL🔥{{ $('Social Media Content Factory').item.json.output.name }} - {{ $('Social Media Content Factory').item.json.output.description }}",
         "message": "={{ $json.output }}",
         "approvalOptions": {
