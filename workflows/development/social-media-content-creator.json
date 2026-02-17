@@ -101,7 +101,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       },
@@ -333,7 +333,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "linkedInOAuth2Api": {
-          "id": "Q0A8w0ias9kyagth",
+          "id": "CRED_0004",
           "name": "LinkedIn account"
         }
       },
@@ -412,11 +412,10 @@
         2736,
         768
       ],
-      "webhookId": "c46cf421-ddb6-45a8-b83b-80b381666f0e",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       }
@@ -512,11 +511,10 @@
         1712,
         1680
       ],
-      "webhookId": "c46cf421-ddb6-45a8-b83b-80b381666f0e",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       },
@@ -699,7 +697,6 @@
         560,
         560
       ],
-      "webhookId": "3e762442-715e-47e1-a65e-ae92085857ae",
       "typeVersion": 2.2
     },
     {
@@ -871,7 +868,6 @@
         112,
         1184
       ],
-      "webhookId": "0dc811ef-b2e0-4213-a0c9-e9b5fb9fcbf1",
       "typeVersion": 1,
       "disabled": true
     },
@@ -891,11 +887,10 @@
         1088,
         1680
       ],
-      "webhookId": "0a81b95a-cd82-465d-8450-cf38518a4cbb",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       }
@@ -915,12 +910,11 @@
         1088,
         1968
       ],
-      "webhookId": "bb40ede7-03cf-493d-b051-196b96725925",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -1041,7 +1035,7 @@
       "typeVersion": 1,
       "credentials": {
         "serpApi": {
-          "id": "1keFbVVO62GpnSNn",
+          "id": "CRED_0005",
           "name": "SerpAPI account"
         }
       }
@@ -1112,7 +1106,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       },
@@ -1140,7 +1134,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       },
@@ -1161,7 +1155,7 @@
       "name": "Google Gemini Chat Model2",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1181,7 +1175,7 @@
       "name": "Google Gemini Chat Model3",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1210,7 +1204,7 @@
       "name": "Generate an image",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1232,7 +1226,7 @@
       "name": "Ollama Chat Model",
       "credentials": {
         "ollamaApi": {
-          "id": "ZWnx3KjAZP3fVHAN",
+          "id": "CRED_0007",
           "name": "Ollama account"
         }
       }
@@ -1254,7 +1248,7 @@
       "name": "Ollama Chat Model1",
       "credentials": {
         "ollamaApi": {
-          "id": "ZWnx3KjAZP3fVHAN",
+          "id": "CRED_0007",
           "name": "Ollama account"
         }
       }
@@ -1274,7 +1268,7 @@
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       },
@@ -1308,7 +1302,7 @@
       "name": "Google Gemini Chat Model1",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       },
@@ -1775,8 +1769,7 @@
   },
   "versionId": "e2efd2f7-ad33-40c6-baa9-c45d41e93906",
   "meta": {
-    "templateId": "3066",
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+    "templateId": "3066"
   },
   "id": "hosV27T7jOPNGwPSK2Al4",
   "tags": []

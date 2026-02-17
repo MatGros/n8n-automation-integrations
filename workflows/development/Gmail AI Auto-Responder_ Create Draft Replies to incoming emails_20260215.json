@@ -26,7 +26,7 @@
       "typeVersion": 1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       },
@@ -97,7 +97,7 @@
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       }
@@ -177,7 +177,7 @@
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       }
@@ -201,10 +201,9 @@
         112
       ],
       "typeVersion": 2.1,
-      "webhookId": "52130cc2-2bc3-4250-b436-6a91182a9159",
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0003",
           "name": "Gmail account 2"
         }
       }
@@ -348,7 +347,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       }
@@ -410,11 +409,10 @@
         1616,
         704
       ],
-      "webhookId": "dec6f574-f47c-4b5d-86b9-2b0f6c957145",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0001",
           "name": "Gmail account"
         }
       }
@@ -491,11 +489,10 @@
         2384,
         832
       ],
-      "webhookId": "4f345fc9-2afd-478b-be3b-d3d28f0fbc82",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0003",
           "name": "Gmail account 2"
         }
       }
@@ -565,7 +562,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       }
@@ -600,10 +597,9 @@
       ],
       "id": "78659b58-8cb4-4080-890e-aaa7bb1e6f6d",
       "name": "Get many messages",
-      "webhookId": "a898abc5-7b79-41af-9420-4dfafe234f63",
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0003",
           "name": "Gmail account 2"
         }
       }
@@ -905,9 +901,7 @@
     "availableInMCP": false
   },
   "versionId": "4a924e2f-2846-46bc-bf79-65824e2c2d5d",
-  "meta": {
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
-  },
+  "meta": {},
   "id": "9cQ_xkvC-gZI3c7TK5HOn",
   "tags": []
 }

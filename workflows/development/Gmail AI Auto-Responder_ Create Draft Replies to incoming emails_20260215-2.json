@@ -16,17 +16,17 @@
         },
         "options": {}
       },
-      "id": "2a9ff08f-919a-41a8-980b-8c2bca3059e4",
+      "id": "c1bc92eb-e3b6-4a23-8872-eda1824fc2a0",
       "name": "Gmail Trigger",
       "type": "n8n-nodes-base.gmailTrigger",
       "position": [
-        480,
-        352
+        112,
+        112
       ],
       "typeVersion": 1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0001",
+          "id": "CRED_0002",
           "name": "Gmail account"
         }
       },
@@ -57,25 +57,25 @@
         },
         "options": {}
       },
-      "id": "3ef14615-0045-404f-a21b-2c65a52f4be8",
+      "id": "c7c906c1-dae0-44de-840e-9b07dbd65db6",
       "name": "If Needs Reply",
       "type": "n8n-nodes-base.if",
       "position": [
-        1040,
-        352
+        672,
+        112
       ],
       "typeVersion": 2
     },
     {
       "parameters": {
-        "jsonSchema": "={\n  \"type\": \"object\",\n  \"properties\": {\n    \"needsReply\": {\n      \"type\": \"boolean\"\n      },\n    \"needsReply\": {\n      \"type\": \"boolean\"\n      }\n  },\n  \"required\": [\"needsReply\"]\n}"
+        "jsonSchema": "={\n  \"type\": \"object\",\n  \"properties\": {\n    \"needsReply\": {\n      \"type\": \"boolean\"\n    },\n    \"replyReason\": {\n      \"type\": \"string\",\n      \"description\": \"Explanation of why a reply is needed or not\"\n    },\n    \"id\": {\n      \"type\": \"string\",\n      \"id\": \"Mail ID\"\n    }\n  },\n  \"required\": [\"needsReply\"]\n}"
       },
-      "id": "36968dd5-8d51-4184-a05a-587b6c95aa82",
+      "id": "ad975f06-bcb1-4c3c-858d-aa0c3ca6873f",
       "name": "JSON Parser",
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "position": [
-        896,
-        512
+        528,
+        272
       ],
       "typeVersion": 1
     },
@@ -87,17 +87,17 @@
           "temperature": 0
         }
       },
-      "id": "2a64dce8-e2f0-475e-a366-a02084293aad",
+      "id": "c913543c-4260-49ce-90e9-2598d227c380",
       "name": "OpenAI Chat",
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
-        720,
-        512
+        352,
+        272
       ],
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "CRED_0002",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
@@ -108,12 +108,12 @@
         "height": 394.42512272977456,
         "width": 304.10628068244364
       },
-      "id": "be892ff8-0981-4b34-9c93-7674ddd90360",
+      "id": "a0291749-e0ed-4337-b840-a1dac9ae3843",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        368,
-        240
+        0,
+        0
       ],
       "typeVersion": 1
     },
@@ -123,12 +123,12 @@
         "height": 397,
         "width": 556
       },
-      "id": "9d92839a-9ff2-436c-8abb-2f43e07c1ace",
+      "id": "495104ba-c461-4a12-8e13-812187f67916",
       "name": "Sticky Note1",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        688,
-        240
+        320,
+        0
       ],
       "typeVersion": 1
     },
@@ -138,12 +138,12 @@
         "height": 400.08454375343996,
         "width": 333.19082443588354
       },
-      "id": "3cd77609-684c-44e2-9cdc-9479cfd836bd",
+      "id": "00925626-eef0-4c73-a063-d22c22540cc4",
       "name": "Sticky Note2",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1264,
-        240
+        896,
+        0
       ],
       "typeVersion": 1
     },
@@ -153,12 +153,12 @@
         "height": 395,
         "width": 326
       },
-      "id": "b123cf31-767d-48bb-a0ba-79a69f6da585",
+      "id": "8d9252c7-8509-44d2-ba9c-3c7a81abd9e6",
       "name": "Sticky Note3",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1616,
-        240
+        1248,
+        0
       ],
       "typeVersion": 1
     },
@@ -167,17 +167,17 @@
         "model": "gpt-4.1-mini",
         "options": {}
       },
-      "id": "1a87c416-6b1c-4526-a2b6-20468c95ea0e",
+      "id": "88f0c995-c67d-4b5b-8609-8bc5b645fbab",
       "name": "OpenAI Chat Model",
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
-        1280,
-        496
+        912,
+        256
       ],
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "CRED_0002",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
@@ -185,46 +185,55 @@
     {
       "parameters": {
         "resource": "draft",
-        "subject": "=Re: {{ $('Gmail trigger').item.json.headers.subject }}",
+        "subject": "=Re: {{ $('Get many messages').item.json.headers.subject }}",
         "emailType": "html",
         "message": "={{ $json.text.replace(/\\n/g, \"<br />\\n\") }}",
         "options": {
-          "threadId": "={{ $('Gmail trigger').item.json.threadId }}",
-          "sendTo": "={{ $('Gmail trigger').item.json.headers.from }}"
+          "threadId": "={{ $('Get many messages').item.json.threadId }}",
+          "sendTo": "={{ $('Get many messages').item.json.headers.from }}"
         }
       },
-      "id": "84b4d516-252e-444e-b998-2d4aa0f89653",
+      "id": "f47668da-5cdd-4301-9c08-cc37fb0b7292",
       "name": "Gmail - Create Draft",
       "type": "n8n-nodes-base.gmail",
       "position": [
-        1712,
-        352
+        1344,
+        112
       ],
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0003",
+          "id": "CRED_0004",
           "name": "Gmail account 2"
         }
       }
     },
     {
       "parameters": {
-        "prompt": "=Subject:{{ $('Get many messages').item.json.Subject }}\nMessage:{{ $json.snippet }}\n"
+        "prompt": "=Subject:{{ $('Get many messages').item.json.Subject }}\nMessage:{{ $json.snippet }}\n",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Tu es un agent spécialisé dans la loterie de mail.\n\nTu doit analyser le mail suivant...\n{{$parameter.prompt}}\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n{{ $json.id }}\n\nTa sortie doit absolument respecter Output Paraser "
+            }
+          ]
+        }
       },
-      "id": "86017ff4-9c57-4b2a-9cd9-f62571a05ffd",
+      "id": "910399dc-e6f2-4379-a654-4247a0263c46",
       "name": "Assess if message needs a reply",
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "position": [
-        720,
-        352
+        352,
+        112
       ],
-      "typeVersion": 1.3
+      "typeVersion": 1.3,
+      "alwaysOutputData": false,
+      "notesInFlow": false
     },
     {
       "parameters": {
         "promptType": "define",
-        "text": "=Subject: {{ $('Gmail trigger').item.json.subject }}\nMessage: {{ $('Gmail trigger').item.json.textAsHtml }}",
+        "text": "=Subject: {{ $('Get many messages').item.json.subject }}\nMessage: {{ $('Get many messages').item.json.textAsHtml }}",
         "messages": {
           "messageValues": [
             {
@@ -233,12 +242,12 @@
           ]
         }
       },
-      "id": "cab1e7e5-93dc-4850-a471-e285cdbe2058",
+      "id": "6276f430-f228-481f-8574-e5a5a34695d0",
       "name": "Generate email reply",
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "position": [
-        1312,
-        304
+        944,
+        64
       ],
       "typeVersion": 1.4
     },
@@ -248,12 +257,12 @@
         "height": 319.3323098457962,
         "width": 241.53974014153226
       },
-      "id": "05ac5af3-7795-4b9f-adf3-97fb983c2610",
+      "id": "a19184c9-70b3-40b5-87f3-b69b31106b00",
       "name": "Sticky Note4",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        2096,
-        1280
+        1104,
+        1024
       ],
       "typeVersion": 1
     },
@@ -263,12 +272,12 @@
         "height": 347.0476323933831,
         "width": 226.14233872620645
       },
-      "id": "74816884-3039-4aed-914b-7388eded3c6f",
+      "id": "86cf052b-e5c7-4793-81c2-3b2aa319e4e3",
       "name": "Sticky Note5",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        2848,
-        944
+        1856,
+        688
       ],
       "typeVersion": 1
     },
@@ -278,12 +287,12 @@
         "height": 347.0476323933831,
         "width": 452.48413953150185
       },
-      "id": "bcaa39b4-3b42-4259-b595-e886ac3baf36",
+      "id": "017f82e1-fadd-4ed1-95b8-ede52cdaf117",
       "name": "Sticky Note6",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        3088,
-        928
+        2096,
+        672
       ],
       "typeVersion": 1
     },
@@ -293,12 +302,12 @@
         "height": 348.5873725349161,
         "width": 238.4602598584674
       },
-      "id": "c4ae7bb6-25d3-490a-a7e3-d739c2bfcdb9",
+      "id": "979427f2-314a-48fe-aaf4-66225b9b520b",
       "name": "Sticky Note7",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        288,
-        912
+        -80,
+        672
       ],
       "typeVersion": 1
     },
@@ -308,12 +317,12 @@
         "height": 348.5873725349161,
         "width": 378.57661273793565
       },
-      "id": "fe20ea05-1f49-4b8f-8653-9be8aea0e211",
+      "id": "586081f5-1c01-46b3-ba31-e4702c800576",
       "name": "Sticky Note8",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        1888,
-        896
+        896,
+        640
       ],
       "typeVersion": 1
     },
@@ -328,17 +337,17 @@
         },
         "filters": {}
       },
-      "id": "79315141-1536-474d-a666-690ff091ec43",
+      "id": "45dd1095-6573-4398-8e83-b5c6781ca078",
       "name": "Gmail trigger",
       "type": "n8n-nodes-base.gmailTrigger",
       "position": [
-        96,
-        1104
+        -272,
+        864
       ],
       "typeVersion": 1.2,
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0001",
+          "id": "CRED_0002",
           "name": "Gmail account"
         }
       }
@@ -346,23 +355,22 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $('Gmail trigger').item.json.snippet }}",
+        "text": "={{ $('Get many messages').item.json.snippet }}",
         "hasOutputParser": true,
         "messages": {
           "messageValues": [
             {
-              "type": "HumanMessagePromptTemplate",
-              "message": "You are an email classification assistant.\n\nYour goal is to assign one or more labels to each email so that an automation system can organize the inbox.\n\nRules:\n- Use ONLY the labels defined below. Do NOT invent new labels.\n- You may assign between 1 and 4 labels per email.\n- Always include at least one “Type” label (what the email is about).\n- Optionally add one “Status” label (what to do) and one “Priority” label (how urgent).\n- If you are not sure between two labels, choose the more general or safer one.\n- Ignore signatures and legal footers when deciding.\n\nType labels (what the email is about):\n\n- Sales-Lead\n  Use for new business opportunities: people asking for prices, demos, collaborations, or sending an RFP.\n  Examples: “We’d like to work with you”, “Can you send a quote?”, “We are interested in your services”.\n\n- Client-Project\n  Use for ongoing client work: project updates, specs, delivery, feedback, planning.\n  Examples: “Here is the latest version of the document”, “Can we change this feature?”, “Project meeting notes”.\n\n- Support\n  Use when someone reports a problem, bug, incident, or asks for help with an existing service.\n  Examples: “Your script crashes”, “I cannot log in”, “The server is down”.\n\n- Billing\n  Use for money and documents related to money: invoices, payments, refunds, quotes, bank messages, tax receipts.\n  Examples: “Invoice attached”, “Payment confirmation”, “Overdue invoice reminder”.\n\n- Legal\n  Use for contracts, NDAs, compliance, privacy (GDPR), company policies, or anything from lawyers.\n  Examples: “Please sign the contract”, “Data processing agreement”, “Terms update”.\n\n- Ops\n  (“Operations”) Use for tools, infrastructure, automation and platform notifications (hosting, APIs, monitoring).\n  Examples: “Server maintenance notice”, “API key update”, “Deployment successful/failed”.\n\n- Personal\n  Use for personal or family emails not related to business.\n  Examples: friends, family, school information for children, personal events.\n\n- Newsletter\n  Use for recurring informational content: newsletters, blog updates, marketing campaigns, community digests.\n  Examples: “Weekly newsletter”, “New features in our product”.\n\n- System-Alert\n  Use for automatic alerts that usually require attention: errors, warnings, security alerts, high-CPU, etc.\n  If the email is clearly a technical alert, prefer System-Alert over Ops.\n\nStatus / action labels (what to do next):\n\n- To-Reply\n  The user should send a reply or take a clear action.\n  Use when the sender expects an answer or a decision.\n\n- Waiting\n  The user is waiting for someone else. The ball is on the other side.\n  Example: follow-up after sending a quote, waiting for client feedback.\n\n- In-Progress\n  The user has started working on this but it is not finished yet.\n  Example: tasks currently being handled.\n\n- Done\n  Everything required by this email is already completed. No more action needed.\n\n\nPriority labels (how urgent it is):\n\n- P1-Urgent\n  Needs attention today or very soon. Short deadlines, production issues, blocking problems.\n\n- P2-High\n  Important but not critical today. Should be handled within a few days.\n\n- P3-Normal\n  Normal priority business emails without strict deadline.\n\n- P4-Low\n  Low priority. Can be processed later without consequence (some newsletters, non-urgent info).\n\nOUTPUT FORMAT (very important):\nReturn a single JSON object with this structure:\n\n{\n  \"labels\": [\n    \"TypeLabel1\",\n    \"TypeLabel2 (optional)\",\n    \"StatusLabel (optional)\",\n    \"PriorityLabel (optional)\"\n  ]\n}\n\nUse only the label names defined above. Example:\n{\"labels\":[\"Client-Project\",\"To-Reply\",\"P2-High\"]}\n"
+              "message": "Voici la version corrigée, complète et prête à l’usage, avec toutes les étiquettes FR + leur équivalent JSON EN entre parenthèses.\nElle est optimisée pour être claire pour l’humain et 100 % compatible avec le schéma JSON.\n\n✅ Document corrigé et harmonisé\n🎯 Objectif\nAttribuer une ou plusieurs étiquettes à chaque e‑mail afin qu’un système automatisé puisse organiser la boîte de réception.\n\n📌 Règles générales\n- Utilisez uniquement les étiquettes définies ci‑dessous.\n- Vous pouvez attribuer 1 à 4 étiquettes par e‑mail.\n- Incluez toujours au moins une étiquette de Type.\n- Vous pouvez ajouter une étiquette de Statut et une de Priorité.\n- En cas de doute, choisissez l’étiquette la plus générale ou la plus sûre.\n- Ignorez les signatures et mentions légales.\n\n🗂️ Étiquettes de Type (objet de l’e-mail)\n(entre parenthèses : valeur JSON obligatoire)\nProspect (Opportunity)\nPour les nouvelles opportunités commerciales : demandes de prix, devis, démonstrations, collaborations, appels d’offres.\nClient-Projet (Client-Project)\nPour le suivi des projets clients : mises à jour, livrables, retours, planification, CR de réunion.\nAssistance (Support)\nPour les problèmes techniques, bugs, incidents, demandes d’aide sur un service existant.\nFacturation (Billing)\nPour les factures, paiements, relances, devis, documents financiers.\nJuridique (Legal)\nPour les contrats, NDA, RGPD, conformité, documents d’avocats.\nOpérations (Ops)\nPour les notifications liées aux outils, serveurs, API, automatisation, infrastructure.\nAlerte système (System-Alert)\nPour les alertes automatiques critiques : erreurs, sécurité, surcharge CPU, incidents techniques.\nSi c’est clairement une alerte technique, privilégier System-Alert plutôt que Ops.\n\nPersonnel (Personal)\nPour les e‑mails non professionnels : famille, amis, vie personnelle.\nNewsletter (Newsletter)\nPour les contenus récurrents : newsletters, articles, campagnes marketing, résumés.\n\n🔧 Étiquettes de Statut / Action\n(entre parenthèses : valeur JSON obligatoire)\nÀ répondre (To-Reply)\nUne réponse ou action est attendue de l’utilisateur.\nEn attente (Waiting)\nL’utilisateur attend un retour d’un tiers.\nEn cours (In-Progress)\nLe sujet est en traitement mais non terminé.\nTerminé (Done)\nAucune action supplémentaire n’est nécessaire.\n\n🚦 Étiquettes de Priorité\n(entre parenthèses : valeur JSON obligatoire)\nP1 – Urgent (P1-Urgent)\nÀ traiter immédiatement ou très rapidement.\nP2 – Élevée (P2-High)\nImportant, à traiter dans les prochains jours.\nP3 – Normale (P3-Normal)\nPriorité standard, pas de délai critique.\nP4 – Faible (P4-Low)\nPeut être traité plus tard sans conséquence.\n\nFormat de sortie attendu\nToujours renvoyer un objet JSON :\n{\n  \"labels\": [\n    \"TypeLabel\",\n    \"StatusLabel (optionnel)\",\n    \"PriorityLabel (optionnel)\"\n  ]\n}\n\n\nExemple :\n{\n  \"labels\": [\"Client-Project\", \"To-Reply\", \"P2-High\"]\n}\n\nVoir output parser.\n\n\n\n"
             }
           ]
         }
       },
-      "id": "14502b98-775c-40cc-90fb-89ba0798398c",
+      "id": "4c3a8474-d9f2-449e-a629-58927f191565",
       "name": "Assign labels for message",
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "position": [
-        1952,
-        1088
+        960,
+        832
       ],
       "typeVersion": 1.5
     },
@@ -375,51 +383,61 @@
               "name": "labels",
               "type": "array",
               "value": "={{ $json.output.labels }}"
+            },
+            {
+              "id": "email_id_assignment",
+              "name": "emailId",
+              "type": "string",
+              "value": "={{ $('Get many messages').item.json.id }}"
             }
           ]
         },
+        "includeOtherFields": true,
         "options": {}
       },
-      "id": "835c03fc-34c6-4981-87d1-ef38706ae4a6",
+      "id": "9f5d6d18-2fe1-43d4-a611-305e9f9e99c5",
       "name": "Set label values",
       "type": "n8n-nodes-base.set",
       "position": [
-        2336,
-        1088
+        1344,
+        832
       ],
       "typeVersion": 3.4
     },
     {
       "parameters": {
-        "resource": "label",
-        "returnAll": true
+        "resource": "label"
       },
-      "id": "256fcb63-9e49-4a2d-ba37-7ffbfeee9c1a",
+      "id": "dbf2d4cf-c053-4a4c-9630-acf17797f961",
       "name": "Get all labels",
       "type": "n8n-nodes-base.gmail",
       "position": [
-        2608,
-        960
+        1616,
+        704
       ],
       "typeVersion": 2.1,
+      "executeOnce": false,
+      "alwaysOutputData": false,
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0001",
+          "id": "CRED_0002",
           "name": "Gmail account"
         }
       }
     },
     {
       "parameters": {
-        "fieldToSplitOut": "=",
+        "fieldToSplitOut": "labels",
+        "include": "selectedOtherFields",
+        "fieldsToInclude": "emailId",
         "options": {}
       },
-      "id": "24e95070-65b7-4bb8-b5dc-865ce4d80f78",
+      "id": "aa679de2-8c50-40b2-b1d8-a0339d0b779e",
       "name": "Split out assigned labels",
       "type": "n8n-nodes-base.splitOut",
       "position": [
-        2608,
-        1184
+        1616,
+        928
       ],
       "typeVersion": 1,
       "alwaysOutputData": false
@@ -431,19 +449,20 @@
         "mergeByFields": {
           "values": [
             {
-              "field1": "name",
-              "field2": "labels"
+              "field1": "labels",
+              "field2": "name"
             }
           ]
         },
+        "outputDataFrom": "input1",
         "options": {}
       },
-      "id": "997aad04-2016-47a7-aa62-1945510ad9e2",
+      "id": "73c2a694-d9ce-4e0f-847f-79344cbba5a7",
       "name": "Merge corresponding labels",
       "type": "n8n-nodes-base.merge",
       "position": [
-        2960,
-        1040
+        1968,
+        784
       ],
       "typeVersion": 3.1,
       "alwaysOutputData": true
@@ -453,38 +472,46 @@
         "fieldsToAggregate": {
           "fieldToAggregate": [
             {
+              "fieldToAggregate": "emailId"
+            },
+            {
+              "fieldToAggregate": "labels"
+            },
+            {
               "fieldToAggregate": "id"
             }
           ]
         },
-        "options": {}
+        "options": {
+          "includeBinaries": false
+        }
       },
-      "id": "33db9d8c-1a44-4801-bded-5c3c2a949c15",
+      "id": "0ff21664-2332-439e-9a47-dfd8b559020e",
       "name": "Aggregate label IDs",
       "type": "n8n-nodes-base.aggregate",
       "position": [
-        3152,
-        1088
+        2160,
+        832
       ],
       "typeVersion": 1
     },
     {
       "parameters": {
         "operation": "addLabels",
-        "messageId": "={{ $('Gmail trigger').item.json[\"id\"] }}",
-        "labelIds": "={{ $json.id }}"
+        "messageId": "={{ $json.data[0].emailId }}",
+        "labelIds": "={{ $json.data[0].labels }}"
       },
-      "id": "02245af9-9d66-4541-b728-d257d7c3a272",
+      "id": "318174d8-2e00-43b8-9106-acd5586f15d1",
       "name": "Add labels to message",
       "type": "n8n-nodes-base.gmail",
       "position": [
-        3376,
-        1088
+        2384,
+        832
       ],
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0003",
+          "id": "CRED_0004",
           "name": "Gmail account 2"
         }
       }
@@ -496,12 +523,12 @@
         "width": 420.4803040774015,
         "color": 4
       },
-      "id": "3d797b3c-2591-43ae-b2e5-4f0b73b45db9",
+      "id": "50cefd41-416b-4c32-95ce-363a5da95a3f",
       "name": "Sticky Note9",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -416,
-        912
+        -784,
+        672
       ],
       "typeVersion": 1
     },
@@ -511,12 +538,12 @@
         "height": 257.42916378714597,
         "width": 421.0932411886662
       },
-      "id": "d3170425-0d24-42bc-ac42-36c02cfb1554",
+      "id": "3007b83e-b1b7-4cad-89e2-acfa3f010845",
       "name": "Sticky Note10",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -416,
-        1184
+        -784,
+        944
       ],
       "typeVersion": 1
     },
@@ -526,12 +553,12 @@
         "height": 348.5873725349161,
         "width": 238.4602598584674
       },
-      "id": "8a1e884a-c448-44fb-809c-80b63db744b3",
+      "id": "f8e092d0-1d49-4436-826e-6a25934cdf6e",
       "name": "Sticky Note11",
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        32,
-        912
+        -336,
+        672
       ],
       "typeVersion": 1
     },
@@ -544,17 +571,17 @@
         },
         "options": {}
       },
-      "id": "34a91b09-350c-4fbe-9abe-b8feaee179d1",
+      "id": "e8fac222-57a6-476f-96dc-7c6083e3e7d8",
       "name": "OpenAI Chat1",
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
-        1936,
-        1296
+        944,
+        1040
       ],
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "CRED_0002",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
@@ -562,14 +589,14 @@
     {
       "parameters": {
         "schemaType": "manual",
-        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"labels\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\",\n        \"enum\": [\n          \"Sales-Lead\",\n          \"Client-Project\",\n          \"Support\",\n          \"Billing\",\n          \"Legal\",\n          \"Ops\",\n          \"Personal\",\n          \"Newsletter\",\n          \"System-Alert\",\n          \"To-Reply\",\n          \"Waiting\",\n          \"In-Progress\",\n          \"Done\",\n          \"P1-Urgent\",\n          \"P2-High\",\n          \"P3-Normal\",\n          \"P4-Low\"\n        ]\n      }\n    }\n  },\n  \"required\": [\"labels\"]\n}\n"
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"labels\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\",\n        \"enum\": [\n          \"Opportunity\",\n          \"Client-Project\",\n          \"Support\",\n          \"Billing\",\n          \"Legal\",\n          \"Ops\",\n          \"Personal\",\n          \"Newsletter\",\n          \"System-Alert\",\n          \"To-Reply\",\n          \"Waiting\",\n          \"In-Progress\",\n          \"Done\",\n          \"P1-Urgent\",\n          \"P2-High\",\n          \"P3-Normal\",\n          \"P4-Low\"\n        ]\n      }\n    }\n  },\n  \"required\": [\"labels\"]\n}\n"
       },
-      "id": "7b814572-d967-40a2-ac0f-0f8d0d878717",
+      "id": "5c7c0001-cc08-46ba-af6d-980074be1cf4",
       "name": "JSON Parser1",
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "position": [
-        2176,
-        1296
+        1184,
+        1040
       ],
       "typeVersion": 1.2
     },
@@ -584,14 +611,14 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        352,
-        1312
+        0,
+        864
       ],
-      "id": "7f142b73-1945-40ea-b513-2778c800e271",
+      "id": "78659b58-8cb4-4080-890e-aaa7bb1e6f6d",
       "name": "Get many messages",
       "credentials": {
         "gmailOAuth2": {
-          "id": "CRED_0003",
+          "id": "CRED_0004",
           "name": "Gmail account 2"
         }
       }
@@ -605,10 +632,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        736,
-        688
+        368,
+        448
       ],
-      "id": "cf049b48-869d-4765-9c87-4e6441cbd6ef",
+      "id": "467d7bab-51e4-4c6c-a8ad-19c2e46fee87",
       "name": "Sticky Note12"
     },
     {
@@ -616,10 +643,10 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        2000,
-        352
+        1632,
+        112
       ],
-      "id": "9040f559-d42e-4e6a-9b16-df5387e0de99",
+      "id": "4420afff-2998-47e7-bbd4-888f3791d396",
       "name": "No Operation, do nothing"
     },
     {
@@ -627,37 +654,48 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        3664,
-        1088
+        2672,
+        832
       ],
-      "id": "6da0d3c0-583b-4b01-a743-a05202d59c5c",
+      "id": "c3834961-3af6-49e3-aece-86106111eb0d",
       "name": "No Operation, do nothing1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -272,
+        1072
+      ],
+      "id": "be413833-e2c1-402a-aded-bd3dda90b9c7",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "You are an email classification assistant.\n\nYour goal is to assign one or more labels to each email so that an automation system can organize the inbox.\n\nRules:\n- Use ONLY the labels defined below. Do NOT invent new labels.\n- You may assign between 1 and 4 labels per email.\n- Always include at least one “Type” label (what the email is about).\n- Optionally add one “Status” label (what to do) and one “Priority” label (how urgent).\n- If you are not sure between two labels, choose the more general or safer one.\n- Ignore signatures and legal footers when deciding.\n\nType labels (what the email is about):\n\n- Sales-Lead\n  Use for new business opportunities: people asking for prices, demos, collaborations, or sending an RFP.\n  Examples: “We’d like to work with you”, “Can you send a quote?”, “We are interested in your services”.\n\n- Client-Project\n  Use for ongoing client work: project updates, specs, delivery, feedback, planning.\n  Examples: “Here is the latest version of the document”, “Can we change this feature?”, “Project meeting notes”.\n\n- Support\n  Use when someone reports a problem, bug, incident, or asks for help with an existing service.\n  Examples: “Your script crashes”, “I cannot log in”, “The server is down”.\n\n- Billing\n  Use for money and documents related to money: invoices, payments, refunds, quotes, bank messages, tax receipts.\n  Examples: “Invoice attached”, “Payment confirmation”, “Overdue invoice reminder”.\n\n- Legal\n  Use for contracts, NDAs, compliance, privacy (GDPR), company policies, or anything from lawyers.\n  Examples: “Please sign the contract”, “Data processing agreement”, “Terms update”.\n\n- Ops\n  (“Operations”) Use for tools, infrastructure, automation and platform notifications (hosting, APIs, monitoring).\n  Examples: “Server maintenance notice”, “API key update”, “Deployment successful/failed”.\n\n- Personal\n  Use for personal or family emails not related to business.\n  Examples: friends, family, school information for children, personal events.\n\n- Newsletter\n  Use for recurring informational content: newsletters, blog updates, marketing campaigns, community digests.\n  Examples: “Weekly newsletter”, “New features in our product”.\n\n- System-Alert\n  Use for automatic alerts that usually require attention: errors, warnings, security alerts, high-CPU, etc.\n  If the email is clearly a technical alert, prefer System-Alert over Ops.\n\nStatus / action labels (what to do next):\n\n- To-Reply\n  The user should send a reply or take a clear action.\n  Use when the sender expects an answer or a decision.\n\n- Waiting\n  The user is waiting for someone else. The ball is on the other side.\n  Example: follow-up after sending a quote, waiting for client feedback.\n\n- In-Progress\n  The user has started working on this but it is not finished yet.\n  Example: tasks currently being handled.\n\n- Done\n  Everything required by this email is already completed. No more action needed.\n\n\nPriority labels (how urgent it is):\n\n- P1-Urgent\n  Needs attention today or very soon. Short deadlines, production issues, blocking problems.\n\n- P2-High\n  Important but not critical today. Should be handled within a few days.\n\n- P3-Normal\n  Normal priority business emails without strict deadline.\n\n- P4-Low\n  Low priority. Can be processed later without consequence (some newsletters, non-urgent info).\n\nOUTPUT FORMAT (very important):\nReturn a single JSON object with this structure:\n\n{\n  \"labels\": [\n    \"TypeLabel1\",\n    \"TypeLabel2 (optional)\",\n    \"StatusLabel (optional)\",\n    \"PriorityLabel (optional)\"\n  ]\n}\n\nUse only the label names defined above. Example:\n{\"labels\":[\"Client-Project\",\"To-Reply\",\"P2-High\"]}\n"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        832,
+        1280
+      ],
+      "id": "428d1307-e22a-4a08-a5cd-644583d7226d",
+      "name": "Sticky Note13"
     }
   ],
-  "pinData": {
-    "JSON Parser": [
-      {
-        "json": {
-          "needsReply": false
-        }
-      },
-      {
-        "json": {
-          "needsReply": true
-        }
-      },
-      {
-        "json": {
-          "needsReply": true
-        }
-      },
-      {
-        "json": {
-          "needsReply": false
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "connections": {
     "JSON Parser": {
       "ai_outputParser": [
@@ -681,21 +719,16 @@
         ]
       ]
     },
-    "Gmail Trigger": {
-      "main": [
-        []
-      ]
-    },
     "If Needs Reply": {
       "main": [
+        [],
         [
           {
-            "node": "Generate email reply",
+            "node": "Assign labels for message",
             "type": "main",
             "index": 0
           }
-        ],
-        []
+        ]
       ]
     },
     "OpenAI Chat Model": {
@@ -725,11 +758,6 @@
         [
           {
             "node": "If Needs Reply",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Assign labels for message",
             "type": "main",
             "index": 0
           }
@@ -780,7 +808,7 @@
           {
             "node": "Merge corresponding labels",
             "type": "main",
-            "index": 0
+            "index": 1
           }
         ]
       ]
@@ -791,7 +819,7 @@
           {
             "node": "Merge corresponding labels",
             "type": "main",
-            "index": 1
+            "index": 0
           }
         ]
       ]
@@ -872,19 +900,28 @@
           }
         ]
       ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get many messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate",
-    "availableInMCP": false
+    "availableInMCP": false,
+    "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "a5024aff-dbe2-4e2c-b6ee-cf2b6e9ab386",
-  "meta": {
-    "templateId": "2271",
-    "templateCredsSetupCompleted": true
-  },
-  "id": "Ndz-6g-8WwKwWDwpg8-7k",
+  "versionId": "7cab15d8-5abc-416c-b6f2-ffb768df44e6",
+  "meta": {},
+  "id": "9cQ_xkvC-gZI3c7TK5HOn",
   "tags": []
 }

@@ -1,5 +1,5 @@
 {
-    "n8n.host": "https://n8n.srv830801.hstgr.cloud",
-    "n8n.apiKey": "VOTRE_CLE_API_ICI",
+    "n8n.host": "https://your-n8n-instance.com",
+    "n8n.apiKey": "your_api_key_here",
     "n8n-atom.enable": true
 }

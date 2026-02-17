@@ -1,7 +1,7 @@
 # n8n Automation Integrations
 
 Ce dépôt centralise les workflows n8n pour l'automatisation des processus.
-Instance n8n cible : [https://n8n.srv830801.hstgr.cloud](https://n8n.srv830801.hstgr.cloud)
+Pour déployer ces workflows, connectez-vous à votre instance n8n personnelle.
 
 ## 📂 Structure du projet
 

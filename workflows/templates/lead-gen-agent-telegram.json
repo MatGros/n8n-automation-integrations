@@ -109,7 +109,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       }
@@ -142,12 +142,11 @@
         1120,
         1504
       ],
-      "webhookId": "3e98f8c1-55f9-4643-9740-b8a7db8aed09",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -167,7 +166,7 @@
       "typeVersion": 1.6,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0002",
           "name": "OpenAi account"
         }
       }
@@ -276,12 +275,11 @@
         2112,
         1504
       ],
-      "webhookId": "16a2fb0a-5e8d-4585-88e7-6d55298b4af7",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -300,12 +298,11 @@
         2112,
         1712
       ],
-      "webhookId": "f90cf8b1-6cd6-43e4-857e-1916585ec2e2",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -323,12 +320,11 @@
         640,
         1600
       ],
-      "webhookId": "e3dd6506-5997-4024-ba33-ff7c1ad12815",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -594,8 +590,7 @@
   "versionId": "4f6f290c-05ef-4fa8-87bf-32465dd9bd7e",
   "meta": {
     "templateId": "6532",
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+    "templateCredsSetupCompleted": true
   },
   "id": "MPgIChQYgMXvA0UZ",
   "tags": []

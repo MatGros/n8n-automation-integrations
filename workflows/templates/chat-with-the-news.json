@@ -12,8 +12,7 @@
         0
       ],
       "id": "261ee04a-4695-4d1a-bec3-9f86b5efd5eb",
-      "name": "When chat message received",
-      "webhookId": "b567d98b-aabb-4963-b0f8-6b1e8b5f8959"
+      "name": "When chat message received"
     },
     {
       "parameters": {},
@@ -114,7 +113,7 @@
       "name": "Ollama Chat Model",
       "credentials": {
         "ollamaApi": {
-          "id": "6gXQpCWska8w9FCa",
+          "id": "CRED_0008",
           "name": "Ollama account"
         }
       }
@@ -197,8 +196,7 @@
   "versionId": "f4455156-7e97-4c85-99c0-c56c34b20783",
   "meta": {
     "templateId": "ready-to-run-ai-workflow-v5",
-    "templateCredsSetupCompleted": true,
-    "instanceId": "1220b710fea857c461261768ed7ee6e0223b6613d0f05a78070ed870f7703771"
+    "templateCredsSetupCompleted": true
   },
   "id": "UuwKMTJdY1c9p90H",
   "tags": []

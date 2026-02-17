@@ -1,5 +1,5 @@
 {
-  "name": "MinimalTelegramZedMg_bot",
+  "name": "MinimalTelegrammy_bot",
   "nodes": [
     {
       "parameters": {
@@ -16,11 +16,10 @@
       ],
       "id": "c3afe3c8-fcca-4bdb-bf3b-bd5052279e53",
       "name": "Telegram Trigger",
-      "webhookId": "a2fabfd2-eb52-404a-9f74-244150e7cd7e",
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -61,10 +60,9 @@
         1072,
         304
       ],
-      "webhookId": "f0322848-2e75-4f9a-950a-b215b875e28c",
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
+          "id": "CRED_0000",
           "name": "Telegram account"
         }
       }
@@ -101,8 +99,7 @@
   },
   "versionId": "db42de2a-314b-4000-aa16-2a552f0cb285",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+    "templateCredsSetupCompleted": true
   },
   "id": "MHP25SCO2tcsaKpI",
   "tags": []

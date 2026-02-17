@@ -117,12 +117,11 @@
         752,
         1264
       ],
-      "webhookId": "3e98f8c1-55f9-4643-9740-b8a7db8aed09",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -230,12 +229,11 @@
         1744,
         1264
       ],
-      "webhookId": "16a2fb0a-5e8d-4585-88e7-6d55298b4af7",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -254,12 +252,11 @@
         1744,
         1472
       ],
-      "webhookId": "f90cf8b1-6cd6-43e4-857e-1916585ec2e2",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -277,12 +274,11 @@
         272,
         1360
       ],
-      "webhookId": "e3dd6506-5997-4024-ba33-ff7c1ad12815",
       "typeVersion": 1.2,
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0000",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -427,7 +423,7 @@
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -453,7 +449,7 @@
       "name": "Transcribe a recording",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0006",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -594,8 +590,7 @@
   },
   "versionId": "a81c52f5-a8a0-42e6-81e8-c5480ac45502",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+    "templateCredsSetupCompleted": true
   },
   "id": "6Jcx492wjJaThyBFX6Aei",
   "tags": []
