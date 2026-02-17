@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: sanitizer-dry-run
+        name: Sanitizer dry-run (fail on secrets in workflows)
+        entry: python scripts/precommit_sanitize_check.py
+        language: system
+        files: '^workflows/.*\\.json$|^scripts/.*\\.py$'
+        pass_filenames: false

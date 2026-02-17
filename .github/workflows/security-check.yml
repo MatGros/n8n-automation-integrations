@@ -36,3 +36,31 @@ jobs:
         with:
           name: security-scan
           path: reports/security-scan.json
+
+      - name: Comment PR with security report
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'reports/security-scan.json';
+            if (!fs.existsSync(path)) return;
+            const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const lines = [];
+            lines.push('## Security scan — quick summary');
+            lines.push(`- emails found: ${report.emails.length}`);
+            lines.push(`- vps_urls: ${report.vps_urls.length}`);
+            lines.push(`- credential_like_ids: ${report.credential_like_ids.length}`);
+            lines.push(`- instance_ids: ${report.instance_ids.length}`);
+            lines.push(`- webhook_ids: ${report.webhook_ids.length}`);
+            lines.push('\n<details><summary>Full JSON report</summary>');
+            lines.push('```json');
+            lines.push(JSON.stringify(report, null, 2));
+            lines.push('```');
+            lines.push('</details>');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: lines.join('\n')
+            });

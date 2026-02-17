@@ -435,17 +435,17 @@ FICHIERS OPTIONNELS (documentés, NON testés):
 
 ## PHASE 9: PRE-COMMIT HOOKS [OPTIONNEL]
 
-- [ ] Créer `.pre-commit-config.yaml`
-- [ ] Hook: check-json
-- [ ] Hook: security-scan
+- [x] Créer `.pre-commit-config.yaml`
+- [x] Hook: check-json
+- [x] Hook: security-scan (`sanitizer-dry-run`)
 - [ ] Hook: style-validation
-- [ ] `docs/pre-commit-setup.md`
+- [x] `docs/pre-commit-setup.md`
 
 ### 9.1 REVIEW DE PHASE 9 (OPTIONNEL)
-- [ ] Pre-commit hooks configurés correctement
-- [ ] Tests locaux passent avant commit
-- [ ] Évite les pushes non-conformes
-- [ ] Documentation setup.md complète
+- [x] Pre-commit hooks configurés correctement
+- [x] Tests locaux passent avant commit
+- [x] Évite les pushes non-conformes (sanitizer + check-json)
+- [x] Documentation setup.md complète
 
 ---
 

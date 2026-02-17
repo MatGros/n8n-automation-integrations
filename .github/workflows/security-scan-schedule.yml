@@ -1,0 +1,31 @@
+name: Scheduled security scan
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # weekly on Monday at 04:00 UTC
+
+jobs:
+  weekly-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: python -m pip install --upgrade pip
+
+      - name: Run security scan
+        run: |
+          mkdir -p reports
+          python scripts/validators/security_validator.py > reports/security-scan-$(date +"%Y%m%d").json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-security-scan
+          path: reports/
