@@ -20,7 +20,12 @@ Demonstrates basic Telegram trigger integration with n8n and message handling.
 3. Set up webhook for message reception
 
 ## Status
-✅ Active and tested
+✅ Active
+
+## Quick start
+1. Import `echo-bot/workflow.json` into your n8n instance.
+2. Add `Telegram` credentials in n8n (use `.env` placeholders).
+3. Activate the workflow and send a test message to the bot.
 
 ## Tags
 `telegram`, `bot`, `communication`, `simple`

@@ -208,15 +208,17 @@ workflows/
 - [ ] Test: Détection tokens/API keys
 - [x] Test: Détection emails personnels
 - [x] Créer `scripts/validators/security_validator.py`
+- [x] Test: Structure dossiers conforme (architecture validator + tests) (scripts/validators/architecture_validator.py)
+
 
 ### 4.3 Tests architecture (`scripts/tests/test_architecture.py`)
 
-- [ ] Test: Structure dossiers conforme (15 catégories)
-- [ ] Test: Présence README requis
-- [ ] Test: Nommage fichiers (kebab-case)
-- [ ] Test: Pas de fichiers racine workflows/
-- [ ] Test: Organisation par domaine métier
-- [ ] Créer `scripts/validators/architecture_validator.py`
+- [x] Test: Structure dossiers conforme (15 catégories)
+- [x] Test: Présence README requis
+- [x] Test: Nommage fichiers (kebab-case)
+- [x] Test: Pas de fichiers racine workflows/
+- [x] Test: Organisation par domaine métier
+- [x] Créer `scripts/validators/architecture_validator.py`
 
 ### 4.4 Tests style visuel (`scripts/tests/test_style_validation.py`)
 
@@ -282,10 +284,10 @@ workflows/
 
 ### 5.2 Workflow architecture
 
-- [ ] Créer `.github/workflows/architecture-validation.yml`
-  - [ ] Job: folder-structure
-  - [ ] Job: naming-conventions
-  - [ ] Job: readme-presence
+- [x] Créer `.github/workflows/architecture-validation.yml`
+  - [x] Job: folder-structure
+  - [x] Job: naming-conventions
+  - [x] Job: readme-presence
   - [ ] Upload artifacts
 
 ### 5.3 Workflow style
@@ -333,6 +335,7 @@ workflows/
 - [ ] `workflows/99-templates/01-simple-workflow-template.json` (minimaliste)
 - [ ] `workflows/99-templates/02-complex-workflow-template.json` (avancé)
 - [ ] `workflows/99-templates/03-ai-agent-template.json` (AI/LLM)
+- [x] `workflows/99-templates/lead-gen/lead-gen-telegram.json` (minimal template)
 
 ### 6.2 Templates par technologie
 

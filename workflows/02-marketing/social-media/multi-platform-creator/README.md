@@ -36,7 +36,12 @@ Streamline content creation across different social networks (Twitter, LinkedIn,
 3. Scheduling configuration
 
 ## Status
-🚧 Development (in progress)
+🚧 Development
+
+## Quick start
+1. Import `multi-platform-creator/workflow.json` into n8n.
+2. Add OpenAI and social platform credentials (Twitter/X, LinkedIn, Instagram).
+3. Run in staging and validate posts per-platform.
 
 ## Tags
 `social-media`, `content-creation`, `marketing`, `multi-platform`, `ai`

@@ -30,5 +30,10 @@ Automate email management with AI-generated responses and intelligent categoriza
 ## Status
 🚧 Development
 
+## Quick start
+1. Import `gmail-ai-responder/workflow.json` into n8n.
+2. Configure `Gmail OAuth2` and `OpenAI` credentials.
+3. Test in `development/` before promoting to `active/`.
+
 ## Tags
 `gmail`, `email`, `ai`, `automation`, `labels`

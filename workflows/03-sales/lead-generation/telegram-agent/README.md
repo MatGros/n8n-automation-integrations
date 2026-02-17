@@ -40,5 +40,10 @@ Generate qualified leads via Telegram with automated qualification and data coll
 ## Status
 ✅ Active
 
+## Quick start
+1. Import `telegram-agent/workflow.json` into n8n.
+2. Configure Telegram bot credentials and CRM integration.
+3. Run qualification flows in a test chat.
+
 ## Tags
 `sales`, `lead-generation`, `telegram`, `ai-agent`, `bot`

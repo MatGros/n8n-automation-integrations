@@ -11,6 +11,9 @@ Google Gemini variant of the Telegram lead generation agent.
 - Alternative to OpenAI-based versions
 - Same lead qualification logic
 
+### lead-gen-telegram.json (minimal)
+Minimal lead-gen Telegram agent template for quick starts and demos. Use this as a starting point for customization.
+
 ## Usage
 1. Select the template that matches your AI provider preference
 2. Customize lead qualification criteria

@@ -1,5 +1,8 @@
 # 99 Templates & Examples
 
+Status
+✅ Templates available
+
 Reusable templates and examples for workflow creation.
 
 ## Template Categories

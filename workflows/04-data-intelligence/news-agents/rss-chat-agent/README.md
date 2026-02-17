@@ -38,5 +38,10 @@ Enable natural language conversations about news from multiple RSS sources using
 ## Status
 ✅ Active
 
+## Quick start
+1. Import `rss-chat-agent/workflow.json` into n8n.
+2. Configure RSS feeds and AI credentials.
+3. Start the workflow and send a test query via Telegram.
+
 ## Tags
 `ai-agent`, `news`, `rss`, `conversation`, `data-intelligence`
