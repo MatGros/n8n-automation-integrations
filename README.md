@@ -23,22 +23,22 @@ n8n-automation-integrations/
 
 | Workflow              | Description                                         | Fichier                                                             |
 | --------------------- | --------------------------------------------------- | ------------------------------------------------------------------- |
-| **Telegram Echo Bot** | Bot Telegram simple qui renvoie les messages reçus. | [`telegram-echo-bot.json`](workflows/active/telegram-echo-bot.json) |
+| **Telegram Echo Bot** | Bot Telegram simple qui renvoie les messages reçus. | [`echo-bot/workflow.json`](workflows/01-communication/telegram/echo-bot/workflow.json) |
 
 ### En Développement (`workflows/development/`)
 
 | Workflow                 | Description                                                              | Fichier                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | **Gmail AI Responder**   | Analyse les emails, génère des brouillons de réponse et labelise via IA. | [`gmail-ai-auto-responder.json`](workflows/development/gmail-ai-auto-responder.json)           |
-| **Social Media Creator** | Génération automatique de contenu pour réseaux sociaux (en cours).       | [`social-media-content-creator.json`](workflows/development/social-media-content-creator.json) |
+| **Social Media Creator** | Génération automatique de contenu pour réseaux sociaux (en cours).       | [`multi-platform-creator/workflow.json`](workflows/02-marketing/social-media/multi-platform-creator/workflow.json) |
 
 ### Templates (`workflows/templates/`)
 
 | Workflow              | Description                                  | Fichier                                                                                          |
 | --------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **News Chat Agent**   | Agent IA conversant sur l'actualité via RSS. | [`chat-with-the-news.json`](workflows/templates/chat-with-the-news.json)                         |
-| **Lead Gen Telegram** | Agent de génération de leads via Telegram.   | [`lead-gen-agent-telegram.json`](workflows/templates/lead-gen-agent-telegram.json)               |
-| **Lead Gen Gemini**   | Variante Gemini de l'agent Lead Gen.         | [`lead-gen-agent-telegram-gemini.json`](workflows/templates/lead-gen-agent-telegram-gemini.json) |
+| **News Chat Agent**   | Agent IA conversant sur l'actualité via RSS. | [`rss-chat-agent/workflow.json`](workflows/04-data-intelligence/news-agents/rss-chat-agent/workflow.json)                         |
+| **Lead Gen Telegram** | Agent de génération de leads via Telegram.   | [`telegram-agent/workflow.json`](workflows/03-sales/lead-generation/telegram-agent/workflow.json)               |
+| **Lead Gen Gemini**   | Variante Gemini de l'agent Lead Gen.         | [`lead-gen-telegram-gemini.json`](workflows/99-templates/lead-gen/lead-gen-telegram-gemini.json) |
 
 ## 📏 Conventions
 
