@@ -1,0 +1,90 @@
+name: Security checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  security-scan:
+    name: Security validators
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run security unit tests
+        run: pytest -q scripts/tests/test_security.py
+
+      - name: Run quick security scan and save report
+        run: |
+          mkdir -p reports
+          python scripts/validators/security_validator.py > reports/security-scan.json
+
+      - name: Upload security scan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan
+          path: reports/security-scan.json
+
+      - name: Comment PR with security report
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v6
+        continue-on-error: true
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'reports/security-scan.json';
+            if (!fs.existsSync(path)) return;
+            const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+            // Skip commenting for PRs coming from forks (token restrictions)
+            if (!context.payload.pull_request) {
+              console.log('No pull_request in payload — skipping comment.');
+              return;
+            }
+            const headRepo = context.payload.pull_request.head?.repo?.full_name || '';
+            const baseRepo = `${context.repo.owner}/${context.repo.repo}`;
+            if (headRepo !== baseRepo) {
+              console.log(`PR head repo (${headRepo}) differs from base (${baseRepo}) — skipping comment.`);
+              return;
+            }
+
+            const lines = [];
+            lines.push('## Security scan — quick summary');
+            lines.push(`- emails found: ${report.emails.length}`);
+            lines.push(`- vps_urls: ${report.vps_urls.length}`);
+            lines.push(`- credential_like_ids: ${report.credential_like_ids.length}`);
+            lines.push(`- instance_ids: ${report.instance_ids.length}`);
+            lines.push(`- webhook_ids: ${report.webhook_ids.length}`);
+            lines.push('\n<details><summary>Full JSON report</summary>');
+            lines.push('```json');
+            lines.push(JSON.stringify(report, null, 2));
+            lines.push('```');
+            lines.push('</details>');
+
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: lines.join('\n')
+              });
+            } catch (err) {
+              console.warn('Could not post PR comment (likely permission restriction):', err.message);
+              console.log('Security scan saved as an artifact; download from the workflow run if needed.');
+            }

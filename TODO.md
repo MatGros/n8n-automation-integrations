@@ -123,7 +123,23 @@ workflows/
 - [x] Déplacer/supprimer `Gmail AI Auto-Responder_*.n8n`
 - [x] Organiser fichiers dupliqués `workflows/development/`
 
-### 2.5 REVIEW DE PHASE 2 ✅
+### 2.5 Convention Architecture Fichiers Workflows ✅ DONE
+
+FICHIERS REQUIS (testés automatiquement):
+- [x] Chaque workflow DOIT avoir `workflow.json`
+- [x] Chaque workflow DOIT avoir `README.md`
+- [x] Créer test: vérifier présence workflow.json + README.md dans chaque dossier workflow
+
+FICHIERS OPTIONNELS (documentés, NON testés):
+- [x] `template.json` - version base/template du workflow (optionnel)
+- [x] `test.json` - cas de test et scénarios (optionnel)
+- [x] `config.json` - configuration spécifique (optionnel)
+- [x] `CHANGELOG.md` - historique des versions (optionnel)
+- [x] `test-data/` - payloads et données de test (optionnel)
+- [x] `logs/` - logs d'exécution (optionnel)
+- [x] `docs/` - documentation additionnelle (optionnel)
+
+### 2.6 REVIEW DE PHASE 2 ✅
 - [x] Vérifier structure conforme (15 catégories)
 - [x] Vérifier tous workflows migrés correctement
 - [x] Vérifier nommage en kebab-case
@@ -273,13 +289,13 @@ workflows/
 
 ## PHASE 5: CI/CD GITHUB ACTIONS
 
-### 5.1 Workflow sécurité
+### 5.1 Workflow sécurité ✅
 
-- [ ] Créer `.github/workflows/security-check.yml`
-  - [ ] Job: security-scan
-  - [ ] Job: credential-detection
-  - [ ] Job: sensitive-data-scan
-  - [ ] Upload artifacts
+- [x] Créer `.github/workflows/security-check.yml`
+  - [x] Job: security-scan (runs `pytest` on security validators)
+  - [x] Job: credential-detection (validator + tests)
+  - [x] Job: sensitive-data-scan (sanitizer/validator)
+  - [x] Upload artifacts (`reports/security-scan.json`)
   - [ ] Fail si violations
 
 ### 5.2 Workflow architecture
@@ -419,17 +435,17 @@ workflows/
 
 ## PHASE 9: PRE-COMMIT HOOKS [OPTIONNEL]
 
-- [ ] Créer `.pre-commit-config.yaml`
-- [ ] Hook: check-json
-- [ ] Hook: security-scan
+- [x] Créer `.pre-commit-config.yaml`
+- [x] Hook: check-json
+- [x] Hook: security-scan (`sanitizer-dry-run`)
 - [ ] Hook: style-validation
-- [ ] `docs/pre-commit-setup.md`
+- [x] `docs/pre-commit-setup.md`
 
 ### 9.1 REVIEW DE PHASE 9 (OPTIONNEL)
-- [ ] Pre-commit hooks configurés correctement
-- [ ] Tests locaux passent avant commit
-- [ ] Évite les pushes non-conformes
-- [ ] Documentation setup.md complète
+- [x] Pre-commit hooks configurés correctement
+- [x] Tests locaux passent avant commit
+- [x] Évite les pushes non-conformes (sanitizer + check-json)
+- [x] Documentation setup.md complète
 
 ---
 
