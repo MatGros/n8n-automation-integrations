@@ -32,15 +32,15 @@ Scope: Vérification complète de la Phase 2 — structure des dossiers, migrati
 
 ## DÉTAILS DES PROBLÈMES DÉTECTÉS
 ### 🟠 Majeur (1)
-1) README racine — liens obsolètes (référençaient `workflows/active/` et `workflows/development/` / `workflows/templates/`)  
-   - Impact: documentation trompeuse pour les utilisateurs et les nouveaux contributeurs.  
-   - Localisation: `README.md` (liens vers `workflows/active/telegram-echo-bot.json`, `workflows/development/social-media-content-creator.json`, `workflows/templates/*`)  
+1) README racine — liens obsolètes (référençaient `workflows/active/` et `workflows/development/` / `workflows/templates/`)
+   - Impact: documentation trompeuse pour les utilisateurs et les nouveaux contributeurs.
+   - Localisation: `README.md` (liens vers `workflows/active/telegram-echo-bot.json`, `workflows/development/social-media-content-creator.json`, `workflows/templates/*`)
    - Statut: Corrigé — README mis à jour pour pointer vers les nouveaux emplacements.
 
 ### 🟡 Mineurs (2)
-1) Template coverage: `workflows/99-templates/lead-gen/` contient uniquement la variante Gemini — ajouter une version `lead-gen-agent-telegram.json` (non critique).  
+1) Template coverage: `workflows/99-templates/lead-gen/` contient uniquement la variante Gemini — ajouter une version `lead-gen-agent-telegram.json` (non critique).
    - Recommandation: ajouter un README d'exemple d'utilisation et une version « minimal » du template.
-2) Consistency: certains `README.md` utilisent des statuts différents (`Active`, `Development`, `🚧 Development`) — standardiser le format (Status + Tags + Quick Start).  
+2) Consistency: certains `README.md` utilisent des statuts différents (`Active`, `Development`, `🚧 Development`) — standardiser le format (Status + Tags + Quick Start).
    - Recommandation: appliquer le `docs/workflow-style-guide.md` (Phase 3) quand disponible.
 
 ## VÉRIFICATIONS SUPPLÉMENTAIRES (sécurité & qualité)
@@ -62,16 +62,14 @@ Scope: Vérification complète de la Phase 2 — structure des dossiers, migrati
 - Phase 1 security checks restent passants après migration — bonne rigueur.
 
 ## CONCLUSION — GO / NO-GO
-- GO pour passer à Phase 3 (Documentation) et Phase 4 (Tests).  
+- GO pour passer à Phase 3 (Documentation) et Phase 4 (Tests).
 - Priorité court-terme: ajouter le template manquant et standardiser les README statuses.
 
 ---
 
 **Artifacts fournis**: `AUDIT_PHASE_2.md` (ce fichier), commits récents qui corrigent README et documentent la revue.
 
-Si vous voulez, je peux:  
-- Ouvrir une PR rassemblant le rapport + corrections,  
-- Créer les tests d'architecture automatisés (Phase 4.3),  
+Si vous voulez, je peux:
+- Ouvrir une PR rassemblant le rapport + corrections,
+- Créer les tests d'architecture automatisés (Phase 4.3),
 - Ajouter le template manquant dans `workflows/99-templates/lead-gen/`.
-
-

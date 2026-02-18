@@ -226,7 +226,7 @@ Si explicitement demandé, procédez aux corrections:
 # Fichier: api.py:42
 password = "example_password"  # DO NOT USE real credentials (example only)
 ```
-**Impact**: Exposition de credentials  
+**Impact**: Exposition de credentials
 **Recommandation**: Utiliser variables d'environnement + secret manager
 
 ### ❌ PROBLÈME MAJEUR
@@ -235,7 +235,7 @@ password = "example_password"  # DO NOT USE real credentials (example only)
 def process_data(data):  # Pas de validation
     return data['user']['email']  # KeyError possible
 ```
-**Impact**: Crash application sur données malformées  
+**Impact**: Crash application sur données malformées
 **Recommandation**: Validation avec pydantic ou jsonschema
 
 ### ❌ PROBLÈME MINEUR
@@ -244,7 +244,7 @@ def process_data(data):  # Pas de validation
 def calc(x, y):  # Nommage vague
     return x + y
 ```
-**Impact**: Maintenabilité réduite  
+**Impact**: Maintenabilité réduite
 **Recommandation**: Renommer en `calculate_sum` avec docstring
 
 ## COMMUNICATION
@@ -290,7 +290,7 @@ def calc(x, y):  # Nommage vague
 - Magic numbers sans constantes
 - Try/except trop larges
 - Print statements (use logging)
-- `import *` 
+- `import *`
 - Mutable default arguments
 - Pas de type hints en Python 3.6+
 - Tests qui dépendent de l'ordre d'exécution

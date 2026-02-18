@@ -54,4 +54,3 @@ n8n-automation-integrations/
 ## 🧰 Developer checks
 - Run the sanitization script: `python scripts/sanitize_workflows.py workflows --dry-run` (use `--force` to apply).
 - Run security tests: `pytest -q` (tests live in `scripts/tests/test_security.py`).
-
