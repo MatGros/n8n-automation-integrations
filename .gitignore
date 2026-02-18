@@ -40,13 +40,20 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
 ENV/
 .pytest_cache/
 .coverage
+coverage.xml
+coverage.*.xml
 htmlcov/
 dist/
 build/
+pip-wheel-metadata/
 *.egg-info/
+.mypy_cache/
+.ropeproject/
+*.pyo
 
 # Reports and outputs
 reports/
