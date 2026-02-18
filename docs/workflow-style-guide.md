@@ -1,83 +1,75 @@
 # Workflow Style Guide
 
-Purpose: centralise les conventions visuelles et rédactionnelles pour tous les workflows du repository. Utilisez ce guide comme référence pour la création, la revue et la maintenance des workflows.
+Purpose
+---
+Centralise les conventions visuelles et rédactionnelles appliquées aux workflows du dépôt. Ce guide sert de référence rapide pour la création, la revue et l'automatisation de la documentation.
 
-## 1. Principes généraux
-- Lisibilité avant tout — un workflow doit expliquer son comportement sans lire le code.
-- Nommer les nodes avec des verbes d'action (`fetch-emails`, `parse-json`, `send-notification`).
-- Garder les workflows < 20 nodes quand possible; scinder en sous-workflows si nécessaire.
+Principes clés
+---
+- Lisibilité d'abord : un reviewer doit comprendre le flux principal sans ouvrir chaque node.
+- Predictibilité : noms explicites, étapes numérotées, outputs clairs.
+- Réutilisabilité : privilégier de petits workflows composables (<20 nodes) et extraire les sous‑processus.
 
-## 2. Sections obligatoires dans `README.md`
-Chaque workflow DOIT contenir au minimum les sections suivantes (niveau `##`):
-- `Description` — court résumé (1-2 phrases)
-- `Purpose` — objectif métier
-- `Trigger` — type d'événement / fréquence
-- `Process` — étapes principales (numérotées)
-- `Output` — ce qui est produit
-- `Setup Requirements` — credentials / secrets / config
+1) Sections obligatoires dans `README.md` (MUST)
+- `Description` — 1‑2 phrases, objectif métier.
+- `Purpose` — pourquoi ce workflow existe.
+- `Trigger` — type d'événement / fréquence / exemples.
+- `Process` — étapes numérotées, explication courte par étape.
+- `Output` — artefacts produits (messages, DB rows, drafts).
+- `Setup Requirements` — credentials, variables d'environnement, permissions.
 
-## 3. Color mapping (7 couleurs)
-- Bleu — Data fetch / IO (HTTP, IMAP, DB)
+2) Checklist documentaire (à inclure dans PR)
+- [ ] Description, Purpose, Trigger, Process, Output, Setup présents
+- [ ] README contient un `Quick start` (import + credential example)
+- [ ] JSON valide et `name` présent dans `workflow.json`
+- [ ] Tous les nodes importants ont un `name`
+- [ ] README respecte le style-guide (naming + color mapping)
+
+3) Node naming (conventions)
+- Format : `verb-resource[-detail]` en `kebab-case` — ex. `fetch-gmail`, `classify-email`, `create-draft`.
+- Préférer l'action précise : `send-notification-email` > `send-email`.
+- Ne pas utiliser noms techniques internes (ex. `node-1`) comme `name`.
+
+4) Color mapping (visual guidance)
+- Bleu — Fetch / IO (HTTP, IMAP, DB)
 - Vert — Logic / Transformation
 - Jaune — Storage / Persistence
 - Rouge — Error / Alerting
 - Orange — Triggers
-- Violet — AI / LLM / Model calls
+- Violet — AI / LLM calls
 - Cyan — Communication (Slack, Email, Telegram)
 
-> Example: `HTTP Request` (blue) → `JSON Parse` (green) → `DB Insert` (yellow)
+Conseil : ajoutez une légende dans le README pour workflows complexes.
 
-## 4. Node naming conventions
-- Use kebab-case, verbs first: `fetch-gmail`, `classify-text`, `create-draft`.
-- Avoid generic names: prefer `send-notification-email` > `send-email` (be explicit).
-- Node `name` should be human-readable (shown in UI) and correspond to the primary action.
+5) Layout & best practices
+- Flux principal → gauche vers droite.
+- Grouper nodes liés verticalement (entrée, traitement, sortie).
+- Séparer les chemins d'erreur visuellement et documenter le comportement de reprise.
 
-## 5. Node descriptions
-- Each complex node (logic, AI, transformations) SHOULD include a brief comment/description in the workflow JSON `parameters` or documented in README `Process`.
+6) Error handling
+- Documenter la stratégie (retry, backoff, DLQ, alerting).
+- Node d'alerte (ex: `notify-on-error`) doit clairement indiquer la cible (Slack/email).
 
-Example snippet (README `Process`):
-
+7) Examples (README `Process` snippet)
+```
 1. `fetch-gmail` — watch inbox and return message payloads
-2. `classify-email` — call AI to decide if reply needed (returns `needsReply` boolean)
-3. `create-draft` — create draft reply using templated prompt
-
-## 6. Layout & ordering
-- Left → Right flow for data pipelines and synchronous flows.
-- Triggers on the far-left; outputs on the far-right.
-- Group related nodes vertically and use separators (comments in README) for sections.
-
-## 7. Error handling
-- Always include an explicit error path for critical flows (notify + retry or dead-letter).
-- Document error handling in `Process` and mark nodes that send alerts.
-
-## 8. Documentation checklist (to include in README / PR)
-- [ ] `Description` present
-- [ ] `Purpose` present
-- [ ] `Trigger` present
-- [ ] `Process` steps documented
-- [ ] `Output` declared
-- [ ] `Setup Requirements` documented
-- [ ] Example `Quick start` included
-
-## 9. Examples
-### Good README excerpt
-```
-## Purpose
-Automate triage of incoming support emails and create draft responses.
-
-## Trigger
-- Type: Gmail Watch
-- Event: New email
-
-## Output
-- Draft replies in Gmail
-- Ticket created in Helpdesk system
+2. `classify-email` — call AI model to decide if reply required (returns `needsReply` boolean)
+3. `create-draft` — generate draft with templated prompt and save to Gmail
 ```
 
-## 10. Reference links
-- `docs/workflow-checklist.md` — validation checklist (used by CI)
-- `scripts/validators/documentation_validator.py` — validator automatique
+8) Enforcement & CI
+- `scripts/validators/documentation_validator.py` valide la présence des sections et la présence du champ `name` dans `workflow.json`.
+- Ajouter un test unitaire dans `scripts/tests/test_documentation.py`.
+
+9) Quick rules for contributors
+- Toujours exécuter `pytest` avant d'ouvrir une PR.
+- Lancer `scripts/sanitize_workflows.py --dry-run` avant commit si vous modifiez workflows.
+- Utiliser le template `workflow-checklist.md` pour PRs qui ajoutent/modifient workflows.
+
+Références
+- `docs/workflow-checklist.md` — checklist à joindre aux PRs
+- `scripts/validators/documentation_validator.py` — règles automatiques
 
 ---
 
-Keep this guide concise — link to examples in `workflows/` for concrete patterns.
+Examples and short templates are available in `workflows/` — use them as canonical patterns.
