@@ -82,9 +82,10 @@ For a workflow that fetches emails, classifies them with AI, and sends notificat
 ## Color Accessibility
 
 If you need to adjust colors for accessibility reasons (e.g., colorblind users):
-- Use the `docs/accessibility-guide.md` (future document) for alternatives
 - Always maintain the same semantic meaning (Blue = Fetch, etc.)
 - Document any overrides in workflow README
+- Ensure sufficient contrast for colorblind users
+- Consider using patterns or labels in addition to colors
 
 ## Related Documentation
 
