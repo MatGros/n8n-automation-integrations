@@ -58,10 +58,25 @@ Conseil : ajoutez une légende dans le README pour workflows complexes.
 ```
 
 8) Enforcement & CI
-- `scripts/validators/documentation_validator.py` valide la présence des sections et la présence du champ `name` dans `workflow.json`.
+- `scripts/validators/documentation_validator.py` valide la présence des sections, la présence du champ `name` dans `workflow.json`, la présence d'un `Quick start`, et que `Process` contient au moins 2 étapes.
 - Ajouter un test unitaire dans `scripts/tests/test_documentation.py`.
 
-9) Quick rules for contributors
+9) Quick start (for contributors)
+- Importer un workflow de `workflows/.../workflow.json` dans une instance n8n locale.
+- Remplir `Gmail OAuth2` / `Telegram` credentials en local.
+- Exécuter :
+  ```bash
+  python -m venv .venv
+  .\.venv\Scripts\Activate.ps1    # Windows PowerShell
+  pip install -r requirements.txt
+  pytest -q
+  ```
+
+10) Screenshots & examples
+- Ajoutez un petit `Example` (code block or sample output) dans README pour les workflows complexes.
+- Inclure au moins une capture d'écran (`assets/`) pour les workflows UI‑heavy.
+
+11) Quick rules for contributors
 - Toujours exécuter `pytest` avant d'ouvrir une PR.
 - Lancer `scripts/sanitize_workflows.py --dry-run` avant commit si vous modifiez workflows.
 - Utiliser le template `workflow-checklist.md` pour PRs qui ajoutent/modifient workflows.

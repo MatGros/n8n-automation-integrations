@@ -1,7 +1,20 @@
 # n8n Automation Integrations
 
+[![Docs validation](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/docs-validation.yml/badge.svg)](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/docs-validation.yml) [![Architecture checks](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/architecture-validation.yml/badge.svg)](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/architecture-validation.yml) [![Security checks](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/security-check.yml/badge.svg)](https://github.com/MatGros/n8n-automation-integrations/actions/workflows/security-check.yml)
+
 Ce dépôt centralise les workflows n8n pour l'automatisation des processus.
 Pour déployer ces workflows, connectez-vous à votre instance n8n personnelle.
+
+## Quick Start
+1. Créez et activez un environnement virtuel Python :
+   ```bash
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1    # PowerShell on Windows
+   pip install -r requirements.txt
+   ```
+2. Exécutez la suite de tests : `pytest -q`
+3. Pour vérifier la documentation : `python scripts/validators/documentation_validator.py workflows`
+4. Avant un PR : `pre-commit run --all-files` et `python scripts/sanitize_workflows.py workflows --dry-run`
 
 ## 📂 Structure du projet
 
