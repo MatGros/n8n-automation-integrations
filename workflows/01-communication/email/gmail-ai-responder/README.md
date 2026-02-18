@@ -35,5 +35,18 @@ Automate email management with AI-generated responses and intelligent categoriza
 2. Configure `Gmail OAuth2` and `OpenAI` credentials.
 3. Test in `development/` before promoting to `active/`.
 
+## Example
+Input (email):
+```
+Subject: Pricing request
+Body: Hi — can you send your pricing tiers?
+```
+Expected result (draft created in Gmail — excerpt):
+```
+Subject: Re: Pricing request
+Hi John,
+Thanks for your message — our Starter plan is $X/month. I attached the pricing sheet.
+```
+
 ## Tags
 `gmail`, `email`, `ai`, `automation`, `labels`

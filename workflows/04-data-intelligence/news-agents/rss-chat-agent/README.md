@@ -43,5 +43,13 @@ Enable natural language conversations about news from multiple RSS sources using
 2. Configure RSS feeds and AI credentials.
 3. Start the workflow and send a test query via Telegram.
 
+## Example
+User: "Summarize the latest article about renewable energy"
+Bot (excerpt):
+```
+AI: "In today's article, researchers show a 12% increase in solar efficiency... [source link]"
+```
+Response includes brief summary + citation.
+
 ## Tags
 `ai-agent`, `news`, `rss`, `conversation`, `data-intelligence`

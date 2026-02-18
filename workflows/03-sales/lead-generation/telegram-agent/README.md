@@ -45,5 +45,14 @@ Generate qualified leads via Telegram with automated qualification and data coll
 2. Configure Telegram bot credentials and CRM integration.
 3. Run qualification flows in a test chat.
 
+## Example
+User: "I'm interested in your consulting services"
+Bot (excerpt): "Great — can I get your company and email?"
+
+Stored lead (example JSON):
+```
+{"name": "Jane Doe", "company": "Acme Inc.", "email": "jane@example.com", "score": 86}
+```
+
 ## Tags
 `sales`, `lead-generation`, `telegram`, `ai-agent`, `bot`

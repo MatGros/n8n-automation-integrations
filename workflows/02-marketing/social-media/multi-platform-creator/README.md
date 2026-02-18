@@ -43,5 +43,15 @@ Streamline content creation across different social networks (Twitter, LinkedIn,
 2. Add OpenAI and social platform credentials (Twitter/X, LinkedIn, Instagram).
 3. Run in staging and validate posts per-platform.
 
+## Example
+Base prompt: `Write a short promotional post about our 30% spring discount.`
+
+Example generated outputs (excerpt):
+```
+Twitter: "Spring sale! 30% off all plans — limited time. #SpringSavings"
+LinkedIn: "We’re offering 30% off our plans this spring. Learn more and save today. [link]"
+Instagram: "Spring vibes 🌷 — 30% off! Tap the link in bio. #Sale"
+```
+
 ## Tags
 `social-media`, `content-creation`, `marketing`, `multi-platform`, `ai`
