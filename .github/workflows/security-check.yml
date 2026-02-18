@@ -44,12 +44,26 @@ jobs:
       - name: Comment PR with security report
         if: ${{ github.event_name == 'pull_request' }}
         uses: actions/github-script@v6
+        continue-on-error: true
         with:
           script: |
             const fs = require('fs');
             const path = 'reports/security-scan.json';
             if (!fs.existsSync(path)) return;
             const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+            // Skip commenting for PRs coming from forks (token restrictions)
+            if (!context.payload.pull_request) {
+              console.log('No pull_request in payload — skipping comment.');
+              return;
+            }
+            const headRepo = context.payload.pull_request.head?.repo?.full_name || '';
+            const baseRepo = `${context.repo.owner}/${context.repo.repo}`;
+            if (headRepo !== baseRepo) {
+              console.log(`PR head repo (${headRepo}) differs from base (${baseRepo}) — skipping comment.`);
+              return;
+            }
+
             const lines = [];
             lines.push('## Security scan — quick summary');
             lines.push(`- emails found: ${report.emails.length}`);
@@ -62,9 +76,15 @@ jobs:
             lines.push(JSON.stringify(report, null, 2));
             lines.push('```');
             lines.push('</details>');
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: lines.join('\n')
-            });
+
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: lines.join('\n')
+              });
+            } catch (err) {
+              console.warn('Could not post PR comment (likely permission restriction):', err.message);
+              console.log('Security scan saved as an artifact; download from the workflow run if needed.');
+            }
