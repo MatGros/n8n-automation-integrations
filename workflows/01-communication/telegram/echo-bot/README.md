@@ -14,6 +14,10 @@ Demonstrates basic Telegram trigger integration with n8n and message handling.
 - **Type**: Text message sent back to the user
 - **Format**: `message: [original message content]`
 
+## Process
+1. `telegram-trigger` receives a message from a user.
+2. `send-message` node echoes the original message back to the sender.
+
 ## Setup Requirements
 1. Create a Telegram bot via @BotFather
 2. Configure Telegram API credentials in n8n
