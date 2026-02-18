@@ -1,0 +1,27 @@
+name: PR: Enforce PR template
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  check-pr-body:
+    name: Check PR body for workflow checklist
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate PR body contains Workflow checklist
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const body = context.payload.pull_request && context.payload.pull_request.body || '';
+            const required = [
+              'Workflow checklist',
+              'workflow-checklist.md',
+              '## Workflow checklist',
+              '- [ ] Description',
+            ];
+            const ok = required.some(r => body.includes(r));
+            if (!ok) {
+              throw new Error('PR body must include the `Workflow checklist` (see .github/PULL_REQUEST_TEMPLATE.md)');
+            }

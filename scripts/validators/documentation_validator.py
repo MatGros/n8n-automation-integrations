@@ -4,6 +4,7 @@ Provides small, focused checks used by tests and CI.
 """
 from pathlib import Path
 import json
+import re
 from typing import List, Dict
 
 REQUIRED_README_SECTIONS = ["Description", "Purpose", "Trigger", "Output"]
