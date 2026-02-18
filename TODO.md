@@ -150,60 +150,63 @@ FICHIERS OPTIONNELS (documentés, NON testés):
 
 ## PHASE 3: DOCUMENTATION COMPLÈTE
 
-### 3.1 Style Guide visuel
+But: livrables documentaires pour rendre le repo utilisable, maintenable et contributable. Acceptance: tous les *MUST* complétés + validator docs passants + README principal mis à jour.
 
-- [ ] Créer `docs/workflow-style-guide.md` [COMPLET: 8 sections]
-  - [ ] Principes de base
-  - [ ] Code couleur 7 couleurs (Bleu=Fetch, Vert=Logic, Jaune=Storage, Rouge=Error, Orange=Trigger, Violet=AI, Cyan=Communication)
-  - [ ] Nommage nodes (verbes d'action)
-  - [ ] Organisation spatiale (gauche→droite)
-  - [ ] Sticky Notes (4 types: Section/Info/Warning/Success)
-  - [ ] Gestion erreurs
-  - [ ] Documentation obligatoire
-  - [ ] Checklist qualité
+PRIORITÉ: Documentation (owner: @MatGros)
 
-### 3.2 Documentation par industrie
+MUST — Livrables prioritaires
+- [ ] `docs/workflow-style-guide.md` — principes, color-mapping, node-naming, layout, error-handling, documentation requise, checklist qualité
+  - Acceptance: chaque section contient un exemple + 2 captures d'écran; contient un `How to write node descriptions`
+  - Est.: 8h
+- [ ] `docs/workflow-checklist.md` — checklist pré-PR intégrable au template PR
+  - Acceptance: checklist utilisable dans PR template
+  - Est.: 1h
+- [ ] `README.md` (racine) — Quick Start, badges, architecture résumé, TOC, run example
+  - Acceptance: reproduire un `pip install -r requirements.txt` + `pytest` localement
+  - Est.: 3h
+- [ ] `docs/contributing.md` — PR process, commit convention, branch naming, review checklist, pre-commit
+  - Acceptance: PR template + CONTRIBUTING présent
+  - Est.: 2h
+- [ ] `docs/security-best-practices.md` — sanitizer usage, secrets handling, pre-commit guidance
+  - Acceptance: instructions pour `scripts/sanitize_workflows.py --dry-run` et remediation steps
+  - Est.: 2h
+- [ ] `docs/ci-cd-setup.md` — expliquer les workflows CI, comment exécuter localement, secrets requis
+  - Acceptance: steps to reproduce CI jobs locally (act or docker)
+  - Est.: 2h
+- [ ] `docs/by-industry/iot-guide.md` — guide complet + patterns + 1 example workflow (MQTT)
+  - Acceptance: example end‑to‑end + mapping to style-guide
+  - Est.: 4h (sample); skeletons for other industries
+- [ ] `docs/by-technology/mqtt-integration.md` — tutoriel + mapping to style-guide
+  - Est.: 3h
 
-- [ ] `docs/by-industry/iot-guide.md` (MQTT, CoAP, LoRaWAN, patterns)
-- [ ] `docs/by-industry/industry-4.0-guide.md` (PLC, SCADA, OEE, patterns)
-- [ ] `docs/by-industry/healthcare-guide.md` (HL7/FHIR, devices, compliance)
-- [ ] `docs/by-industry/energy-guide.md` (Smart grid, monitoring, optimization)
+SHOULD — Secondaires
+- [ ] `docs/color-reference.md` — palette & usage examples (Est.: 1h)
+- [ ] `docs/deployment-guide.md` — recipes (Est.: 2h)
+- [ ] Mettre à jour `docs/workflow-editing-guide.md` (Est.: 1h)
 
-### 3.3 Documentation par technologie
+NICE-TO-HAVE
+- [ ] assets/architecture-diagram.png + cheatsheet PDF (Est.: 4h)
+- [ ] GIFs/screenshots pour Quick Start (Est.: 2h)
 
-- [ ] `docs/by-technology/mqtt-integration.md`
-- [ ] `docs/by-technology/blockchain-integration.md`
-- [ ] `docs/by-technology/kubernetes-automation.md`
-- [ ] `docs/by-technology/edge-computing.md`
+AUTOMATION & VALIDATION (doit être en place avant marquer "Phase 3 complete")
+- [ ] `scripts/validators/documentation_validator.py` — vérifie README/TOC/headers (Purpose/Trigger/Output)
+- [ ] `scripts/tests/test_documentation.py` — unit tests pour validator
+- [ ] Ajouter job `docs-validation` dans `pr-checks.yml` pour exécuter le validator
+- Acceptance: `docs-validation` passe et PR a le label `DOCS_READY`
 
-### 3.4 Autres docs
+TIMELINE & OWNERS
+- Owner: @MatGros (primary); contributors: repo maintainers
+- Target: compléter tous les MUST en 1 sprint (5 jours ouvrés)
 
-- [ ] `docs/color-reference.md`
-- [ ] `docs/workflow-checklist.md`
-- [ ] `docs/security-best-practices.md`
-- [ ] `docs/deployment-guide.md`
-- [ ] `docs/ci-cd-setup.md`
-- [ ] `docs/contributing.md`
-- [ ] Mettre à jour `docs/workflow-editing-guide.md`
-
-### 3.5 README principal
-
-### 3.6 REVIEW DE PHASE 3
-- [ ] Vérifier tous les guides créés
-- [ ] Valider compatibilité avec workflows
-- [ ] Vérifier liens dans la documentation
-- [ ] Confirmer style guide utilisé par l'équipe
-- [ ] README attractif et à jour
-
-- [ ] Badges (tests, license, workflows count)
-- [ ] Section Quick Start
-- [ ] Screenshots/GIFs
-- [ ] Table des matières
-- [ ] Liens documentation
-- [ ] Section Architecture
-- [ ] Retirer URL VPS
+CRITÈRES DE REVUE
+- Tous les MUST complétés et testés
+- Documentation validator passing
+- README principal à jour + Quick Start fonctionnel
+- PR review + minimum 1 approbation
 
 ---
+
+## PHASE 4: TESTS AUTOMATISÉS
 
 ## PHASE 4: TESTS AUTOMATISÉS
 
