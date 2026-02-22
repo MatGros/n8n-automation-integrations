@@ -60,7 +60,13 @@ def find_non_kebab_paths(workflows_path: str = "workflows") -> List[str]:
                 # skip schema files (e.g., workflow-metadata.schema.json)
                 if p.name.endswith(".schema.json"):
                     continue
+                # skip metadata files (either plain or per-workflow)
+                if p.name == "metadata.json" or p.name.endswith(".metadata.json"):
+                    continue
                 name = p.stem
+                # if this is a per-workflow metadata, strip the '.metadata' suffix before checking
+                if name.endswith(".metadata"):
+                    name = name[: -len(".metadata")]
                 # Allow specific _STATUS_DATE suffixes (e.g., _PUB_20260221, _DEV_20260221)
                 name_without_suffix = re.sub(r'_(PUB|DEV|DRF|DEP|ARC)_\d{8}$', '', name)
                 if not is_kebab(name_without_suffix):

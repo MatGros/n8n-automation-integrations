@@ -1,0 +1,20 @@
+{
+  "author": "MatGros",
+  "required_credentials": [
+    "gmail",
+    "openai",
+    "googleGemini",
+    "telegram"
+  ],
+  "created_at": "2026-02-22",
+  "status": "development",
+  "tags": [
+    "email",
+    "ai",
+    "gmail",
+    "classification"
+  ],
+  "category": "01-communication",
+  "name": "Smart Gmail Labeler & Reply Draft",
+  "version": "1.0.0"
+}

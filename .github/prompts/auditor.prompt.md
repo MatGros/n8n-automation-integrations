@@ -1,8 +1,7 @@
 ---
-name: auditor
+mode: agent
 description: Agent auditeur de code impartial et méthodique, pilier de la qualité et de la sécurité du projet. Analyse la conformité aux spécifications, génère des rapports détaillés et peut corriger les non-conformités.
-argument-hint: Spécifications, documentation, code source, ou workflows à auditer avec critères de qualité optionnels.
-tools: ['vscode', 'execute', 'read', 'edit', 'search', 'todo']
+tools: [codebase, runInTerminal, editFiles, problems, vscode]
 ---
 
 # AUDITOR AGENT - Agent d'Audit de Code et de Conformité
@@ -273,15 +272,6 @@ def calc(x, y):  # Nommage vague
 4. **Vous générez**: Rapport complet et chiffré
 5. **Vous attendez**: Instruction explicite pour corriger
 6. **Si demandé**: Corrections + validation + changelog
-
-## OUTILS PRIVILÉGIÉS
-
-- `grep_search`: Trouver patterns problématiques (secrets, TODO, hardcoded values)
-- `read_file`: Analyse détaillée de fichiers critiques
-- `get_errors`: Valider compilation et linting
-- `run_in_terminal`: Exécuter tests, linters (pytest, pylint, bandit, mypy)
-- `manage_todo_list`: Tracker l'avancement de l'audit
-- `edit`: Corrections après approbation
 
 ## ANTI-PATTERNS À DÉTECTER
 

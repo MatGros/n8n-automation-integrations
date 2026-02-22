@@ -1,5 +1,5 @@
 {
-  "name": "Auto AI Label Gmail unread msg reply draft",
+  "name": "Smart Gmail Labeler & Reply Draft",
   "nodes": [
     {
       "parameters": {
@@ -33,7 +33,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "=\n---SYSTEM PROMPT---\n\nYou are an email classification assistant. Your task is to analyze Gmail email snippets and categorize them into one of the following labels:\n\n- Admin🗂️ (TypeLabel) : Official documents, administrative procedures, certificates, contracts.\n- Events🎟️ (TypeLabel) : Invitations, tickets, event bookings, outings.\n- Family🤝🤸‍♀️ (TypeLabel) : Family in the broad sense — co‑parenting, children, school, shared custody, parents, extended family, or any family‑related decision (even administrative, legal, financial, medical, or logistical).\n- Finance💰 (TypeLabel) : Banking, payments, invoices, taxes, insurance, financial documents.\n- Health🏥 (TypeLabel) : Medical appointments, prescriptions, insurance, results.\n- Home🏠 (TypeLabel) : Housing, utilities, subscriptions, home management.\n- Marketing📣 (TypeLabel) : Commercial content, promotions, loyalty programs, personalized offers, account‑based marketing messages, or any email whose primary purpose is to encourage purchases or engagement — even when the message is personalized or linked to your account.\n- Personal⭐ (TypeLabel) : Personal accounts, hobbies, sign‑ups, and general notifications not related to commercial marketing or promotions.\n\n- Newsletter📰 (TypeLabel) : Editorial content, regular updates, non‑commercial news.\n- Personal⭐ (TypeLabel) : Personal accounts, hobbies, sign‑ups, general notifications.\n- Shopping🛒 (TypeLabel) : Orders, deliveries, receipts, returns, travel bookings.\n- Work💼 (TypeLabel) : Work‑related emails, HR, professional admin, projects.\n\n- ⚡ (StatusLabel — Action) : Requires an immediate action from you.\n- ✅ (StatusLabel — Done) : Completed, no further action needed.\n- 📩 (StatusLabel — Reply) : Waiting for someone else’s reply or action.\n- 👀 (StatusLabel — Review) : Needs careful reading or analysis before deciding.\n\n- 🔥 (PriorityLabel — High) : High priority.\n- 📌 (PriorityLabel — Normal) : Normal priority.\n- 💤 (PriorityLabel — Low) : Low priority.\n\n- 🏷️ (SystemLabel — Tagged) : Email already processed and classified by the model.\n\n---END OF SYSTEM PROMPT---\n\n---USER PROMPT---\n\nInstructions:\n1. Read the email snippet carefully\n2. Note the sender (if provided) for context\n3. Choose the single most appropriate label based on the rules above\n4. IMPORTANT: Respond ONLY with the number and label.\n5. Do not include any other text, explanation, or repeat the email content\n\n\n\nClassify the following Gmail message using the labels defined in the system instructions.\n\nEmailFrom:\n{{ $json.From }}\n\nEmailTo:\n{{ $json.To }}\n\nEmailSubject:\n{{ $json.Subject }}\n\nEmailSnippet:\n{{ $json.snippet }}\n\nEmail msgID (for internal use, DO NOT repeat it in your answer):\n{{ $json.id }}\n\nmatch between labels and labelsID :\n{{ $json.combinedObject.toJsonString()}}\n\nLe label Tagged🏷️ est obligatoire.\n\"🏷️\"={{ $json.combinedObject['🏷️'] }}\n\nReason for the choice, explain concisely why you made that choice (Répond en FRANCAIS):\n0:choiceReason (for label 0)\n0:choiceReason (for label 1)\n0:choiceReason (for label 3)\n0:choiceReason (for label 4)\n\nREMINDERS:\n- Choose the most appropriate labels based on the email content and context.\n- Use only the allowed labels from the system message.\n- Always include the label 🏷️.\n- Reply ONLY with the comma-separated list of labels, nothing else.\n\n---END OF USER PROMPT---\n",
+        "text": "=✅ SYSTEM PROMPT (Version française optimisée)\nTu es un assistant de classification d’emails Gmail.\nTa tâche est d’analyser le contenu d’un email (expéditeur, sujet, snippet) et de lui attribuer les labels appropriés parmi les catégories suivantes.\n\n🎯 TypeLabels — Catégories principales\n- Admin🗂️ : Documents officiels, démarches administratives, certificats, contrats, attestations.\n- Events🎟️ : Invitations, billets, réservations d’événements, sorties.\n- Family🤝🤸‍♀️ : Tout ce qui concerne la famille au sens large exemple : co‑parentalité, enfants, école, garde, parents, famille élargie, décisions familiales (même administratives, financières, médicales ou logistiques).\n- Finance💰 : Banque, paiements, factures, impôts, assurances, documents financiers.\n- Health🏥 : Rendez‑vous médicaux, prescriptions, résultats, mutuelle, soins.\n- Home🏠 : Logement, abonnements, énergie, eau, internet, gestion du foyer.\n- Marketing📣 : Contenu commercial, promotions, programmes de fidélité, offres personnalisées, marketing lié à un compte, emails visant à encourager un achat ou un engagement.\n- Newsletter📰 : Contenu éditorial, mises à jour régulières, actualités non commerciales.\n- Personal⭐ : Comptes personnels, inscriptions, loisirs, notifications générales non commerciales et non professionnelle.\n- Shopping🛒 : Commandes, livraisons, reçus, retours, réservations de voyage.\n- Work💼 : Emails professionnels, RH, projets, administration liée au travail, emplois, réseaux sociaux professionnels, formation professionnels, réunions professionnelse etc...\n\n⚡ StatusLabels — Statut / Action requise\nCes labels indiquent si une action est attendue.\n- ⚡ Action immédiate :\nUtiliser si l’email demande une action urgente, une confirmation rapide, une échéance proche, ou un créneau limité.\nExemples : “Confirmez votre rendez‑vous”, “Dernière chance”, “Votre créneau expire”.\n- 📩 Reply (En attente de réponse) :\nUtiliser si l’email demande explicitement une réponse, une confirmation, un choix ou une validation.\nExemples : “Merci de répondre”, “Veuillez confirmer”, “Choisissez une option”.\n- 👀 Review (À lire attentivement) :\nUtiliser si l’email nécessite une analyse ou une lecture attentive avant décision.\nExemples : documents importants, contrats, informations sensibles.\n- ✅ Done (Terminé) :\nUtiliser si l’email indique qu’une action est déjà accomplie et qu’aucune autre n’est requise.\nExemples : “Votre paiement a été reçu”, “Votre dossier est validé”.\n\n🔥 PriorityLabels — Priorité\n- 🔥 Haute priorité : Informations urgentes, délais courts, éléments critiques.\n- 📌 Priorité normale : Cas standard.\n- 💤 Basse priorité : Informations non urgentes, notifications mineures.\n\n🏷️ SystemLabel — Obligatoire\n- 🏷️ Tagged : Indique que l’email a été traité et classé par le modèle.\nCe label doit toujours être présent.\n\n🧠 Règles générales de classification\n- Lis attentivement le snippet et le sujet.\n- Identifie le type d’email → choisis un seul TypeLabel.\n- Ajoute les StatusLabels si nécessaire (⚡, 📩, 👀, ✅).\n- Ajoute un PriorityLabel si identifiable.\n- Ajoute toujours le label 🏷️.\n- Réponds uniquement avec la liste des labels, séparés par des virgules.\n- Ne répète jamais le contenu de l’email.\n\n🧾 USER PROMPT (Version française optimisée)\nInstructions :\n- Lis attentivement le snippet de l’email.\n- Note l’expéditeur si utile au contexte.\n- Choisis le TypeLabel le plus approprié.\n- Ajoute les StatusLabels et PriorityLabels si nécessaire.\n- IMPORTANT : Réponds uniquement avec la liste des labels (numéro + label), séparés par des virgules.\n- N’ajoute aucun texte supplémentaire.\n\nEmailFrom :\n{{ $json.From }}\nEmailTo :\n{{ $json.To }}\nEmailSubject :\n{{ $json.Subject }}\nEmailSnippet :\n{{ $json.snippet }}\nEmail msgID (ne pas répéter) :\n{{ $json.id }}\nCorrespondance labels → labelsID :\n{{ $json.combinedObject.toJsonString() }}\nLe label 🏷️ Tagged est obligatoire.\n\"🏷️\" = {{ $json.combinedObject['🏷️'] }}\n\nReason for the choice (en français, concis) :\n0:choiceReason (for label 0)\n0:choiceReason (for label 1)\n0:choiceReason (for label 3)\n0:choiceReason (for label 4)\n\nRappels :\n- Utilise uniquement les labels autorisés.\n- Choisis le meilleur label selon le contenu.\n- Toujours inclure 🏷️.\n- Réponds uniquement avec les labels, rien d’autre.\n",
         "hasOutputParser": true,
         "needsFallback": true,
         "batching": {}
@@ -59,11 +59,10 @@
         592,
         240
       ],
-      "webhookId": "8486ead2-f408-4e64-afa7-0e20a1622830",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0000",
           "name": "Gmail account 2"
         }
       }
@@ -94,11 +93,10 @@
         1664,
         352
       ],
-      "webhookId": "c393dcb0-92cb-4206-b8b9-e378a9bf8090",
       "typeVersion": 2.1,
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0000",
           "name": "Gmail account 2"
         }
       }
@@ -117,7 +115,7 @@
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0001",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -138,10 +136,9 @@
       ],
       "id": "dca2ed82-5653-420f-bd2a-24ca5d2fec8a",
       "name": "Get many messages1",
-      "webhookId": "17b7b078-3ac8-4079-8a48-e1bef013ac27",
       "credentials": {
         "gmailOAuth2": {
-          "id": "qcgpwRzx5eZ9o1LQ",
+          "id": "CRED_0002",
           "name": "Gmail account"
         }
       }
@@ -189,7 +186,7 @@
       "typeVersion": 1.2,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
@@ -259,58 +256,10 @@
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "## LLM identifies whether the email requires a response or not.\n",
-        "height": 653,
-        "width": 588,
-        "color": 6
-      },
-      "id": "a61ff552-b62a-4e83-adc0-6a62e9528134",
-      "name": "Sticky Note1",
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        1904,
-        144
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
-        "content": "## Generate a Reply",
-        "height": 656,
-        "width": 333,
-        "color": 6
-      },
-      "id": "53b814d3-7008-4224-aa4f-a3748c056439",
-      "name": "Sticky Note2",
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        2480,
-        144
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
-        "content": "## Draft in the mail",
-        "height": 651,
-        "width": 342,
-        "color": 3
-      },
-      "id": "4758cc6b-6cc8-4a00-a81a-478740f55c5f",
-      "name": "Sticky Note3",
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        2816,
-        144
-      ],
-      "typeVersion": 1
     },
     {
       "parameters": {
@@ -327,7 +276,7 @@
       "typeVersion": 1,
       "credentials": {
         "openAiApi": {
-          "id": "bcp1WWksO5Apywoz",
+          "id": "CRED_0003",
           "name": "OpenAi account"
         }
       }
@@ -351,10 +300,9 @@
         336
       ],
       "typeVersion": 2.1,
-      "webhookId": "52130cc2-2bc3-4250-b436-6a91182a9159",
       "credentials": {
         "gmailOAuth2": {
-          "id": "MP7zXHvHyevKQVsV",
+          "id": "CRED_0000",
           "name": "Gmail account 2"
         }
       }
@@ -365,7 +313,7 @@
         "messages": {
           "messageValues": [
             {
-              "message": "=Tu es un agent spécialisé dans l'organisation de mail.\n\nTu doit analyser le mail suivant pour identifier si il y a nécessité d'une réponse par l'utilisateur...\n{{$parameter.prompt}}\n\nPuis tu rédige une justification courte :\nreplyReason\nPuis tu indique si une réponse est nécessaire :\nneedsReply\nPuis tu indique l'ID du mail :\n{{ $json.id }}\n\nTa sortie doit absolument respecter Output Paraser "
+              "message": "=Tu es un agent spécialisé dans l’organisation des emails.\nAnalyse le mail suivant pour déterminer si l’utilisateur doit y répondre.\nUne réponse est nécessaire uniquement si l’email demande explicitement une réponse, une confirmation écrite, une information à fournir, ou si une personne attend un retour direct.\nNe considère pas comme nécessitant une réponse :\n- les notifications automatiques (Doctolib, banques, services en ligne)\n- les confirmations, reçus, rappels, alertes\n- les changements d’horaire automatiques\n- les actions à effectuer via un bouton ou un lien sans réponse écrite\n- les emails informatifs sans demande explicite\n{{$parameter.prompt}}\nPuis rédige une justification courte dans : replyReason\nPuis indique si une réponse est nécessaire dans : needsReply\nPuis indique l’ID du mail : {{ $json.id }}\nTa sortie doit absolument respecter l’Output Parser."
             }
           ]
         }
@@ -418,7 +366,7 @@
       "name": "Google Gemini Chat Model1",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0001",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -706,21 +654,6 @@
     },
     {
       "parameters": {
-        "content": "## Error management",
-        "height": 651,
-        "width": 1238
-      },
-      "id": "3b7ee0a0-f026-4307-804c-46c5b5f92988",
-      "name": "Sticky Note7",
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        3168,
-        144
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
         "chatId": "6690564339",
         "text": "={{ $json.workflowName }}",
         "additionalFields": {}
@@ -733,11 +666,10 @@
       ],
       "id": "7d990dfe-9993-47ab-a036-2abc7dc0e8c7",
       "name": "Send a text message",
-      "webhookId": "60a5c714-b1bb-4de6-a479-e85455da76c0",
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0004",
+          "name": "Telegram account my_bot"
         }
       }
     },
@@ -756,11 +688,10 @@
       ],
       "id": "3c7eaea4-46c3-4829-b65a-2f5ea8e35c47",
       "name": "Telegram Trigger",
-      "webhookId": "5490edc8-05e1-425e-aafc-242ab02363a4",
       "credentials": {
         "telegramApi": {
-          "id": "xHdPDRkVv0Nav4zO",
-          "name": "Telegram account ZedMg_bot"
+          "id": "CRED_0004",
+          "name": "Telegram account my_bot"
         }
       },
       "disabled": true
@@ -779,10 +710,88 @@
       "name": "Google Gemini Chat Model2",
       "credentials": {
         "googlePalmApi": {
-          "id": "Gt69CGhh9Igw9oS2",
+          "id": "CRED_0001",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
+    },
+    {
+      "parameters": {
+        "content": "## LLM identifies whether the email requires a response or not.",
+        "height": 682,
+        "width": 304,
+        "color": 6
+      },
+      "id": "955d3f4b-dfcc-49ff-87a4-214f15be1e44",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1904,
+        128
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Generate a Reply",
+        "height": 682,
+        "width": 384,
+        "color": 6
+      },
+      "id": "90401f2b-ec83-4fb0-9a15-82f6c62b9440",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2448,
+        128
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Mail Draft reply",
+        "height": 682,
+        "width": 278,
+        "color": 3
+      },
+      "id": "8520c8a0-9b47-4bd0-9898-1785f541546f",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2832,
+        128
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Error management",
+        "height": 682,
+        "width": 1302
+      },
+      "id": "3a8a20fe-da69-4874-8e0c-e942089b7ae3",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3152,
+        128
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "",
+        "height": 682,
+        "color": 4
+      },
+      "id": "177f9de6-4d0a-494e-91c3-fcef03fb27fa",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2208,
+        128
+      ],
+      "typeVersion": 1
     }
   ],
   "pinData": {},
@@ -1079,11 +1088,10 @@
     "timeSavedPerExecution": 60,
     "errorWorkflow": "km5jBfGqfXoorup8"
   },
-  "versionId": "1e6845a5-1f45-48f3-a38d-bf7f7731e3f7",
+  "versionId": "087789a3-ce82-4607-b7a8-95b5794e60f1",
   "meta": {
     "templateId": "4876",
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b7e1b4457386aa6bbc6ea47187acaa4fab3fa99522223f2ee037f799459525ce"
+    "templateCredsSetupCompleted": true
   },
   "id": "km5jBfGqfXoorup8",
   "tags": []
