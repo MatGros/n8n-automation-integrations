@@ -13,13 +13,18 @@ Vous êtes un assistant spécialisé dans le tri et la validation des workflows 
 
 ### Étape 1: Analyse de l'Inbox
 1. Lisez le contenu du dossier `workflows/inbox/`.
-2. Pour chaque fichier `.json` (workflow), analysez son contenu pour comprendre son but.
+2. Pour chaque fichier `.json` (workflow), analysez son contenu pour comprendre son but. S'il s'agit d'une mise à jour, comparez avec l'existant pour évaluer l'ampleur des changements.
 3. Proposez un emplacement dans l'arborescence existante (ex: `workflows/01-communication/email/`) ou proposez la création d'un nouveau dossier si nécessaire.
 4. Proposez un nouveau nommage respectant la convention `kebab-case` (ex: `send-email-notification.json`).
+5. Proposez un niveau de versionnement (Majeur, Mineur, Correctif) et un statut (ex: `development`, `published`).
 
 ### Étape 2: Validation Utilisateur
-1. Présentez vos propositions à l'utilisateur.
-2. Attendez sa validation ou ses corrections.
+1. Présentez vos propositions à l'utilisateur de manière structurée :
+   - Emplacement et nommage.
+   - Niveau de mise à jour de la version (Majeure, Mineure, Correctif) et le numéro de version résultant.
+   - Statut du workflow (ex: `development`, `published`).
+2. Demandez explicitement à l'utilisateur de valider ou de corriger ces éléments (ex: "Souhaitez-vous le publier (PUB) ou le garder en développement (DEV) ? S'agit-il d'un correctif ou d'une évolution mineure ?").
+3. Attendez sa validation ou ses corrections avant de passer à la suite.
 
 ### Étape 3: Validation Technique (Script Bash)
 1. Une fois l'accord obtenu, exécutez le script de validation sur le nom proposé (n'oubliez pas l'extension `.json`) :
@@ -37,7 +42,7 @@ Vous êtes un assistant spécialisé dans le tri et la validation des workflows 
 4. Déplacez le nouveau fichier `.json` vers le dossier de destination et renommez-le obligatoirement en `workflow.json`.
 5. Déplacez et renommez les fichiers associés (ex: `.png` en `screen-01.png`, `screen-02.png`, etc.). **Règle pour les images :** Si des captures d'écran ont un numéro identique, incrémentez-le pour éviter tout écrasement.
 6. Générez ou mettez à jour le fichier `metadata.json` (avec `version`, `created_at` ou `updated_at`, `status`, etc.) et le fichier `README.md` (avec l'en-tête de version et de date).
-   - **Attention au statut :** Déduisez le `status` à partir du nom du fichier d'origine (ex: si le fichier contient `_PUB_`, le statut doit être `"published"`. S'il contient `_DRAFT_` ou `_DEV_`, le statut est `"development"`).
+   - **Important :** Utilisez le `status` et la `version` explicitement validés par l'utilisateur lors de l'Étape 2. Ne déduisez pas le statut automatiquement sans confirmation.
 7. Exécutez le script de nettoyage sur le nouveau `workflow.json` : `python scripts/sanitize_workflows.py <chemin-vers-workflow.json> --force`.
 8. Vérifiez que les fichiers ont bien été déplacés et ne sont plus dans l'inbox.
 9. Confirmez le succès de l'opération à l'utilisateur.
