@@ -1,0 +1,20 @@
+{
+  "name": "Multi-Platform Social Media Creator",
+  "category": "02-marketing",
+  "version": "1.1.0",
+  "status": "active",
+  "required_credentials": [
+    "twitter",
+    "facebook",
+    "instagram",
+    "openai"
+  ],
+  "tags": [
+    "social-media",
+    "marketing",
+    "content-creation",
+    "ai",
+    "multi-platform"
+  ],
+  "author": "MatGros"
+}

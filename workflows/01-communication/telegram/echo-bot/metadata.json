@@ -1,0 +1,16 @@
+{
+  "name": "Telegram Echo Bot",
+  "category": "01-communication",
+  "version": "1.0.0",
+  "status": "active",
+  "required_credentials": [
+    "telegram"
+  ],
+  "tags": [
+    "telegram",
+    "bot",
+    "communication",
+    "simple"
+  ],
+  "author": "MatGros"
+}

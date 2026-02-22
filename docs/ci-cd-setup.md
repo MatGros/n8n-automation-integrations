@@ -1,5 +1,7 @@
 # CI/CD Setup Guide
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 ## Purpose
 
 This guide documents the continuous integration and continuous deployment (CI/CD) setup for automated testing, security scanning, and deployment of n8n workflows. Automated workflows ensure quality, security, and reliability across all environments.

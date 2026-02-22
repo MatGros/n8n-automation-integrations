@@ -3,22 +3,14 @@ from pathlib import Path
 import re
 from typing import List
 
+# EXPECTED_CATEGORIES: Categories that currently exist with workflows.
+# As new categories are created, add them to this list in numeric order.
+# See RULES.md for the full vision of 16 categories (01-communication through 15-transportation).
 EXPECTED_CATEGORIES = [
     "01-communication",
     "02-marketing",
     "03-sales",
     "04-data-intelligence",
-    "05-iot",
-    "06-industry-4.0",
-    "07-edge-computing",
-    "08-blockchain",
-    "09-robotics",
-    "10-cloud-infrastructure",
-    "11-cybersecurity",
-    "12-healthcare",
-    "13-energy",
-    "14-agriculture",
-    "15-transportation",
     "99-templates",
 ]
 
@@ -65,8 +57,13 @@ def find_non_kebab_paths(workflows_path: str = "workflows") -> List[str]:
         else:
             # check filenames (without extension) for kebab-case if json file
             if p.suffix == ".json":
+                # skip schema files (e.g., workflow-metadata.schema.json)
+                if p.name.endswith(".schema.json"):
+                    continue
                 name = p.stem
-                if not is_kebab(name):
+                # Allow specific _STATUS_DATE suffixes (e.g., _PUB_20260221, _DEV_20260221)
+                name_without_suffix = re.sub(r'_(PUB|DEV|DRF|DEP|ARC)_\d{8}$', '', name)
+                if not is_kebab(name_without_suffix):
                     bad.append(str(rel))
     return bad
 

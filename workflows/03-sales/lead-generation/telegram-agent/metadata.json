@@ -1,0 +1,19 @@
+{
+  "name": "Lead Generation Agent (Telegram)",
+  "category": "03-sales",
+  "version": "2.0.0",
+  "status": "active",
+  "required_credentials": [
+    "telegram",
+    "anthropic"
+  ],
+  "tags": [
+    "sales",
+    "lead-generation",
+    "telegram",
+    "ai-agent",
+    "automation"
+  ],
+  "n8n_version_min": "1.0.0",
+  "author": "MatGros"
+}

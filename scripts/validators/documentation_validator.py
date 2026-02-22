@@ -7,7 +7,7 @@ import json
 import re
 from typing import List, Dict
 
-REQUIRED_README_SECTIONS = ["Description", "Purpose", "Trigger", "Output"]
+REQUIRED_README_SECTIONS = ["Description", "Purpose", "Trigger", "Process", "Output", "Setup Requirements"]
 MIN_PROCESS_STEPS = 2
 
 

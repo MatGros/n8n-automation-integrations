@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/MatGros/n8n-automation-integrations/main/workflows/schema/workflow-metadata.schema.json",
+  "title": "n8n Workflow Metadata Schema",
+  "description": "Canonical schema for workflow metadata.json files. Every workflow.json must have a sibling metadata.json conforming to this schema.",
+  "type": "object",
+  "required": [
+    "name",
+    "category",
+    "version",
+    "status",
+    "required_credentials",
+    "tags"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable workflow name. Should match the README heading.",
+      "minLength": 1,
+      "maxLength": 100,
+      "examples": [
+        "Echo Bot",
+        "Gmail AI Auto-Responder",
+        "Multi-Platform Social Media Creator"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "description": "Workflow category. Must be one of the 16 defined categories.",
+      "enum": [
+        "01-communication",
+        "02-marketing",
+        "03-sales",
+        "04-data-intelligence",
+        "05-iot",
+        "06-industry-4.0",
+        "07-edge-computing",
+        "08-blockchain",
+        "09-robotics",
+        "10-cloud-infrastructure",
+        "11-cybersecurity",
+        "12-healthcare",
+        "13-energy",
+        "14-agriculture",
+        "15-transportation",
+        "99-templates"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version (SemVer X.Y.Z). Increment on changes. New workflows start at 1.0.0.",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
+      "examples": [
+        "1.0.0",
+        "1.2.3",
+        "2.0.0-rc.1"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "Workflow lifecycle state.",
+      "enum": [
+        "active",
+        "development",
+        "deprecated",
+        "archived"
+      ],
+      "examples": [
+        "active",
+        "development"
+      ]
+    },
+    "required_credentials": {
+      "type": "array",
+      "description": "List of credential types required to run this workflow. Must be non-empty. Examples: 'gmail', 'openai', 'slack', 'telegram'.",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "examples": [
+        [
+          "telegram"
+        ],
+        [
+          "gmail",
+          "openai"
+        ],
+        [
+          "slack",
+          "anthropic"
+        ]
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable keywords for discovery and categorization. Lowercase, hyphenated strings. Minimum 2 tags.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "minLength": 1,
+        "maxLength": 30
+      },
+      "minItems": 2,
+      "uniqueItems": true,
+      "examples": [
+        [
+          "telegram",
+          "bot"
+        ],
+        [
+          "email",
+          "ai",
+          "automation"
+        ]
+      ]
+    },
+    "n8n_version_min": {
+      "type": "string",
+      "description": "Minimum n8n version required. Optional. Use SemVer format.",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
+      "examples": [
+        "1.0.0",
+        "1.47.0"
+      ]
+    },
+    "author": {
+      "type": "string",
+      "description": "Original creator or maintainer. Optional. Can be a GitHub handle, email, or name.",
+      "minLength": 1,
+      "maxLength": 100,
+      "examples": [
+        "MatGros",
+        "john.doe@example.com"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": "Echo Bot",
+      "category": "01-communication",
+      "version": "1.0.0",
+      "status": "active",
+      "required_credentials": [
+        "telegram"
+      ],
+      "tags": [
+        "telegram",
+        "bot",
+        "communication",
+        "simple"
+      ]
+    },
+    {
+      "name": "Gmail AI Auto-Responder",
+      "category": "01-communication",
+      "version": "1.2.1",
+      "status": "development",
+      "required_credentials": [
+        "gmail",
+        "openai"
+      ],
+      "tags": [
+        "email",
+        "ai",
+        "automation",
+        "gmail"
+      ],
+      "author": "MatGros"
+    },
+    {
+      "name": "Lead Generation Agent",
+      "category": "03-sales",
+      "version": "2.0.0",
+      "status": "active",
+      "required_credentials": [
+        "telegram",
+        "anthropic"
+      ],
+      "tags": [
+        "sales",
+        "lead-gen",
+        "telegram",
+        "ai-agent"
+      ],
+      "n8n_version_min": "1.47.0"
+    }
+  ]
+}

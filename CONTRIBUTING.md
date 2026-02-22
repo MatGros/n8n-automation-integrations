@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing! Follow these steps to make your PR reviewable and mergeable.
+Thanks for contributing! Follow these steps to make your PR reviewable and mergeable. For the full contributor guide (detailed checklists and examples), see `docs/contributing.md`.
 
 ## Local setup
 1. Create a virtualenv and install dev deps:

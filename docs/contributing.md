@@ -1,5 +1,7 @@
 # Contributing Guide
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 ## Welcome
 
 Thank you for your interest in contributing to n8n-automation-integrations! This guide explains how to contribute workflows, documentation, and improvements to the project.

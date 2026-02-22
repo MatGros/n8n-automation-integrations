@@ -1,5 +1,7 @@
 # Guide d'édition des Workflows n8n
 
+_Dernière mise à jour: 2026-02-19 • Audience: Contributeurs & Mainteneurs_
+
 Ce document décrit les méthodes recommandées pour collaborer sur les workflows de ce dépôt.
 
 ## Méthode Recommandée : API n8n + Git

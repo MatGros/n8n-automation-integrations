@@ -1,5 +1,7 @@
 # Workflow PR Checklist (copy into PR description)
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 Use this checklist when opening or reviewing PRs that add or change workflows.
 
 ## Required (must pass)

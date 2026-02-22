@@ -1,0 +1,18 @@
+{
+  "name": "Gmail AI Auto-Responder",
+  "category": "01-communication",
+  "version": "1.2.1",
+  "status": "development",
+  "required_credentials": [
+    "gmail",
+    "openai"
+  ],
+  "tags": [
+    "email",
+    "ai",
+    "automation",
+    "gmail",
+    "labeling"
+  ],
+  "author": "MatGros"
+}

@@ -1,5 +1,7 @@
 # Workflow Style Guide
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 Purpose
 ---
 Centralise les conventions visuelles et rédactionnelles appliquées aux workflows du dépôt. Ce guide sert de référence rapide pour la création, la revue et l'automatisation de la documentation.

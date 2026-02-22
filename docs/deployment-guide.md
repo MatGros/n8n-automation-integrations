@@ -1,5 +1,7 @@
 # Deployment Guide
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 ## Purpose
 
 This guide covers the complete workflow for deploying n8n workflows from development to production, including setup, configuration, testing, and backup strategies.

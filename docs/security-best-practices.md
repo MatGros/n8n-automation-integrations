@@ -1,5 +1,7 @@
 # Security Best Practices
 
+_Last updated: 2026-02-19 • Audience: Contributors & Maintainers_
+
 ## Purpose
 
 This guide documents security best practices for developing, testing, and deploying workflows in the n8n-automation-integrations repository. Security is a shared responsibility across all contributors.

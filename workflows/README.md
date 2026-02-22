@@ -1,5 +1,28 @@
 # Workflows Directory
 
+## Index generation
+
+A companion index file can be generated to obtain a quick, arborescent
+view of every workflow along with its last‑commit date, short
+description and declared status (development, published, etc.).
+
+Run the helper script from the repository root:
+
+```bash
+python scripts/generate_workflow_index.py \
+    > workflows/WORKFLOW_INDEX.md
+```
+
+Commit the resulting `WORKFLOW_INDEX.md` if you need to keep a
+snapshot, or invoke the script as part of CI to refresh the page
+before publishing documentation.
+
+The format is simple Markdown and is intended to help reviewers and
+project managers see which folders are currently being edited,
+which have been published, and when they last changed.
+
+
+
 This directory contains all n8n automation workflows organized by category and domain.
 
 ## Directory Structure
@@ -57,21 +80,7 @@ workflow-folder/
 
 ## Conventions
 
-### File Naming
-
-- **`workflow.json`** - The executable n8n workflow file (always present, always this name)
-- **`template.json`** - Base/template version if this is a variation or template
-- **`README.md`** - Documentation with mandatory sections (see template below)
-- **`test.json`** - Test cases in JSON format
-- **`config.json`** - Configuration parameters for the workflow
-
-### Kebab-case Naming
-
-All folder and file names MUST use kebab-case:
-- ✅ `echo-bot/`
-- ✅ `gmail-ai-responder/`
-- ❌ `echo_bot/` (wrong)
-- ❌ `EchoBot/` (wrong)
+The canonical workflow conventions — including naming, node naming, color mapping, README templates and checklist — are maintained in `docs/workflow-style-guide.md` and `docs/workflow-checklist.md`. Keep workflow-level README files concise and follow the style guide for detailed rules.
 
 ## README Template
 

@@ -53,6 +53,7 @@ class WorkflowSanitizer:
         """Generate consistent anonymous credential ID"""
         if cred_id not in self.anonymization_map:
             self.anonymization_map[cred_id] = f"CRED_{len(self.anonymization_map):04d}"
+            self.changes.append(f"Anonymized credential ID: {cred_id} → {self.anonymization_map[cred_id]}")
         return self.anonymization_map[cred_id]
 
     def sanitize_url(self, text: str) -> str:
