@@ -22,8 +22,9 @@ Vous êtes un assistant spécialisé dans le tri et la validation des workflows 
 2. Attendez sa validation ou ses corrections.
 
 ### Étape 3: Validation Technique (Script Bash)
-1. Une fois l'accord obtenu, exécutez le script de validation sur le nom proposé :
-   `bash scripts/validate_workflow_name.sh <nom-proposé> <chemin-proposé>`
+1. Une fois l'accord obtenu, exécutez le script de validation sur le nom proposé (n'oubliez pas l'extension `.json`) :
+   `bash scripts/validate_workflow_name.sh <nom-proposé>.json <chemin-proposé>`
+   *(Note: Sous Windows, si vous rencontrez une erreur de retour chariot `\r`, convertissez les fins de ligne du script avec PowerShell : `(Get-Content scripts/validate_workflow_name.sh -Raw) -replace "\r\n", "\n" | Set-Content scripts/validate_workflow_name.sh -NoNewline`)*
 2. Analysez le résultat du script.
 3. Si le script retourne des erreurs (ex: non-respect du kebab-case, catégorie invalide), demandez à l'utilisateur de corriger le nommage ou corrigez-le vous-même et re-validez.
 
@@ -32,10 +33,11 @@ Vous êtes un assistant spécialisé dans le tri et la validation des workflows 
 2. Créez le dossier de destination s'il n'existe pas. Le workflow doit être placé dans son propre sous-dossier en `kebab-case` (ex: `workflows/01-communication/email/send-email-notification/`).
 3. **Gestion des versions (si le dossier existe déjà) :**
    - Si le dossier existe, créez un sous-dossier `archive/vX.Y.Z/` (où X.Y.Z est la version actuelle lue dans `metadata.json`).
-   - Déplacez tous les fichiers actuels (`workflow.json`, `metadata.json`, `README.md`, `.png`, etc.) dans ce dossier d'archive avant d'importer les nouveaux.
+   - Déplacez tous les fichiers actuels (`workflow.json`, `metadata.json`, `README.md`, `.png`, etc.) dans ce dossier d'archive avant d'importer les nouveaux. (Attention aux conflits de déplacement sous PowerShell, déplacez les fichiers explicitement sans écraser).
 4. Déplacez le nouveau fichier `.json` vers le dossier de destination et renommez-le obligatoirement en `workflow.json`.
-5. Déplacez et renommez les fichiers associés (ex: `.png` en `screen-01.png`, `screen-02.png`, etc.).
+5. Déplacez et renommez les fichiers associés (ex: `.png` en `screen-01.png`, `screen-02.png`, etc.). **Règle pour les images :** Si des captures d'écran ont un numéro identique, incrémentez-le pour éviter tout écrasement.
 6. Générez ou mettez à jour le fichier `metadata.json` (avec `version`, `created_at` ou `updated_at`, `status`, etc.) et le fichier `README.md` (avec l'en-tête de version et de date).
+   - **Attention au statut :** Déduisez le `status` à partir du nom du fichier d'origine (ex: si le fichier contient `_PUB_`, le statut doit être `"published"`. S'il contient `_DRAFT_` ou `_DEV_`, le statut est `"development"`).
 7. Exécutez le script de nettoyage sur le nouveau `workflow.json` : `python scripts/sanitize_workflows.py <chemin-vers-workflow.json> --force`.
 8. Vérifiez que les fichiers ont bien été déplacés et ne sont plus dans l'inbox.
 9. Confirmez le succès de l'opération à l'utilisateur.

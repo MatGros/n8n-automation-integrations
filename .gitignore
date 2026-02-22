@@ -63,6 +63,5 @@ validation_report.json
 # Sensitive data files
 *.data
 *.n8n
-archive/
 temp/
 tmp/
