@@ -114,9 +114,9 @@ What problem does it solve?
 3. Dependencies
 
 ## Status
-- ✅ Active
+- 🟢 Published
 - 🚧 Development
-- ⚠️ Testing
+- 📦 Archived
 - ⛔ Deprecated
 
 ## Tags

@@ -1,6 +1,6 @@
 # Smart Gmail Labeler & Reply Draft
 
-**Version:** 1.1.3
+**Version:** 1.1.1
 **Date:** 2026-02-22
 
 ## Description
@@ -27,4 +27,4 @@ Automate email management with AI-generated responses and intelligent categoriza
 - Labeled emails in Gmail
 
 ## Status
-✓ Published
+✓ Active

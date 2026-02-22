@@ -16,7 +16,6 @@
   ],
   "category": "01-communication",
   "name": "Smart Gmail Labeler & Reply Draft",
-  "description": "Analyzes incoming Gmail messages, generates AI-powered draft replies, and applies intelligent labels to organize the inbox.",
-  "version": "1.1.3",
+  "version": "1.1.1",
   "updated_at": "2026-02-22"
 }

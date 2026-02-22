@@ -1,6 +1,6 @@
 # Smart Gmail Labeler & Reply Draft
 
-**Version:** 1.1.3
+**Version:** 1.1.2
 **Date:** 2026-02-22
 
 ## Description
