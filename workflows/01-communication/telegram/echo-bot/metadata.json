@@ -2,7 +2,7 @@
   "name": "Telegram Echo Bot",
   "category": "01-communication",
   "version": "1.0.0",
-  "status": "active",
+  "status": "published",
   "required_credentials": [
     "telegram"
   ],

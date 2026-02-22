@@ -26,6 +26,38 @@ import sys
 
 BASE = pathlib.Path(__file__).parent.parent / "workflows"
 
+# Emoji mapping for categories
+CATEGORY_EMOJI = {
+    "01-communication": "📧",
+    "02-marketing": "📱",
+    "03-sales": "💼",
+    "04-data-intelligence": "📊",
+}
+
+# Emoji mapping for status
+def get_status_emoji(status: str) -> str:
+    """Return emoji based on status."""
+    status_lower = status.lower()
+    if "published" in status_lower:
+        return "🟢"
+    elif "development" in status_lower:
+        return "🚧"
+    elif "archived" in status_lower or "deprecated" in status_lower:
+        return "📦"
+    return "❓"
+
+
+def normalize_status(status: str) -> str:
+    """Normalize status names for display (using n8n terminology)."""
+    status_lower = status.lower()
+    if "published" in status_lower:
+        return "Published"
+    elif "development" in status_lower:
+        return "Development"
+    elif "archived" in status_lower or "deprecated" in status_lower:
+        return "Archived"
+    return status
+
 
 def git_last_commit(path: pathlib.Path) -> str:
     """Return the ISO date of the last git commit that touched ``path``.
@@ -45,18 +77,30 @@ def git_last_commit(path: pathlib.Path) -> str:
         return ""
 
 
-def parse_readme(path: pathlib.Path) -> tuple[str, str]:
-    """Return a pair ``(description, status)`` extracted from README.md.
+def parse_metadata(path: pathlib.Path) -> str:
+    """Extract status from metadata.json."""
+    metadata_file = path / "metadata.json"
+    if not metadata_file.exists():
+        return ""
+
+    try:
+        data = json.loads(metadata_file.read_text(encoding="utf-8"))
+        return data.get("status", "")
+    except (json.JSONDecodeError, KeyError):
+        return ""
+
+
+def parse_readme(path: pathlib.Path) -> str:
+    """Return description extracted from README.md.
 
     - ``description`` is the first non-empty line after the main heading.
-    - ``status`` is any text under the "## Status" section.
     """
     description = ""
-    status = ""
-    if not path.exists():
-        return description, status
+    readme_file = path / "README.md"
+    if not readme_file.exists():
+        return description
 
-    text = path.read_text(encoding="utf-8").splitlines()
+    text = readme_file.read_text(encoding="utf-8").splitlines()
     # description: first non-heading, non-empty line after the first heading
     seen_heading = False
     for line in text:
@@ -66,19 +110,8 @@ def parse_readme(path: pathlib.Path) -> tuple[str, str]:
         if seen_heading and line.strip() and not line.startswith("#"):
             description = line.strip()
             break
-    # status: gather lines following "## Status" until next heading
-    for idx, line in enumerate(text):
-        if line.strip().lower().startswith("## status"):
-            # collect next lines until blank or new section
-            for l in text[idx+1:]:
-                if l.strip().startswith("## "):
-                    break
-                if l.strip():
-                    status += (l.strip() + " ")
-            status = status.strip()
-            break
 
-    return description, status
+    return description
 
 
 def main() -> None:
@@ -89,30 +122,68 @@ def main() -> None:
         pass
     lines: list[str] = []
     lines.append("# Workflow index\n")
-    # collect entries by top-level category for indentation
-    tree: dict[str, list[str]] = {}
-    entries: dict[str, dict] = {}
+
+    # Build hierarchical tree: category -> subcategory -> workflow
+    tree: dict[str, dict[str, list[dict]]] = {}
 
     for wf_dir in sorted(BASE.rglob("workflow.json")):
         wf_dir = wf_dir.parent
         rel = wf_dir.relative_to(BASE).as_posix()
+
+        # Skip archived workflows
+        if "/archive/" in rel:
+            continue
+
         parts = rel.split('/')
         category = parts[0] if parts else ''
+        subcategory = parts[1] if len(parts) > 1 else None
+        workflow_name = parts[-1]
+
         commit_date = git_last_commit(wf_dir / "workflow.json")
-        desc, stat = parse_readme(wf_dir / "README.md")
-        status_text = f" – Status: {stat}" if stat else ""
-        date_text = f" (last modified {commit_date})" if commit_date else ""
-        entry_text = f"- **{rel}/**{date_text}{status_text} – {desc}"
-        tree.setdefault(category, []).append(entry_text)
+        desc = parse_readme(wf_dir)
+        stat = parse_metadata(wf_dir)
 
-    # print categories in sorted order with indentation for entries
+        # Add emoji and normalize status
+        status_emoji = get_status_emoji(stat)
+        normalized_stat = normalize_status(stat)
+        status_text = f"{status_emoji} {normalized_stat}" if stat else ""
+
+        workflow_entry = {
+            "name": workflow_name,
+            "date": commit_date,
+            "status": status_text,
+            "desc": desc
+        }
+
+        if category not in tree:
+            tree[category] = {}
+        if subcategory:
+            if subcategory not in tree[category]:
+                tree[category][subcategory] = []
+            tree[category][subcategory].append(workflow_entry)
+
+    # Generate output with proper hierarchy
     for category in sorted(tree.keys()):
-        lines.append(f"- **{category}/**")
-        for entry in tree[category]:
-            # indent with two spaces
-            lines.append(f"  {entry}")
+        cat_emoji = CATEGORY_EMOJI.get(category, "📁")
+        lines.append(f"- {cat_emoji} **{category}/**")
 
-    sys.stdout.write("\n".join(lines))
+        for subcategory in sorted(tree[category].keys()):
+            lines.append(f"  - **{subcategory}/**")
+
+            for workflow in tree[category][subcategory]:
+                date_text = f"(last modified {workflow['date']})" if workflow['date'] else ""
+                status_text = f"- {workflow['status']}" if workflow['status'] else ""
+                desc_text = workflow['desc']
+
+                # Format: workflow name with metadata on separate line
+                lines.append(f"    - **{workflow['name']}/**")
+                if date_text or status_text or desc_text:
+                    info_parts = [p for p in [date_text, status_text, desc_text] if p]
+                    lines.append(f"      {' '.join(info_parts)}")
+
+    # Write directly to file instead of stdout to avoid PowerShell encoding issues on Windows
+    output_file = BASE / "WORKFLOW_INDEX.md"
+    output_file.write_text("\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":

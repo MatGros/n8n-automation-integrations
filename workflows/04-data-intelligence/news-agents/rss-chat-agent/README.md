@@ -36,7 +36,7 @@ Enable natural language conversations about news from multiple RSS sources using
 3. Chat platform integration (Telegram/HTTP)
 
 ## Status
-✅ Active
+✓ Published
 
 ## Quick start
 1. Import `rss-chat-agent/workflow.json` into n8n.

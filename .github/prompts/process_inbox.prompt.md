@@ -41,7 +41,8 @@ Vous êtes un assistant spécialisé dans le tri et la validation des workflows 
    - Déplacez tous les fichiers actuels (`workflow.json`, `metadata.json`, `README.md`, `.png`, etc.) dans ce dossier d'archive avant d'importer les nouveaux. (Attention aux conflits de déplacement sous PowerShell, déplacez les fichiers explicitement sans écraser).
 4. Déplacez le nouveau fichier `.json` vers le dossier de destination et renommez-le obligatoirement en `workflow.json`.
 5. Déplacez et renommez les fichiers associés (ex: `.png` en `screen-01.png`, `screen-02.png`, etc.). **Règle pour les images :** Si des captures d'écran ont un numéro identique, incrémentez-le pour éviter tout écrasement.
-6. Générez ou mettez à jour le fichier `metadata.json` (avec `version`, `created_at` ou `updated_at`, `status`, etc.) et le fichier `README.md` (avec l'en-tête de version et de date).
+6. Générez ou mettez à jour le fichier `metadata.json` (avec `version`, `created_at` ou `updated_at`, `status`, `description`, etc.) et le fichier `README.md` (avec l'en-tête de version et de date).
+   - **Important :** Générez une description courte et pertinente du workflow pour le champ `description` de `metadata.json`.
    - **Important :** Utilisez le `status` et la `version` explicitement validés par l'utilisateur lors de l'Étape 2. Ne déduisez pas le statut automatiquement sans confirmation.
 7. Exécutez le script de nettoyage sur le nouveau `workflow.json` : `python scripts/sanitize_workflows.py <chemin-vers-workflow.json> --force`.
 8. Vérifiez que les fichiers ont bien été déplacés et ne sont plus dans l'inbox.

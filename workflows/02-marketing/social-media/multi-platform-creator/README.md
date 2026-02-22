@@ -36,7 +36,7 @@ Streamline content creation across different social networks (Twitter, LinkedIn,
 3. Scheduling configuration
 
 ## Status
-🚧 Development
+○ Development
 
 ## Quick start
 1. Import `multi-platform-creator/workflow.json` into n8n.

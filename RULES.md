@@ -34,7 +34,7 @@ Every workflow directory (containing `workflow.json`) **MUST** have a `README.md
 | 7 | `## Quick start` | Step-by-step import guide | Numbered list | "1. Import workflow.json<br/>2. Configure credentials<br/>3. Test" |
 | 8 | `## Example` | Concrete input + output | Code fence or table | Shows actual message + bot response |
 | 9 | `## Tags` | Searchable keywords | Comma-separated or list | `telegram`, `bot`, `communication`, `simple` |
-| 10 | `## Status` | Workflow stage | Badge or text | `✅ Active` / `🚧 Development` / `⚠️ Deprecated` |
+| 10 | `## Status` | Workflow stage | Badge or text | `🟢 Published` / `🚧 Development` / `📦 Archived` |
 
 ### Optional Sections (May be present)
 
@@ -158,7 +158,7 @@ Every workflow **MUST** have a `metadata.json` file alongside `workflow.json` an
   "name": "Echo Bot",
   "category": "01-communication",
   "version": "1.0.0",
-  "status": "active",
+  "status": "published",
   "required_credentials": ["telegram"],
   "tags": ["telegram", "bot", "communication", "simple"],
   "n8n_version_min": "1.0.0",
@@ -173,7 +173,7 @@ Every workflow **MUST** have a `metadata.json` file alongside `workflow.json` an
 | `name` | string | **YES** | Any | Human-readable name (should match README `# Heading`) |
 | `category` | string | **YES** | One of 16 categories | See [Project Structure](#7-project-structure) |
 | `version` | string | **YES** | SemVer `X.Y.Z` | Increment on changes; `1.0.0` for new workflows |
-| `status` | string | **YES** | `active`, `development`, `deprecated`, `archived` | Workflow lifecycle state |
+| `status` | string | **YES** | `published`, `development`, `archived` | Workflow lifecycle state (n8n terms) |
 | `required_credentials` | array | **YES** | Credential type strings | e.g., `["gmail", "openai"]` — **exact list of what's needed** |
 | `tags` | array | **YES** | Lowercase, hyphenated strings | For search/discovery; minimum 2 tags |
 | `n8n_version_min` | string | **NO** | SemVer `X.Y.Z` | Minimum n8n version required (optional, for complex workflows) |

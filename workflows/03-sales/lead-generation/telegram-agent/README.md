@@ -38,7 +38,7 @@ Generate qualified leads via Telegram with automated qualification and data coll
 4. Message templates configured
 
 ## Status
-✅ Active
+✓ Published
 
 ## Quick start
 1. Import `telegram-agent/workflow.json` into n8n.

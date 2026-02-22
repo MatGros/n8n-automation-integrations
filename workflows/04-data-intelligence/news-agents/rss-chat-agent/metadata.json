@@ -2,7 +2,7 @@
   "name": "RSS News Chat Agent",
   "category": "04-data-intelligence",
   "version": "1.3.0",
-  "status": "active",
+  "status": "published",
   "required_credentials": [
     "anthropic"
   ],

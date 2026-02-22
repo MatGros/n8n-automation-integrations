@@ -24,7 +24,7 @@ Demonstrates basic Telegram trigger integration with n8n and message handling.
 3. Set up webhook for message reception
 
 ## Status
-✅ Active
+✓ Published
 
 ## Quick start
 1. Import `echo-bot/workflow.json` into your n8 instance.

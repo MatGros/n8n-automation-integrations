@@ -12,7 +12,7 @@ if (-not (Test-Path $script)) {
 
 $indexFile = Join-Path $PSScriptRoot "WORKFLOW_INDEX.md"
 # call Python and capture output
-& python $script | Out-File -FilePath $indexFile -Encoding utf8
+& python $script | Set-Content -Path $indexFile -Encoding utf8
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Workflow index updated at $indexFile" -ForegroundColor Green

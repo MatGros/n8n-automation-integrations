@@ -2,7 +2,7 @@
   "name": "Lead Generation Agent (Telegram)",
   "category": "03-sales",
   "version": "2.0.0",
-  "status": "active",
+  "status": "published",
   "required_credentials": [
     "telegram",
     "anthropic"
