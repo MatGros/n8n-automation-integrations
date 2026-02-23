@@ -1,5 +1,0 @@
-{
-    "n8n.host": "https://your-n8n-instance.com",
-    "n8n.apiKey": "your_api_key_here",
-    "n8n-atom.enable": true
-}

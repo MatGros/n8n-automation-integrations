@@ -1,7 +1,7 @@
 # Smart Gmail Labeler & Reply Draft
 
-**Version:** 1.1.4
-**Date:** 2026-02-23
+**Version:** 1.1.3
+**Date:** 2026-02-22
 
 ## Description
 Analyzes incoming Gmail messages, generates AI-powered draft replies, and applies intelligent labels to organize the inbox.
@@ -28,12 +28,3 @@ Automate email management with AI-generated responses and intelligent categoriza
 
 ## Status
 ✓ Published
-
-## Version History
-### v1.1.4 (2026-02-23)
-- Correction du mapping 	hreadId pour assurer que les brouillons sont bien rattachés au fil de conversation.
-- Refonte du prompt "Generate email reply" pour garantir une structure JSON valide et un formatage HTML propre.
-- Mise à jour des identifiants (Credentials) pour Telegram et Gemini.
-
-### v1.1.3 (2026-02-22)
-- Version initiale publiée.
